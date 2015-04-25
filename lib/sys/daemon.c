@@ -1,23 +1,10 @@
 #include "argcv/sys/daemon.h"
 
-#include <sys/socket.h>
-#include <sys/types.h>
-#include <netdb.h>
-#include <unistd.h> // setsid
-#include <string.h>
-#include <stdio.h>
-#include <stdlib.h> // malloc
-
-#include <syslog.h> // syslog
-#include <signal.h> // signal
-#include <sys/stat.h> // open O_RDONL
-#include <fcntl.h> // open
-
-#include <sys/wait.h> // wait
-
-#include <netdb.h>
-#include <arpa/inet.h>
-
+#include <unistd.h>  // setsid
+#include <syslog.h>    // syslog
+#include <signal.h>    // signal
+#include <sys/stat.h>  // open O_RDONL
+#include <fcntl.h>     // open
 
 int daemon_proc = 0;  // for err_XXX() functions
 char proj_work_dir[1024] = "/";
@@ -51,8 +38,8 @@ int daemon_init(const char* ident) {
     }
     // child 2 continues ...
     daemon_proc = 1;  // for err_XXX() functions
-    
-    syslog(LOG_INFO, "chdir: %s\n",proj_work_dir);
+
+    syslog(LOG_INFO, "chdir: %s\n", proj_work_dir);
 
     chdir(proj_work_dir);
 
@@ -73,4 +60,3 @@ void daemon_destroy() {
     syslog(LOG_INFO, "daemon stopped");
     closelog();
 }
-
