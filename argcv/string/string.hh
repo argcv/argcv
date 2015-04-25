@@ -5,14 +5,15 @@
 #include <string>
 #include <algorithm>
 
-namespace argcv { namespace string {
+namespace argcv {
+namespace string {
 
 inline std::vector<std::string> &split(const std::string &s, const std::string &delim,
-    std::vector<std::string> *_elems) {
+                                       std::vector<std::string> *_elems) {
     std::string item;
     if (delim.empty()) {
         _elems->push_back(s);
-        return * _elems;
+        return *_elems;
     }
     std::string::const_iterator substart = s.begin(), subend;
     while (true) {
@@ -27,17 +28,15 @@ inline std::vector<std::string> &split(const std::string &s, const std::string &
         }
         substart = subend + delim.size();
     }
-    return * _elems;
+    return *_elems;
 }
 
 inline std::vector<std::string> split(const std::string &s, const std::string &delim) {
     std::vector<std::string> elems;
-    split(s, delim, & elems);
+    split(s, delim, &elems);
     return elems;
 }
-
-
-}}  // argcv::string
+}
+}  // argcv::string
 
 #endif  //  ARGCV_STRING_STRING_HH
-
