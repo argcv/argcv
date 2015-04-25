@@ -1,5 +1,5 @@
-#ifndef ARGCV_ALG_RANDOM_HH
-#define ARGCV_ALG_RANDOM_HH
+#ifndef ARGCV_RANDOM_RANDOM_HH
+#define ARGCV_RANDOM_RANDOM_HH
 
 #include <cstdlib>
 #include <ctime>
@@ -30,4 +30,4 @@ inline std::string random_str(const int len) {
 
 }}  //  namespace argcv::random
 
-#endif  //  ARGCV_ALG_RANDOM_HH
+#endif  //  ARGCV_RANDOM_RANDOM_HH
