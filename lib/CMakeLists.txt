@@ -33,5 +33,5 @@ SET_TARGET_PROPERTIES(argcv_static PROPERTIES OUTPUT_NAME "argcv")
 
 # INSTALL (FILES ${${CMAKE_PROJECT_NAME}_SOURCE_DIR}/include/argcv/util.h DESTINATION include/argcv/ )
 
-
+ADD_SUBDIRECTORY(sys)
 
