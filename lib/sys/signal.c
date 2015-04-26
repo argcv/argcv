@@ -1,5 +1,7 @@
 #include "argcv/sys/signal.h"
 
+#include <sys/types.h>  // pid_t
+
 #include <stdio.h>  // printf
 
 #include <signal.h>    // signal
