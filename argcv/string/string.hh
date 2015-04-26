@@ -36,6 +36,17 @@ inline std::vector<std::string> split(const std::string &s, const std::string &d
     split(s, delim, &elems);
     return elems;
 }
+
+inline std::string replace(std::string &str_raw, const std::string &str_src, const std::string &str_dst) {
+    std::string::size_type pos = 0;
+    std::string::size_type src_len = str_src.size();
+    std::string::size_type dst_len = str_dst.size();
+    while ((pos = str_raw.find(str_src, pos)) != std::string::npos) {
+        str_raw.replace(pos, src_len, str_dst);
+        pos += dst_len;
+    }
+    return str_raw;
+}
 }
 }  // argcv::string
 
