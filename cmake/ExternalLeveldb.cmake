@@ -10,7 +10,7 @@ EXTERNALPROJECT_ADD(
     GIT_REPOSITORY git@github.com:google/leveldb.git
     GIT_TAG v1.18
     PREFIX ${CMAKE_CURRENT_BINARY_DIR}
-    #UPDATE_COMMAND ""
+    UPDATE_COMMAND ""
     CONFIGURE_COMMAND ""
     SOURCE_DIR ${leveldb_build}
     # BINARY_DIR ${leveldb_build}

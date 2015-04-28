@@ -7,7 +7,8 @@
 // study of algorithms that can learn from and make predictions on data.
 // ref: http://en.wikipedia.org/wiki/Machine_learning
 
-#include <stdint.h>  // uint64_t
+#include <cstdio>
+#include <cstdint>  // uint64_t
 
 #include <string>
 #include <vector>
@@ -30,26 +31,32 @@ public:
     dataset() {}
     std::vector<std::pair<std::vector<X>, Y>> data() { return ds; }
     virtual ~dataset() {}
+    const uint64_t x_size() const {
+        if (size() == 0)
+            return 0;
+        else
+            return ds[0].first.size();
+    }
     const uint64_t size() const { return ds.size(); }
     std::pair<std::vector<X>, Y> &operator[](uint64_t pos) { return ds[pos]; }
     std::pair<std::vector<X>, Y> &at(uint64_t pos) { return ds.at(pos); }
     std::vector<X> &x_at(uint64_t pos) { return at(pos).first; }
     X &x_at(uint64_t pos, uint64_t off) { return x_at(pos).at(off); }
     Y &y_at(uint64_t pos) { return at(pos).second; }
-    void add(std::pair<std::vector<X>, Y> ds_item) { return ds.push_back(ds_item); }
-    void add(std::vector<X> x, Y y) {
-        std::pair<std::vector<X>, Y> val(x, y);
-        return ds.push_back(val);
-    }
     void add(X x[], int len, Y y) {
         std::pair<std::vector<X>, Y> val(std::vector<X>(x, x + len), y);
-        return ds.push_back(val);
+        ds.push_back(val);
     }
-    void rm(uint64_t pos) { ds.erase(ds.begin() + pos); }
-    void rm() { ds.clear(); }
-    void del(uint64_t pos) { rm(pos); }
-    void del() { rm(); }
-    void clear() { rm(); }
+    void add(std::vector<X> x, Y y) {
+        // std::pair<std::vector<X>, Y> val(x, y);
+        ds.push_back(std::make_pair(x, y));
+    }
+    void add(std::pair<std::vector<X>, Y> ds_item) { ds.push_back(ds_item); }
+    void rm(uint64_t pos) const { ds.erase(ds.begin() + pos); }
+    void rm() const { ds.clear(); }
+    void del(uint64_t pos) const { rm(pos); }
+    void del() const { rm(); }
+    void clear() const { rm(); }
 
 private:
     std::vector<std::pair<std::vector<X>, Y>> ds;
@@ -63,7 +70,18 @@ typedef dataset<std::string, int> dataset_s;
 typedef dataset<std::string, bool> dataset_sb;
 typedef dataset<std::string, std::string> dataset_ss;
 
-
+template <typename X, typename Y>
+class ml {
+public:
+    virtual void init(dataset<X, Y> d) const {}
+    virtual void add(X x[], int len, Y y) { add(std::vector<X>(x, x + len), y); }
+    virtual void add(std::pair<std::vector<X>, Y> &ds_item) { add(ds_item.first, ds_item.second); }
+    virtual void add(std::vector<X> x, Y y) = 0;
+    virtual bool learn() = 0;
+    virtual bool save(const std::string &path) = 0;
+    virtual bool load(const std::string &path) = 0;
+    virtual Y predict(std::vector<X> x) = 0;
+};
 }
 }  // namespace argcv::ml
 
