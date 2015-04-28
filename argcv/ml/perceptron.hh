@@ -21,11 +21,10 @@ namespace ml {
 
 class perceptron : public ml<double, int> {
 public:
-    perceptron(uint64_t nx = 0, double rate = 0.001, size_t sloop = 1000)
-        : nx(nx), rate(rate), sloop(sloop) {}
+    perceptron(uint64_t nx = 0, double rate = 0.0001, size_t c = 10000) : nx(nx), rate(rate), c(c) {}
 
-    perceptron(dataset<double, int> data, uint64_t nx = 0, double rate = 0.001, size_t sloop = 1000)
-        : data(data), nx(nx), rate(rate), sloop(sloop) {}
+    perceptron(dataset<double, int> data, uint64_t nx = 0, double rate = 0.0001, size_t c = 10000)
+        : data(data), nx(nx), rate(rate), c(c) {}
 
     ~perceptron() {}
 
@@ -40,34 +39,50 @@ public:
         for (size_t ix = 0; ix < nx; ix++) {
             w.push_back(0);
         }
-        for (size_t c = 0; c < sloop; c++) {
+        w.push_back(0);
+        size_t sz_data = data.size();
+        // printf("data size : %zu \n", sz_data);
+        for (size_t cc = 0; cc < c; cc++) {
             bool changed = false;
-            size_t sz_data = data.size();
             for (size_t ix = 0; ix < sz_data; ix++) {
                 double p = 0;
                 for (int j = 0; j < nx; j++) {
                     p += w[j] * data.x_at(ix, j);
                 }
+                p += w[nx];
                 if (data.y_at(ix) * p <= 0) {
                     changed = true;
                     for (int j = 0; j < nx; j++) {
+                        // printf("i: %zu j: %d yix : %d  xixj %f rate : %f from: %f\n", ix, j, data.y_at(ix),
+                        //      data.x_at(ix, j), rate * data.y_at(ix) * data.x_at(ix, j), w[j]);
                         w[j] += rate * data.y_at(ix) * data.x_at(ix, j);
+                        if (w[j] > 1000 || w[j] < -1000) {
+                            printf("i: %zu j: %d yix : %d  xixj %f rate : %f from: %f\n", ix, j,
+                                   data.y_at(ix), data.x_at(ix, j), rate * data.y_at(ix) * data.x_at(ix, j),
+                                   w[j]);
+                            return false;
+                        }
                     }
+                    w[nx] += rate * data.y_at(ix);
                 }
             }
             if (!changed) {
-                // no_change_continue_num ++ ;
-                // if(no_change_continue_num > 20)
-                //{
-                // printf("no any change at %d continued times : %d\n",c,no_change_continue_num);
-                printf("no any change at %zu\n", c);
+                printf("no any change at %zu\n", cc);
                 break;
                 //}
             } else {
+                // dump();
                 // no_change_continue_num = 0;
             }
         }
         return true;
+    }
+
+    void dump() {
+        printf("w: %zu \n", w.size());
+        for (size_t i = 0; i < w.size(); i++) {
+            printf("%zu : %f\n", i, w[i]);
+        }
     }
 
     void add(std::vector<double> x, int y) { data.add(x, y); }
@@ -113,15 +128,22 @@ public:
         double p = 0;
         for (int j = 0; j < nx; j++) {
             p += w[j] * x[j];
+            // printf("p : %f w[j]: %f x[j]: %f\n ", p, w[j], x[j]);
         }
-        return p;
+        // printf("p : %f w[j]: %f \n ", p, w[nx]);
+        p += w[nx];
+        // printf("p : %f w[j]: %f \n ", p, w[nx]);
+        if (p > 0)
+            return 1;
+        else
+            return -1;
     }
 
 private:
     dataset<double, int> data;
     size_t nx;
     double rate;
-    size_t sloop;
+    size_t c;
     std::vector<double> w;
 };
 }
