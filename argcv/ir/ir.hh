@@ -7,6 +7,8 @@
 // on full-text (or other content-based) indexing.
 // ref: http://en.wikipedia.org/wiki/Information_retrieval
 
+#include <cmath>
+
 namespace argcv {
 namespace ir {
 

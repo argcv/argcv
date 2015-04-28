@@ -62,6 +62,8 @@ typedef dataset<double, double> dataset_dd;
 typedef dataset<std::string, int> dataset_s;
 typedef dataset<std::string, bool> dataset_sb;
 typedef dataset<std::string, std::string> dataset_ss;
+
+
 }
 }  // namespace argcv::ml
 
