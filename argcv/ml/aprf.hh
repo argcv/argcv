@@ -29,35 +29,35 @@ public:
             tn++;
     }
 
-    double accuracy() {
+    const double accuracy() const {
         size_t all = tp + fp + tn + fn;
         if (all == 0) return 0;
         return (double)(tp + tn) / all;
     }
 
-    double precision() {
+    const double precision() const {
         if (tp + fp == 0)
             return 0;
         else
             return (double)tp / (tp + fp);
     }
 
-    double recall() {
+    const double recall() const {
         if (tp + fn == 0)
             return 0;
         else
             return (double)tp / (tp + fn);
     }
 
-    double f1() {
-        //double p = precision();
-        //double r = recall();
-        //if (p + r == 0) return 0;
-        //return 2 * p * r / (p + r);
+    const double f1() const {
+        // double p = precision();
+        // double r = recall();
+        // if (p + r == 0) return 0;
+        // return 2 * p * r / (p + r);
         return f(1);
     }
 
-    double f(size_t a) {
+    const double f(size_t a) const {
         if (a < 1) return 0;
         double p = precision();
         double r = recall();
