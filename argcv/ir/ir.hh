@@ -1,12 +1,14 @@
-#ifndef ARGCV_ML_CORPUS_CORPUS_HH
-#define ARGCV_ML_CORPUS_CORPUS_HH
+#ifndef ARGCV_IR_IR_HH
+#define ARGCV_IR_IR_HH
 
-#include <cmath>
-#include <cstdio>
+// Information retrieval (IR) is the activity of obtaining information
+// resources relevant to an information need from a collection of
+// information resources. Searches can be based on metadata or
+// on full-text (or other content-based) indexing.
+// ref: http://en.wikipedia.org/wiki/Information_retrieval
 
 namespace argcv {
-namespace ml {
-namespace corpus {
+namespace ir {
 
 // tf-idf
 // assume : k in document D
@@ -21,7 +23,6 @@ inline double tf_idf(size_t stid, size_t atsid, size_t ads, size_t dscct) {
     return (static_cast<double>(stid) / atsid) * log(static_cast<double>(ads) / (dscct)) / 2.302585;
 }
 }
-}
-}  // namespace argcv::ml::corpus
+}  // namespace argcv::ir
 
-#endif  //  ARGCV_ML_CORPUS_CORPUS_HH
+#endif  //  ARGCV_IR_IR_HH
