@@ -75,7 +75,7 @@ class ml {
 public:
     virtual void init(dataset<X, Y> d) const {}
     virtual void add(X x[], int len, Y y) { add(std::vector<X>(x, x + len), y); }
-    virtual void add(std::pair<std::vector<X>, Y> &ds_item) { add(ds_item.first, ds_item.second); }
+    virtual void add(std::pair<std::vector<X>, Y> ds_item) { add(ds_item.first, ds_item.second); }
     virtual void add(std::vector<X> x, Y y) = 0;
     virtual bool learn() = 0;
     virtual bool save(const std::string &path) = 0;
