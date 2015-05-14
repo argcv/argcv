@@ -1,5 +1,7 @@
 # argcv
 
+[![Join the chat at https://gitter.im/argcv/argcv](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/argcv/argcv?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ## Motivation
 
 该工程是一个轻便的的c++库,使用cmake管理.里面主要存放个人可能会被多次使用到的代码,当然,行文也是以个人的审美趣味来书写.它被期望以submodule的方式出现在某个工程的子目录下,比如[这样](https://github.com/argcv/argcv-seed ).
