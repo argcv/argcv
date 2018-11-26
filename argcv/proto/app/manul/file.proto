@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package argcv.app.manul;
+
+import "google/protobuf/struct.proto";
+
+option cc_enable_arenas = true;
+option go_package = "github.com/argcv/go-argcvapis/app/manul/file;file";
+
+option java_multiple_files = true;
+option java_outer_classname = "FileProto";
+option java_package = "com.argcv.proto.app.manul";
+
+// A Generatic File
+message File {
+    string name = 1;
+    string path = 2;
+    uint64 size = 3;
+    google.protobuf.Struct meta = 4;
+    bytes data = 5;
+}
+
+message Files {
+    google.protobuf.Struct meta = 1;
+
+    repeated File data = 2;
+}
+
+
+

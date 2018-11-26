@@ -1,0 +1,64 @@
+# System Generated Info
+.DS_Store
+
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Build Directory
+.build/
+.idea/
+
+# bazel
+/bazel-*
+
+# project
+/argcv-bzl.iml
+/argcv-bzl.ipr
+/argcv-bzl.iws
+
+# utils, symbol link for py
+/third_party/py/python_include
+/third_party/py/python_lib
+/third_party/py/numpy/numpy_include
+
+# generated tools
+/.argcv.env.rc
+/tools/bazel.rc
+/tools/python_bin_path.sh
+
+# app directory
+/app/*
+
+
+# vscode
+/.vscode/*
+!/.vscode/{c_cpp_properties.json
+
+

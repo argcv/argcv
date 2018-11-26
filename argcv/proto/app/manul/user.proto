@@ -1,0 +1,231 @@
+syntax = "proto3";
+
+package argcv.app.manul;
+
+import "argcv/proto/api/annotations.proto";
+import "argcv/proto/status/status.proto";
+//import "google/protobuf/any.proto";
+//import "google/protobuf/empty.proto";
+
+option cc_enable_arenas = true;
+option go_package = "github.com/argcv/go-argcvapis/app/manul/user;user";
+
+option java_multiple_files = true;
+option java_outer_classname = "UserProto";
+option java_package = "com.argcv.proto.app.manul";
+
+// User Management Services
+service UserService {
+
+    rpc ListUsers (ListUsersRequest) returns (ListUsersResponse) {
+        option (argcv.api.http) = {
+            get: "/v1/user:list"
+            // optional: additonal binding
+            additional_bindings {
+                get: "/v1/user:list/{filter}/{offset}/{size}"
+            }
+        };
+    }
+
+    rpc CreateUser (CreateUserRequest) returns (CreateUserResponse) {
+        option (argcv.api.http) = {
+            post: "/v1/user:create"
+            body: "*"
+        };
+    }
+
+    rpc UpdateUser (UpdateUserRequest) returns (UpdateUserResponse) {
+        option (argcv.api.http) = {
+            put: "/v1/user/{id}"
+            body: "*"
+        };
+    }
+
+    rpc GetUser (GetUserRequest) returns (GetUserResponse) {
+        option (argcv.api.http) = {
+            get: "/v1/user/{id}"
+        };
+    }
+
+    rpc DeleteUser (DeleteUserRequest) returns (DeleteUserResponse) {
+        option (argcv.api.http) = {
+            delete: "/v1/user/{id}"
+        };
+    }
+
+}
+
+enum UserType {
+    // could access everything
+    // used to add/remove users
+    // to/from projects
+    ADMIN = 0;
+
+    // used to submit job
+    // for ordinary students
+    USER = 1;
+
+    // special authorization
+    // could read project
+    // but can NOT submit job
+    BOT = 2;
+}
+
+message AuthToken {
+    // user id
+    string id = 1;
+
+    // user name
+    string name = 2;
+
+    string secret = 3;
+}
+
+message User {
+    string id = 1;
+
+    UserType user_type = 2;
+
+    // user name, may corresponding to some
+    // external user name
+    string name = 3;
+
+    string display_name = 4;
+
+    // Note: it should be post-processed before return to client
+    string email = 5;
+
+}
+
+message Users {
+    repeated User users = 1;
+
+    int32 offset = 2;
+
+    int32 size = 3;
+
+    int32 total = 4;
+}
+
+message ListUsersRequest {
+    // The standard list filter.
+    string filter = 1;
+
+    // offset
+    int32 offset = 2;
+
+    // size
+    int32 size = 3;
+
+    // User Name ($object_id or username)
+    AuthToken auth = 4;
+
+}
+
+message ListUsersResponse {
+    bool success = 1;
+
+    string message = 2;
+
+    // The operation result, which can be either an `error` or a valid `projects`.
+    // If `success` == `true`, `users` is set
+    // If `success` == `false`, `error` is set.
+    oneof result {
+        argcv.status.Status error = 3;
+        Users users = 4;
+    }
+}
+
+message CreateUserRequest {
+    // required
+    string name = 1;
+
+    string display_name = 2;
+
+    string email = 3;
+
+    UserType user_type = 4;
+
+    // Your(Admin's) User Name ($object_id or username)
+    AuthToken auth = 5;
+}
+
+message CreateUserResponse {
+    bool success = 1;
+
+    string message = 2;
+
+
+    oneof result {
+        argcv.status.Status error = 3;
+        User user = 4;
+    }
+}
+
+message UpdateUserRequest {
+    // Target User Id
+    string id = 1;
+
+    string name = 2;
+
+    User update = 3;
+
+    // Your(Admin's) User Name ($object_id or username)
+    // An ordinary(Non-Admin) user can NOT change email ~TODO: discussing~
+    AuthToken auth = 4;
+}
+
+message UpdateUserResponse {
+    bool success = 1;
+
+    string message = 2;
+
+    // The operation result, which can be either an `error` or a valid `projects`.
+    // If `success` == `true`, `user` is set
+    // If `success` == `false`, `error` is set.
+    oneof result {
+        argcv.status.Status error = 3;
+        User user = 4;
+    }
+}
+
+message GetUserRequest {
+    string id = 1;
+
+    string name = 2;
+
+    // Your(Admin's) User Name ($object_id or username)
+    // You can leave it as empty if you are updating yourself
+    AuthToken auth = 5;
+}
+
+message GetUserResponse {
+    bool success = 1;
+
+    string message = 2;
+
+    // The operation result, which can be either an `error` or a valid `projects`.
+    // If `success` == `true`, `user` is set
+    // If `success` == `false`, `error` is set.
+    oneof result {
+        argcv.status.Status error = 3;
+        User user = 4;
+    }
+}
+
+message DeleteUserRequest {
+    string id = 1;
+
+    // Your(Admin's) User Name ($object_id or username)
+    // You can leave it as empty if you are updating yourself
+    AuthToken auth = 2;
+}
+
+message DeleteUserResponse {
+    bool success = 1;
+
+    string message = 2;
+
+    // error message
+    argcv.status.Status error = 3;
+}

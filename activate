@@ -1,0 +1,63 @@
+# A simple script to initialize some environment variables
+# It is supposed to used through command: '. activate'
+
+[ -f .argcv.env.rc ] && . .argcv.env.rc
+
+[ -f tools/bash_helpers.sh ] && . tools/bash_helpers.sh
+
+ARGCV_BASE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+echo 'Welcome to use ArgCV!'
+
+PROMPT_CH=$(argcv_prompt_check_root)
+
+export PS1='$(argcv_prompt_exitstatus) ${tc_blue}\u@${tc_d_gray}\H$tc_reset $tc_l_gray\w \n$tc_l_gray$PROMPT_CH$tc_reset'
+export PS2=''
+
+alias RST="cd $ARGCV_BASE_DIR"
+
+
+_acv-get() {
+  cands=$( ls $ARGCV_BASE_DIR/app )
+  COMPREPLY=( $(compgen -W "$cands" -- ${COMP_WORDS[COMP_CWORD]}) )
+}
+
+acv-get() {
+  if test $# -eq 0; then
+    echo -e "\tUsage: $@ org/repo"
+  else
+    pushd $ARGCV_BASE_DIR/app
+    if [ -d $1 ]; then
+      echo "repo exists: $1"
+    else
+      git clone --depth 1 https://github.com/$1 $1
+    fi
+    popd
+  fi
+}
+
+_acv() {
+  local cands=""
+  if [ $COMP_CWORD -gt 1 ]; then
+      local cmd="_acv-${COMP_WORDS[1]}"
+      if check_command_exists $cmd; then
+        $cmd
+      fi
+  else
+    cands=$(compgen -A function | grep "^acv-" | cut -c 5-)
+  fi
+  COMPREPLY=( $(compgen -W "$cands" -- ${COMP_WORDS[COMP_CWORD]}) )
+}
+
+complete -F _acv acv
+
+acv() {
+  if test $# -eq 0; then
+    echo -e "\tUsage: acv [command] [options]..."
+    return -1
+  else
+    local cmd="acv-$1"
+    shift
+    $cmd $@
+  fi
+}

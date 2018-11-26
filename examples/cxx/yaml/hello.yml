@@ -1,0 +1,32 @@
+dict:
+  - foo
+  - key:
+          - k1
+          - k2
+list:
+  - foo
+  - primes: [2, 3, 5, 7, 11]
+    odds: [1, 3, 5, 7, 9, 11]
+  - [x, y]
+  - |
+    here are a few sentences in
+    multiple lines
+    ~
+  -
+    hr: # 1998 hr ranking
+      - Mark McGwire
+      - Sammy Sosa
+
+    rbi:
+      # 1998 rbi ranking
+      - Sammy Sosa
+      - Ken Griffey
+    ? - Detroit Tigers
+      - Chicago cubs
+    :
+      - 2001-07-23
+
+    ? [ New York Yankees,
+        Atlanta Braves ]
+    : [ 2001-07-02, 2001-08-12,
+        2001-08-14 ]

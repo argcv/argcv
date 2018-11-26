@@ -1,0 +1,13 @@
+# build -c opt --copt=-std=c99 --cxxopt=-std=c++11
+build -c opt
+test -c opt
+run -c opt
+
+build --show_timestamps
+build --verbose_failures
+
+build --define=grpc_no_ares=true
+test --define=grpc_no_ares=true
+run --define=grpc_no_ares=true
+
+test --test_output=errors

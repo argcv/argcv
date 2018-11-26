@@ -1,0 +1,478 @@
+syntax = "proto3";
+
+package argcv.app.manul;
+
+import "argcv/proto/api/annotations.proto";
+import "argcv/proto/status/status.proto";
+import "argcv/proto/app/manul/file.proto";
+import "argcv/proto/app/manul/user.proto";
+
+import "google/protobuf/struct.proto";
+
+option cc_enable_arenas = true;
+option go_package = "github.com/argcv/go-argcvapis/app/manul/project;project";
+
+option java_multiple_files = true;
+option java_outer_classname = "ProjectProto";
+option java_package = "com.argcv.proto.app.manul";
+
+// // https://github.com/grpc-ecosystem/grpc-gateway#mapping-grpc-to-http
+// // https://godoc.org/google.golang.org/grpc/metadata
+// // grpcgateway-[your-header]
+//if md, ok := metadata.FromIncomingContext(ctx); ok {
+//    for k, v := range md {
+//        log.Infof("Key: %s", k)
+//        for vi, vv := range v {
+//            log.Infof("  - [%v] Got: %s", vi, vv)
+//        }
+//    }
+//} else {
+//    log.Warnf("Get Metadata FAILED!!!")
+//}
+//+ For Projects <project.proto>
+//    + List projects X
+//    + Create project
+//    + Update project
+//        + Update job info
+//        + Update roster
+//    + Delete project
+
+
+service ProjectService {
+    //
+    rpc ListProjects (ListProjectsRequest) returns (ListProjectsResponse) {
+        option (argcv.api.http) = {
+            get: "/v1/project:list"
+            // optional: additonal binding
+            additional_bindings {
+                get: "/v1/project:list/{filter}/{offset}/{size}"
+            }
+        };
+    }
+
+
+    rpc CreateProject (CreateProjectRequest) returns (CreateProjectResponse) {
+        option (argcv.api.http) = {
+            post: "/v1/project:create"
+            body: "*"
+        };
+    }
+
+
+    rpc UpdateProject (UpdateProjectRequest) returns (UpdateProjectResponse) {
+        option (argcv.api.http) = {
+            put: "/v1/project/{id}"
+            body: "*"
+        };
+    }
+
+    rpc GetProject (GetProjectRequest) returns (GetProjectResponse) {
+        option (argcv.api.http) = {
+            get: "/v1/project/{id}"
+        };
+    }
+
+    rpc GetProjectChecklist (GetProjectChecklistRequest) returns (GetProjectChecklistResponse) {
+        option (argcv.api.http) = {
+            get: "/v1/project/{id}/checklist"
+        };
+    }
+
+    rpc DeleteProject (DeleteProjectRequest) returns (DeleteProjectResponse) {
+        option (argcv.api.http) = {
+            delete: "/v1/project/{id}"
+        };
+    }
+
+    // Add/Delete/Change Project Members
+    rpc UpdateProjectMember (UpdateProjectMemberRequest) returns (UpdateProjectMemberResponse) {
+        option (argcv.api.http) = { put: "/v1/project/{id}/member" };
+    }
+
+    rpc ListProjectMembers (ListProjectMembersRequest) returns (ListProjectMembersResponse) {
+        option (argcv.api.http) = {
+            get: "/v1/project/{id}/member:list"
+            // optional: additonal binding
+            additional_bindings {
+                get: "/v1/project/{id}/member:list/{filter}"
+            }
+            additional_bindings {
+                get: "/v1/project/{id}/member:list/{filter}/{offset}/{size}"
+            }
+        };
+    }
+
+}
+
+// Currently, it only support file and folder
+enum ProjectChecklistElemType {
+    REGULAR_FILE = 0;
+    DIRECTORY = 1;
+    //    LINK = 2; // Symbolic File
+    //    SPECIAL_FILE = 3;
+    //    SOCKET = 4;
+    //    PIPE = 5;
+    //    REGEX_PATTERN = 6;
+    //    WILDCARD_PATTERN = 7;
+}
+
+message ProjectChecklistElem {
+    // Required Target Path
+    // It could be either a path or a
+    string path = 1;
+
+    // Required Target Type
+    ProjectChecklistElemType target_type = 2;
+
+    // is it required?
+    // maybe not?
+    // uint64 maximum_size = 3;
+}
+
+message ProjectChecklist {
+    // Required: project id
+    string id = 1;
+
+    // Required: project name
+    string name = 2;
+
+    // Optional: description
+    string desc = 3;
+
+    // Required:
+    repeated ProjectChecklistElem checklist = 5;
+
+}
+
+message ProjectEnvironment {
+    string key = 1;
+    string value = 2;
+}
+
+message ProjectVolume {
+    string local_path = 1;
+    string remote_path = 2;
+    repeated string option = 3;
+}
+
+// message ProjectProgress {
+//     repeated string script = 1;
+// }
+
+message ProjectConfig {
+    string image = 1;
+
+    repeated ProjectChecklistElem checklist = 2;
+
+    uint64 timeout_sec = 3; // in second
+
+    uint64 maximum_cpu = 4;
+
+    uint64 maximum_mem_mb = 5;
+
+    repeated ProjectEnvironment env = 6;
+
+    repeated ProjectVolume volume = 7;
+
+    // step 1
+    // ProjectProgress pre_process = 8;
+
+    // step 2
+    // ProjectProgress start = 9;
+
+    // step 3
+    // ProjectProgress finalize = 10;
+}
+
+// Project Brief Description
+message Project {
+    // Required: project id
+    string id = 1;
+
+    // Required: project name
+    string name = 2;
+
+    // Optional: description
+    string desc = 3;
+
+    // Optional: A configure file
+    // If it is empty, the '.manul.project.yml' file
+    // would be parsed
+    // Note:
+    // It is NOT required to fill this content
+    // in creating stage
+    // It is NOT visible if it is listed in 'rich'
+    ProjectConfig config = 4;
+
+    // Resource Files
+    // It is NOT visible if it is listed in 'rich'
+    Files files = 5;
+
+    // Optional: Reserved, for additional metadata
+    // it is NOT in use now
+    // It is NOT visible if it is listed in 'rich'
+    google.protobuf.Struct meta = 6;
+
+}
+
+// List of Project Brief Description
+message Projects {
+    repeated Project data = 1;
+
+    int32 offset = 2;
+
+    int32 size = 3;
+
+    int32 total = 4;
+}
+
+message ListProjectsRequest {
+    // The standard list filter.
+    string filter = 1;
+
+    // offset
+    int32 offset = 2;
+
+    // size
+    int32 size = 3;
+
+    // User Name ($object_id or username)
+    AuthToken auth = 4;
+}
+
+message ListProjectsResponse {
+    bool success = 1;
+
+    string message = 2;
+
+    // The operation result, which can be either an `error` or a valid `projects`.
+    // If `success` == `true`, `projects` is set
+    // If `success` == `false`, `error` is set.
+    oneof result {
+        argcv.status.Status error = 3;
+        Projects projects = 4;
+    }
+}
+
+message CreateProjectRequest {
+    Project project = 1;
+
+    // User Name ($object_id or username)
+    AuthToken auth = 2;
+}
+
+message CreateProjectResponse {
+    bool success = 1;
+
+    string message = 2;
+
+    oneof result {
+        argcv.status.Status error = 3;
+        Project project = 4;
+    }
+}
+
+message UpdateProjectRequest {
+    string id = 1;
+
+    Project project = 2;
+
+    // User Name ($object_id or username)
+    AuthToken auth = 3;
+}
+
+message UpdateProjectResponse {
+    bool success = 1;
+
+    string message = 2;
+
+    // The operation result, which can be either an `error` or a valid `projects`.
+    // If `success` == `true`, `project` is set
+    // If `success` == `false`, `error` is set.
+    oneof result {
+        argcv.status.Status error = 3;
+        Project project = 4;
+    }
+}
+
+message GetProjectRequest {
+    string id = 1;
+
+    // rich == true:
+    // full doc, only for admin and bot
+    bool rich = 2;
+
+    // User Name ($object_id or username)
+    AuthToken auth = 3;
+}
+
+message GetProjectResponse {
+    bool success = 1;
+
+    string message = 2;
+
+    // The operation result, which can be either an `error` or a valid `projects`.
+    // If `success` == `true`, `projects` is set
+    // If `success` == `false`, `error` is set.
+    oneof result {
+        argcv.status.Status error = 3;
+        Project project = 4;
+    }
+}
+
+message GetProjectChecklistRequest {
+    string id = 1;
+
+    // User Name ($object_id or username)
+    AuthToken auth = 2;
+}
+
+message GetProjectChecklistResponse {
+    bool success = 1;
+
+    string message = 2;
+
+    // The operation result, which can be either an `error` or a valid `projects`.
+    // If `success` == `true`, `projects` is set
+    // If `success` == `false`, `error` is set.
+    oneof result {
+        argcv.status.Status error = 3;
+        ProjectChecklist data = 4;
+    }
+}
+
+message DeleteProjectRequest {
+    string id = 1;
+
+    // User Name ($object_id or username)
+    AuthToken auth = 2;
+}
+
+message DeleteProjectResponse {
+    bool success = 1;
+
+    string message = 2;
+
+    // error message
+    argcv.status.Status error = 3;
+}
+
+//////////////////////////
+//
+// Project Members
+//
+//////////////////////////
+
+// Project Member Type
+enum ProjectMemberType {
+    OWNER = 0;
+
+    MASTER = 1;
+
+    DEVELOPER = 2;
+
+    REPORTER = 3;
+
+    GUEST = 4;
+}
+
+enum ProjectMemberOperation {
+    // Add Member
+    INSERT = 0;
+
+    // Update Member
+    UPDATE = 1;
+
+    // Update or Insert Member
+    UPSERT = 2;
+
+    // Remove member
+    DELETE = 3;
+}
+
+// One Project Member Info
+message ProjectMember {
+    // Required: project id
+    string id = 1;
+
+    User user = 2;
+
+    ProjectMemberType type = 3;
+
+    // second for unix time
+    // 0 for never expired
+    uint64 expire = 4;
+}
+
+// List of Project Members
+message ProjectMembers {
+    repeated ProjectMember data = 1;
+
+    int32 offset = 2;
+
+    int32 size = 3;
+
+    int32 total = 4;
+}
+
+message ListProjectMembersRequest {
+    // project id
+    string id = 1;
+
+    // The standard list filter.
+    string filter = 2;
+
+    // offset
+    int32 offset = 3;
+
+    // size
+    int32 size = 4;
+
+    // Auth
+    AuthToken auth = 5;
+}
+
+message ListProjectMembersResponse {
+    bool success = 1;
+
+    string message = 2;
+
+    // The operation result, which can be either an `error` or a valid `projects`.
+    // If `success` == `true`, `members` is set
+    // If `success` == `false`, `error` is set.
+    oneof result {
+        argcv.status.Status error = 3;
+        ProjectMembers members = 4;
+    }
+}
+
+message ProjectMembersUpdateElem {
+    ProjectMember member = 1;
+
+    ProjectMemberOperation op = 2;
+}
+
+message UpdateProjectMemberRequest {
+    // project id
+    string id = 1;
+
+    repeated ProjectMembersUpdateElem data = 2;
+
+    // User Id
+    AuthToken auth = 3;
+}
+
+message UpdateProjectMemberResponse {
+    bool success = 1;
+
+    string message = 2;
+
+    // The operation result, which can be either an `error` or a valid `projects`.
+    // If `success` == `true`, `member` is set
+    // If `success` == `false`, `error` is set.
+    oneof result {
+        argcv.status.Status error = 3;
+        ProjectMember member = 4;
+    }
+}
+

@@ -1,0 +1,10 @@
+#ifndef ARGCV_CXX_ENV_CONFIG_H_
+#define ARGCV_CXX_ENV_CONFIG_H_
+
+#define ARGCV_VERSION "@ARGCV_VERSION@"
+
+#bazeldefine ARGCV_NEED_OPENCL "@ARGCV_NEED_OPENCL@" // "0" to not used, "1" to used
+
+#bazeldefine ENV_NOT_EXISTS
+
+#endif  // ARGCV_CXX_ENV_CONFIG_H_

@@ -1,0 +1,40 @@
+// this code is from https://github.com/googleapis/googleapis/blob/master/google/api/http.proto
+
+
+syntax = "proto3";
+
+package argcv.api;
+
+option cc_enable_arenas = true;
+option go_package = "github.com/argcv/go-argcvapis/api/http;http";
+
+option java_multiple_files = true;
+option java_outer_classname = "HttpProto";
+option java_package = "com.argcv.proto.api";
+
+message Http {
+  repeated HttpRule rules = 1;
+}
+
+message HttpRule {
+
+  string selector = 1;
+
+  oneof pattern {
+    string get = 2;
+    string put = 3;
+    string post = 4;
+    string delete = 5;
+    string patch = 6;
+    CustomHttpPattern custom = 8;
+  }
+
+  string body = 7;
+
+  repeated HttpRule additional_bindings = 11;
+}
+
+message CustomHttpPattern {
+  string kind = 1;
+  string path = 2;
+}

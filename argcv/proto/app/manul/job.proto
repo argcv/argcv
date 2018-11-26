@@ -1,0 +1,216 @@
+syntax = "proto3";
+
+package argcv.app.manul;
+
+import "argcv/proto/api/annotations.proto";
+import "argcv/proto/status/status.proto";
+import "argcv/proto/app/manul/file.proto";
+import "argcv/proto/app/manul/user.proto";
+//import "google/protobuf/any.proto";
+//import "google/protobuf/empty.proto";
+
+option cc_enable_arenas = true;
+option go_package = "github.com/argcv/go-argcvapis/app/manul/job;job";
+
+option java_multiple_files = true;
+option java_outer_classname = "JobProto";
+option java_package = "com.argcv.proto.app.manul";
+
+// Job Management Services
+service JobService {
+
+    // List Jobs
+    rpc ListJobs (ListJobsRequest) returns (ListJobsResponse) {
+        option (argcv.api.http) = {
+            get: "/v1/job:list"
+            additional_bindings {
+                get: "/v1/job:list/{filter}/{offset}/{size}"
+            }
+        };
+    }
+
+    rpc CreateJob (CreateJobRequest) returns (CreateJobResponse) {
+        option (argcv.api.http) = {
+            post: "/v1/job:create"
+            body: "*"
+        };
+    }
+
+
+    rpc GetJob (GetJobRequest) returns (GetJobResponse) {
+        option (argcv.api.http) = {
+            get: "/v1/job/{id}"
+        };
+    }
+
+    rpc CancelJob (CancelJobRequest) returns (CancelJobResponse) {
+        option (argcv.api.http) = {
+            delete: "/v1/job/{id}"
+        };
+    }
+
+}
+
+
+enum JobProgress {
+    // Job is ready
+    OK = 0;
+
+    // Job not found
+    NOT_FOUND = 1;
+
+    // Job Created but not in queue
+    CREATED = 2;
+
+    // Job is in queue
+    PENDING = 3;
+
+    // Job in in processing
+    PROCESSING = 4;
+
+    // Job is canceled
+    CANCELLED = 5;
+
+    // Processed, timeout, no response
+    TIMEOUT = 6;
+
+    // Process Failed
+    FAILED = 7;
+
+    // Invalid User
+    PERMISSION_DENIED = 8;
+
+    // Reserved
+    UNKNOWN = 9;
+}
+
+message JobResult {
+    // Job result
+    int32 score = 1;
+
+    argcv.status.Status error = 2;
+}
+
+// Job status
+message Job {
+    // job id
+    string id = 1;
+
+    // project id
+    string project_id = 2;
+
+    // user id
+    string user_id = 3;
+
+    // current progress
+    JobProgress progress = 4;
+
+    JobResult result = 5;
+
+    string logs = 6;
+}
+
+message Jobs {
+    repeated Job jobs = 1;
+
+    int32 offset = 2;
+
+    int32 size = 3;
+
+    int32 total = 4;
+}
+
+message ListJobsRequest {
+    // The standard list filter.
+    string filter = 1;
+
+    // offset
+    int32 offset = 2;
+
+    // size
+    int32 size = 3;
+
+    // User Name ($object_id or username)
+    AuthToken auth = 4;
+}
+
+message ListJobsResponse {
+    bool success = 1;
+
+    string message = 2;
+
+    // The operation result, which can be either an `error` or a valid `jobs`.
+    // If `success` == `false`, return `error`
+    // If `success` == `true`, return `jobs`
+    oneof result {
+        argcv.status.Status error = 3;
+        Jobs jobs = 4;
+    }
+}
+
+message CreateJobRequest {
+    string project_id = 1;
+
+    Files files = 2;
+
+    // User Name ($object_id or username)
+    AuthToken auth = 3;
+}
+
+message CreateJobResponse {
+    bool success = 1;
+
+    string message = 2;
+
+    // The operation result, which can be either an `error` or a valid `job`.
+    // If `success` == `false`, return error
+    // If `success` == `true`, return the job
+    oneof result {
+        argcv.status.Status error = 3;
+        Job job = 4;
+    }
+}
+
+message GetJobRequest {
+    // job id
+    string id = 1;
+
+    // User Name ($object_id or username)
+    AuthToken auth = 2;
+}
+
+message GetJobResponse {
+    bool success = 1;
+
+    string message = 2;
+
+    // The operation result, which can be either an `error` or a valid `job`.
+    // If `success` == `false`, return error
+    // If `success` == `true`, return the job
+    oneof result {
+        argcv.status.Status error = 3;
+        Job job = 4;
+    }
+}
+
+message CancelJobRequest {
+    string id = 1;
+
+    // User Name ($object_id or username)
+    // You can only cancel your job if your are not admin
+    AuthToken auth = 2;
+}
+
+message CancelJobResponse {
+    bool success = 1;
+
+    string message = 2;
+
+    // The operation result, which can be either an `error` or a valid `job`.
+    // If `success` == `false`, return error
+    // If `success` == `true`, return job
+    oneof result {
+        argcv.status.Status error = 3;
+        Job job = 4;
+    }
+}

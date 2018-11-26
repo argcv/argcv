@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package argcv.api;
+
+option cc_enable_arenas = true;
+option go_package = "github.com/argcv/go-argcvapis/api/httpbody;httpbody";
+
+option java_multiple_files = true;
+option java_outer_classname = "HttpBodyProto";
+option java_package = "com.argcv.proto.api";
+
+
+message HttpBody {
+    string content_type = 1;
+
+    bytes data = 2;
+}
