@@ -1,3 +1,5 @@
+# Copyright 2019 Yu Jing
+
 workspace(name = "com_github_argcv_argcv")
 
 # # ref: https://github.com/bazelbuild/rules_closure

@@ -1,3 +1,5 @@
+# Copyright 2019 Yu Jing
+
 # How to prepare rules: https://bazel.build/versions/master/docs/skylark/cookbook.html
 load("//tools/build_rules/config:system.bzl", "cc_system_package")
 load("//tools/build_rules:arq.bzl", "arq")

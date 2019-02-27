@@ -1,3 +1,8 @@
+# Copyright 2019 Yu Jing
+licenses(["notice"])  # MIT
+
+package(default_visibility = ["//visibility:public"])
+
 # https://bazel.build/versions/master/docs/be/c-cpp.html#cc_test
 cc_test(
     name = "example_test",
