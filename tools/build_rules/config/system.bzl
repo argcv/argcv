@@ -59,7 +59,7 @@ cc_system_package_configure = repository_rule(
         "defines": attr.string_list(),
         # "mandatory": attr.bool(default=True),
         "build_file_template": attr.label(
-            default = Label("//tools/build_rules/config:BUILD.tpl"), # removed '@' here
+            default = Label("//tools/build_rules/config:BUILD.tpl"),  # removed '@' here
             single_file = True,
             allow_files = True,
         ),
@@ -70,6 +70,10 @@ cc_system_package_configure = repository_rule(
 def cc_system_package(name, **kwargs):
   # Set reponame
   reponame = "local_" + name
+
+  # May override the default reponame
+  if 'reponame' in kwargs:
+    reponame = kwargs['reponame']
 
   # Avoid conflict
   if reponame in native.existing_rules():
@@ -85,4 +89,3 @@ def cc_system_package(name, **kwargs):
   native.bind(name=name, actual="@local_{name}//:lib".format(name=name))
 
   print("[cc_system_package] **", reponame, "** configured")
-
