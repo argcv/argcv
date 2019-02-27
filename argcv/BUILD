@@ -21,6 +21,7 @@ cc_library(
         ],
         exclude = [
             "**/*_test.h",
+            "cxx/base/test.h",
         ],
     ),
     deps = [
@@ -51,6 +52,9 @@ cc_test(
         "**/*_test.cc",
         "**/*_test.h",
     ]),
+    copts = [
+        "-Wno-unused-function",
+    ],
     deps = [
         ":argcv",
         ":test",

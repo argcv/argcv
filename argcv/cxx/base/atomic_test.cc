@@ -2,7 +2,7 @@
 #include "argcv/cxx/base/atomic.h"
 
 #include <atomic>
-#include <thread> // NOLINT build/c++11
+#include <thread>  // NOLINT build/c++11
 
 #include "argcv/cxx/base/test.h"
 
@@ -17,7 +17,7 @@ void do_work(atomic<int> *data) {
 
 TEST(Atomic, Atomic) {
   InitTestGoogleLogging();
-  atomic<int> data;
+  atomic<int> data(0);
 
   std::thread th1(do_work, &data);
   std::thread th2(do_work, &data);
@@ -31,5 +31,6 @@ TEST(Atomic, Atomic) {
   th4.join();
   th5.join();
   LOG(INFO) << "Result:" << data;
+  EXPECT_EQ(data, 5);
 }
 }  // namespace argcv
