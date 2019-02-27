@@ -1,10 +1,11 @@
+// Copyright 2019 Yu Jing
 #include <cstring>
 #include <string>
 
 #include "benchmark/benchmark.h"
 
 // // Dummy Example
-// void BM_empty(benchmark::State& state) {
+// void BM_empty(benchmark::State& state) { // NOLINT non-const reference
 //   for (auto _ : state) {
 //     benchmark::DoNotOptimize(state.iterations());
 //   }
@@ -15,14 +16,16 @@
 // Define another benchmark
 // Basic usage
 // https://github.com/google/benchmark#basic-usage
-static void BM_StringCreation(benchmark::State& state) {
+static void BM_StringCreation(
+    benchmark::State& state) {  // NOLINT non-const reference
   for (auto _ : state) std::string empty_string;
 }
 
 BENCHMARK(BM_StringCreation);
 
 // Once More
-static void BM_StringCopy(benchmark::State& state) {
+static void BM_StringCopy(
+    benchmark::State& state) {  // NOLINT non-const reference
   std::string x = "hello";
   for (auto _ : state) std::string copy(x);
 }
@@ -30,7 +33,7 @@ BENCHMARK(BM_StringCopy);
 
 // Passing arguments
 // https://github.com/google/benchmark#passing-arguments
-static void BM_memcpy(benchmark::State& state) {
+static void BM_memcpy(benchmark::State& state) {  // NOLINT non-const reference
   char* src = new char[state.range(0)];
   char* dst = new char[state.range(0)];
   memset(src, 'x', state.range(0));
@@ -45,7 +48,8 @@ BENCHMARK(BM_memcpy)->Arg(8)->Arg(64);
 // BENCHMARK(BM_memcpy)->Range(8, 8 << 10);
 // BENCHMARK(BM_memcpy)->RangeMultiplier(2)->Range(8, 8 << 10);
 
-// static void BM_SetInsert(benchmark::State& state) {
+// static void BM_SetInsert(benchmark::State& state) { // NOLINT non-const
+// reference
 //   std::set<int> data;
 //   for (auto _ : state) {
 //     state.PauseTiming();
@@ -77,7 +81,8 @@ BENCHMARK(BM_memcpy)->Arg(8)->Arg(64);
 // Calculate asymptotic complexity (Big O)
 // https://github.com/google/benchmark#calculate-asymptotic-complexity-big-o
 
-static void BM_StringCompare(benchmark::State& state) {
+static void BM_StringCompare(
+    benchmark::State& state) {  // NOLINT non-const reference
   std::string s1(state.range(0), '-');
   std::string s2(state.range(0), '-');
   for (auto _ : state) {
@@ -85,6 +90,7 @@ static void BM_StringCompare(benchmark::State& state) {
   }
   state.SetComplexityN(state.range(0));
 }
+
 BENCHMARK(BM_StringCompare)
     ->RangeMultiplier(2)
     ->Range(1 << 10, 1 << 12)
@@ -110,7 +116,8 @@ BENCHMARK(BM_StringCompare)
 
 // Templated benchmarks
 // https://github.com/google/benchmark#templated-benchmarks
-// template <class Q> int BM_Sequential(benchmark::State& state) {
+// template <class Q> int BM_Sequential(benchmark::State& state) { // NOLINT
+// non-const reference
 //   Q q;
 //   typename Q::value_type v;
 //   for (auto _ : state) {
@@ -123,11 +130,12 @@ BENCHMARK(BM_StringCompare)
 //   state.SetBytesProcessed(
 //       static_cast<int64_t>(state.iterations())*state.range(0));
 // }
-// BENCHMARK_TEMPLATE(BM_Sequential, WaitQueue<int>)->Range(1<<0, 1<<10);
+// BENCHMARK_TEMPLATE(BM_Sequential, WaitQueue<int>)->Range(1 << 0, 1 << 10);
 
 // Multithreaded benchmarks
 // https://github.com/google/benchmark#multithreaded-benchmarks
-static void BM_MultiThreaded(benchmark::State& state) {
+static void BM_MultiThreaded(
+    benchmark::State& state) {  // NOLINT non-const reference
   if (state.thread_index == 0) {
     // Setup code here.
   }

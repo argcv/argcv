@@ -23,7 +23,7 @@
  * SOFTWARE.
  *
  **/
-#include "examples/test/example_test.h"
+#include "examples/cxx/test/example_test.h"
 
 #include <cstdio>
 

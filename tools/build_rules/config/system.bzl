@@ -73,13 +73,16 @@ def cc_system_package(name, **kwargs):
 
   # Avoid conflict
   if reponame in native.existing_rules():
-    print("Repository [", reponame, "] already exists, skipping...")
+    # print("Repository [", reponame, "] already exists, skipping...")
     return
-  # print("Repository [", repo_name, "] didn't exist, fetching...")
+
+  print("[cc_system_package] **", reponame, "** configuring...")
 
   # Set modname
   if 'modname' not in kwargs:
     kwargs['modname'] = name
   cc_system_package_configure(name=reponame, **kwargs)
   native.bind(name=name, actual="@local_{name}//:lib".format(name=name))
+
+  print("[cc_system_package] **", reponame, "** configured")
 
