@@ -59,19 +59,15 @@ install:
   - . .github/travis/install.sh
   - echo $PATH
   # configure python
-  - cat .argcv.env.rc.template > .argcv.env.rc
-  - ./configure
   - bazel fetch //...
 
 script:
   # build by stage for cache
-  - bazel build //examples/cxx/grpc/...
-  - bazel build //examples/cxx:hello_world
   - bazel build //...
-  - bazel build //external:nasm
+  # - bazel build //external:nasm
   # test if there is any library missing
-  - bazel run //examples/c/libxml2:gjobread $(pwd)/examples/c/libxml2/gjobs.xml
-  - bazel run //examples/cxx/libxml2:gjobread $(pwd)/examples/c/libxml2/gjobs.xml
+  # - bazel run //examples/c/libxml2:gjobread $(pwd)/examples/c/libxml2/gjobs.xml
+  # - bazel run //examples/cxx/libxml2:gjobread $(pwd)/examples/c/libxml2/gjobs.xml
   # - bazel test --genrule_strategy=standalone --spawn_strategy=standalone  //...
   - bazel test  --test_output=errors //...
 
