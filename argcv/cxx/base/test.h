@@ -1,12 +1,12 @@
 // Copyright 2019 Yu Jing
-#ifndef ARGCV_CXX_TEST_GTEST_EXT_H_
-#define ARGCV_CXX_TEST_GTEST_EXT_H_
-
-#include "gtest/gtest.h"
+#ifndef ARGCV_CXX_BASE_TEST_H_
+#define ARGCV_CXX_BASE_TEST_H_
 
 #include <setjmp.h>
 #include <signal.h>
 #include <unistd.h>
+
+#include "gtest/gtest.h"
 
 static jmp_buf jmp_env;
 
@@ -27,4 +27,6 @@ static void catch_alarm(int sig) { longjmp(jmp_env, 1); }
     }                                                               \
   }
 
-#endif  // ARGCV_CXX_TEST_GTEST_EXT_H_
+void InitTestGoogleLogging();
+
+#endif  // ARGCV_CXX_BASE_TEST_H_

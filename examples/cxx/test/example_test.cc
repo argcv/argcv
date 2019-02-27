@@ -5,6 +5,8 @@
 
 #include <map>
 
+#include "argcv/cxx/base/test.h"
+#include "glog/logging.h"
 #include "gtest/gtest.h"
 
 TEST(FactorialTest, First) { EXPECT_EQ(1, 1); }
@@ -22,12 +24,12 @@ class ExampleOfTestFTest : public testing::Test {
     Agent(ExampleOfTestFTest &m_o, int m_k) : o_(m_o), k_(m_k) {}
 
     operator int() const {
-      printf("ExampleOfTestFTest::Agent::get : %d <- %d\n", k_, o_.get(k_));
+      LOG(INFO) << "ExampleOfTestFTest::Agent::get : " << k_ << "<-" << o_.get(k_);
       return o_.get(k_);
     }
 
     void operator=(int v) {
-      printf("ExampleOfTestFTest::Agent::set : %d -> %d\n", k_, v);
+      LOG(INFO) << "ExampleOfTestFTest::Agent::set : " << k_ << "->" << v;
       o_.set(k_, v);
     }
 
@@ -48,16 +50,18 @@ class ExampleOfTestFTest : public testing::Test {
   }
 
   virtual void SetUp() {
-    printf("ExampleOfTestFTest::SetUp start\n");
+    InitTestGoogleLogging();
+
+    LOG(INFO) << "ExampleOfTestFTest::SetUp start";
     (*this)[1] = 2;
     (*this)[2] = 3;
     (*this)[3] = 4;
-    printf("ExampleOfTestFTest::SetUp end\n");
+    LOG(INFO) << "ExampleOfTestFTest::SetUp end";
   }
 
   virtual void TearDown() {
-    printf("ExampleOfTestFTest::TearDown start\n");
-    printf("ExampleOfTestFTest::TearDown end\n");
+    LOG(INFO) << "ExampleOfTestFTest::TearDown start";
+    LOG(INFO) << "ExampleOfTestFTest::TearDown end";
   }
 
   Agent operator[](int k) { return Agent(*this, k); }

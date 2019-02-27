@@ -18,13 +18,13 @@ def argcv_infra_workspace(repo_name):
   # //external:gtest
   native.bind(
       name = "gtest",
-      actual = "@gmock_archive//:gtest",
+      actual = "@com_github_google_googletest//:gtest",
   )
 
   # //external:gtest_main
   native.bind(
       name = "gtest_main",
-      actual = "@gmock_archive//:gtest_main",
+      actual = "@com_github_google_googletest//:gtest_main",
   )
 
   native.bind(
@@ -70,7 +70,7 @@ def argcv_infra_workspace(repo_name):
   )
 
   arq(
-      name = "gmock_archive",
+      name = "com_github_google_googletest",
       urls = [
           "http://bazel-mirror.storage.googleapis.com/github.com/google/googletest/archive/release-1.8.0.zip",
           "https://github.com/google/googletest/archive/release-1.8.0.zip",

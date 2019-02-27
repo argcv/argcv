@@ -17,6 +17,7 @@ cc_test(
         # ".",
     ],
     deps = [
+        "//argcv:test",
         "//external:gtest_main",
     ],
 )
@@ -28,6 +29,7 @@ cc_test(
         "**/*_bench.h",
     ]),
     deps = [
+        "//argcv:argcv_test",
         "//external:benchmark_main",
     ],
 )
