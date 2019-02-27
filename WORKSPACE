@@ -17,9 +17,8 @@ workspace(name = "com_github_argcv_argcv")
 # closure_repositories()
 
 load("//tools:version.bzl", "check_version")
-load("//third_party:workspace.bzl", "argcv_workspace")
+load("//argcv:argcv.bzl", "argcv_repositories")
 
 check_version("0.12.0")
-
-argcv_workspace(repo_name="com_github_argcv_argcv")
+argcv_repositories()
 
