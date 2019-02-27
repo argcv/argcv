@@ -1,5 +1,5 @@
 // Copyright 2019 Yu Jing
-#include "argcv/cxx/base/atomic.h"
+#include "argcv/cxx/base/types.h"
 
 #include <atomic>
 #include <thread>  // NOLINT build/c++11
@@ -15,7 +15,7 @@ void do_work(atomic<int> *data) {
   data->fetch_add(1, std::memory_order_relaxed);
 }
 
-TEST(Atomic, Atomic) {
+TEST(Types, Atomic) {
   InitTestGoogleLogging();
   atomic<int> data(0);
 
@@ -33,4 +33,6 @@ TEST(Atomic, Atomic) {
   LOG(INFO) << "Result:" << data;
   EXPECT_EQ(data, 5);
 }
+
+
 }  // namespace argcv

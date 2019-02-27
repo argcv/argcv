@@ -2,6 +2,6 @@
 #ifndef ARGCV_CXX_BASE_BASE_H_
 #define ARGCV_CXX_BASE_BASE_H_
 
-#include "argcv/base/atomic.h"
+#include "argcv/cxx/base/types.h"
 
 #endif  // ARGCV_CXX_BASE_BASE_H_
