@@ -3,9 +3,8 @@
 # How to prepare rules: https://bazel.build/versions/master/docs/skylark/cookbook.html
 load("//tools/build_rules/config:system.bzl", "cc_system_package")
 load("//tools/build_rules:arq.bzl", "arq")
-load("//third_party:infra.bzl", "argcv_infra_workspace")
+load("//third_party:infra.bzl", "argcv_infra_repositories")
 
 def argcv_repositories(repo_name="com_github_argcv_argcv"):
-  print("argcv_workspace working...")
-  argcv_infra_workspace(repo_name)
-
+  print("argcv_repositories working...")
+  argcv_infra_repositories(repo_name)

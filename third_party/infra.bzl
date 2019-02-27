@@ -2,8 +2,8 @@
 
 load("//tools/build_rules:arq.bzl", "arq", "clean_dep")
 
-def argcv_infra_workspace(repo_name):
-  print("argcv_infra_workspace working...")
+def argcv_infra_repositories(repo_name):
+  print("argcv_infra_repositories working...")
   
   native.bind(
     name = "gflags",
