@@ -48,4 +48,3 @@ cc_test(
         "//external:glog",
     ],
 )
-
