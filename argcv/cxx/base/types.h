@@ -14,6 +14,10 @@
 #include <unordered_set>
 #include <vector>
 
+/*! \brief Type definitions
+
+    Some predefined types to make code shorter & friendly
+*/
 namespace argcv {
 
 typedef int64_t i64t;
@@ -31,8 +35,9 @@ typedef double f64t;
 typedef float f32t;
 
 // typedef std::atomic<T> as atomic<T>
-template <typename T>
-using atomic = std::atomic<T>;
+// template <typename T>
+// using atomic = std::atomic<T>;
+using std::atomic;
 using std::deque;
 using std::map;
 using std::priority_queue;

@@ -37,14 +37,23 @@ def argcv_infra_repositories(repo_name):
     actual = "@com_github_google_benchmark//:benchmark_main",
   )
 
+  # arq(
+  #     name = "com_github_gflags_gflags",
+  #     urls = [
+  #         "https://github.com/gflags/gflags/archive/v2.2.0.zip",
+  #     ],
+  #     sha256 = "99f9e8b63ea53e4b23f0fd0f68a6f1e397d5512be36716c17cc75966a90f0d57",
+  #     strip_prefix = "gflags-2.2.0",
+  #     build_file = clean_dep("//third_party:gflags.BUILD"), # Use Customized Build File
+  #     repository = repo_name,
+  # )
   arq(
       name = "com_github_gflags_gflags",
       urls = [
-          "https://github.com/gflags/gflags/archive/v2.2.0.zip",
+          "https://github.com/gflags/gflags/archive/v2.2.2.zip",
       ],
-      sha256 = "99f9e8b63ea53e4b23f0fd0f68a6f1e397d5512be36716c17cc75966a90f0d57",
-      strip_prefix = "gflags-2.2.0",
-      build_file = clean_dep("//third_party:gflags.BUILD"), # Use Customized Build File
+      sha256 = "19713a36c9f32b33df59d1c79b4958434cb005b5b47dc5400a7a4b078111d9b5",
+      strip_prefix = "gflags-2.2.2",
       repository = repo_name,
   )
 

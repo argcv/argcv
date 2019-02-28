@@ -1,7 +1,9 @@
 // Copyright 2019 Yu Jing
-#define STRIP_FLAG_HELP 1  // this must go before the #include!
 
-// ref: https://gflags.github.io/gflags/#bazel
+//! this must go before the #include!
+#define STRIP_FLAG_HELP \
+  1  //!< see: https://gflags.github.io/gflags/#misc <br/>
+     //!< by the way, for doc blocks: http://bit.ly/2UjnmBT
 #include <iostream>
 #include <string>
 #include <vector>
@@ -19,17 +21,24 @@ DEFINE_string(languages, "english,french,german",
 DEFINE_bool(consider_made_up_languages, false, "Consider Made Up Languages");
 DEFINE_bool(h, false, "Show help");
 
-// DEFINE_bool: boolean
-// DEFINE_int32: 32-bit integer
-// DEFINE_int64: 64-bit integer
-// DEFINE_uint64: unsigned 64-bit integer
-// DEFINE_double: double
-// DEFINE_string: C++ string
-
-// args:
-// --nobig-menu --languages="english,french,german,chinese"
-// --big-menu=false
-//
+/**
+ * \brief A simple example to pass parameters into the code. <br/>
+ *        e.g. `bazel run //examples/cxx/gflags:hello_gflags --nobig-menu
+ * --languages="english,french,german,chinese"`
+ *
+ * + `DEFINE_int32`: 32-bit integer
+ * + `DEFINE_int64`: 64-bit integer
+ * + `DEFINE_uint32`: unsigned 32-bit integer
+ * + `DEFINE_uint64`: unsigned 64-bit integer
+ * + `DEFINE_double`: double
+ * + `DEFINE_string`: C++ string
+ *
+ * options examples:
+ *
+ *  + --nobig-menu
+ *  + --big-menu=false
+ *  + --languages="english,french,german,chinese"
+ */
 int main(int argc, char* argv[]) {
   // glogs
   google::InitGoogleLogging(argv[0]);

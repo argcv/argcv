@@ -15,7 +15,7 @@ TEST(Types, Atomic) {
   auto incr = [](atomic<int>* data) {
     data->fetch_add(1, std::memory_order_relaxed);
   };
-  
+
   InitTestGoogleLogging();
   atomic<int> data(0);
 

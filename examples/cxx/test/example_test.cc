@@ -24,7 +24,8 @@ class ExampleOfTestFTest : public testing::Test {
     Agent(ExampleOfTestFTest &m_o, int m_k) : o_(m_o), k_(m_k) {}
 
     operator int() const {
-      LOG(INFO) << "ExampleOfTestFTest::Agent::get : " << k_ << "<-" << o_.get(k_);
+      LOG(INFO) << "ExampleOfTestFTest::Agent::get : " << k_ << "<-"
+                << o_.get(k_);
       return o_.get(k_);
     }
 

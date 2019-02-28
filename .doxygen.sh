@@ -10,6 +10,8 @@ DOXYGEN_VER=doxygen-1.8.15
 DOXYGEN_TAR=${DOXYGEN_VER}.linux.bin.tar.gz
 DOXYGEN_URL="http://doxygen.nl/files/${DOXYGEN_TAR}"
 
+DOXYFILE_PATH=tools/docs/Doxyfile
+
 skip() {
 	echo "$@" 1>&2
 	echo "Exiting..." 1>&2
@@ -22,6 +24,10 @@ abort() {
 	exit 1
 }
 
-doxygen doc/Doxyfile
+if [ ! -f $DOXYFILE_PATH ]; then
+	abort "Doxyfile not found in $DOXYFILE_PATH"
+fi
 
+rm -rf docs/html
+doxygen $DOXYFILE_PATH
 

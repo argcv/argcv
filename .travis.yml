@@ -31,6 +31,11 @@ addons:
     packages:
       - oracle-java8-installer
       - oracle-java8-set-default
+      - doxygen # see http://bit.ly/2T7EmhT for some introduction
+      - doxygen-doc
+      - doxygen-latex
+      - doxygen-gui
+      - graphviz
 
 # JDK configuration, ref: https://github.com/travis-ci/travis-ci/issues/2316
 matrix:

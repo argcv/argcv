@@ -53,7 +53,7 @@ COPY . ${ARGCV_SRC_DIR}
 WORKDIR ${ARGCV_SRC_DIR}
 
 # Setup and test environment
-RUN ./setup && bazel build //... && bazel clean
+RUN bazel build //... && bazel clean
 
 # expose 22, and start sshd in default
 EXPOSE 22
