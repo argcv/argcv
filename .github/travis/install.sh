@@ -8,7 +8,7 @@ if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
 
   BAZEL_DEB="bazel_${BAZEL_VERSION}-linux-x86_64.deb"
   # install bazel via deb pack
-  wget https://github.com/bazelbuild/bazel/releases/download/${BAZEL_VERSION}/${BAZEL_DEB}
+  wget --progress=dot:mega https://github.com/bazelbuild/bazel/releases/download/${BAZEL_VERSION}/${BAZEL_DEB}
   sudo dpkg -i ${BAZEL_DEB}
   rm -f ${BAZEL_DEB}
 
@@ -18,7 +18,7 @@ if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
 
   # download miniconda if not exists
   # [ ! -d $HOME/mc ] && wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
-  [ ! -f $HOME/mc/bin/conda ] && wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
+  [ ! -f $HOME/mc/bin/conda ] && wget --progress=dot:mega https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
   # wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
 fi
 
