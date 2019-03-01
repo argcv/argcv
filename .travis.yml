@@ -45,10 +45,10 @@ matrix:
       # Bazel does not support jdk 9 yet
       env:
         - CACHE_NAME=linux
-    # - os: osx
-    #   osx_image: xcode8.3  # Building Bazel requires JDK8.
-    #   env:
-    #     - CACHE_NAME=osx
+    - os: osx
+      osx_image: xcode8.3  # Building Bazel requires JDK8.
+      env:
+        - CACHE_NAME=osx
 
 before_install:
   # debug

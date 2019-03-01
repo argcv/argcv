@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-BAZEL_VERSION="0.18.0"
+BAZEL_VERSION="0.23.0"
 
 if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
   # update itself
