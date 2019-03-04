@@ -4,7 +4,9 @@
 load("//tools/build_rules/config:system.bzl", "cc_system_package")
 load("//tools/build_rules:arq.bzl", "arq")
 load("//third_party:infra.bzl", "argcv_infra_repositories")
+load("//third_party:vision.bzl", "argcv_vision_repositories")
 
 def argcv_repositories(repo_name="com_github_argcv_argcv"):
   print("argcv_repositories working...")
   argcv_infra_repositories(repo_name)
+  argcv_vision_repositories(repo_name)
