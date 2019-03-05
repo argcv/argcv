@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-BAZEL_VERSION="0.23.0"
+BAZEL_VERSION="0.23.1"
 
 if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
   # update itself
@@ -28,10 +28,17 @@ if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
 
   # install bazel using brew
   # md5sha1sum is for mc
-  brew install bazel md5sha1sum
-  
+  # brew install bazel md5sha1sum
+  brew install md5sha1sum
+
+  BAZEL_DARWIN_BIN="bazel-${BAZEL_VERSION}-darwin-x86_64"
+  # install bazel via deb pack
+  wget --progress=dot:mega https://github.com/bazelbuild/bazel/releases/download/${BAZEL_VERSION}/${BAZEL_DARWIN_BIN} -O bazel
+  chmod +x bazel
+  mv bazel /usr/local/bin/
+
   # c++ driver
-  brew install mongo-cxx-driver
+  # brew install mongo-cxx-driver
 
   # Error: corrupt installation: file '/home/travis/.cache/bazel/_bazel_travis/install/xxx/_embedded_binaries/client' missing. 
   # Please remove '/home/travis/.cache/bazel/_bazel_travis/install/xx' and try again.
