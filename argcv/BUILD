@@ -12,7 +12,6 @@ cc_library(
         ],
         exclude = [
             "**/*_test.cc",
-            "cxx/base/test.cc",
         ],
     ),
     hdrs = glob(
@@ -21,7 +20,6 @@ cc_library(
         ],
         exclude = [
             "**/*_test.h",
-            "cxx/base/test.h",
         ],
     ),
     deps = [
