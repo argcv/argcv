@@ -8,6 +8,7 @@ var types_8h =
     [ "i4t", "types_8h.html#a9e200566732e74a3c3810b965de17727", null ],
     [ "i64t", "types_8h.html#adb76906e20741769f2fd983a58bdd7de", null ],
     [ "i8t", "types_8h.html#a9df5481da97fbce55cdc32e8cd60ec40", null ],
+    [ "string_view", "types_8h.html#a775cf32fa3d656254b2dbc0b62dc0ea1", null ],
     [ "u16t", "types_8h.html#a5e92f13f5e7fd53f5f8b86f28b6db5c1", null ],
     [ "u32t", "types_8h.html#a74fad07c47ee1cdd25206af6235caa82", null ],
     [ "u4t", "types_8h.html#a590ff268d73d0c5edf85c3fc216419b7", null ],

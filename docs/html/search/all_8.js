@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['op_5fcomparable',['OP_COMPARABLE',['../x_2base_2macros_8h.html#a74ae2dd0741a97813dd887ec4530ccb8',1,'macros.h']]]
+  ['license_2emd',['LICENSE.md',['../_l_i_c_e_n_s_e_8md.html',1,'']]],
+  ['license',['LICENSE',['../md__l_i_c_e_n_s_e.html',1,'']]]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['main',['main',['../stb__c__lexer_8c.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;stb_c_lexer.c'],['../main_8cc.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;main.cc']]]
+  ['aborted',['Aborted',['../classargcv_1_1_status.html#afe7fc36587136da8e0c177436c830985',1,'argcv::Status']]],
+  ['alreadyexists',['AlreadyExists',['../classargcv_1_1_status.html#adde3e60c243fcdde45bbb7839890d6ec',1,'argcv::Status']]]
 ];

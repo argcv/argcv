@@ -36,5 +36,5 @@ var searchData=
   ['stb_5fc_5flex_5fuse_5fstdlib',['STB_C_LEX_USE_STDLIB',['../stb__c__lexer_8c.html#a53f3fd0bfd90580e19e69b3ed975f44f',1,'stb_c_lexer.c']]],
   ['stb_5fc_5flexer_5fdefinitions',['STB_C_LEXER_DEFINITIONS',['../stb__c__lexer_8c.html#a8b893e90431868a001769552c966731b',1,'stb_c_lexer.c']]],
   ['stb_5fc_5flexer_5fimplementation',['STB_C_LEXER_IMPLEMENTATION',['../stb__c__lexer_8c.html#a5f2bed6b57e29bb738eb6bbe482c7877',1,'stb_c_lexer.c']]],
-  ['strip_5fflag_5fhelp',['STRIP_FLAG_HELP',['../main_8cc.html#a718c759cde599602415a91b0d62e0c94',1,'main.cc']]]
+  ['strip_5fflag_5fhelp',['STRIP_FLAG_HELP',['../gflags_2main_8cc.html#a718c759cde599602415a91b0d62e0c94',1,'main.cc']]]
 ];
