@@ -4,7 +4,7 @@
 #include <atomic>
 #include <thread>  // NOLINT build/c++11
 
-#include "argcv/cxx/base/test.h"
+#include "argcv/cxx/test/test.h"
 
 #include "glog/logging.h"
 #include "gtest/gtest.h"

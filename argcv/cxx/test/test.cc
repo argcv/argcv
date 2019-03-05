@@ -1,5 +1,5 @@
 // Copyright 2019 Yu Jing
-#include "argcv/cxx/base/test.h"
+#include "argcv/cxx/test/test.h"
 
 #include <unistd.h>  // usleep microseconds
 #include <mutex>     // NOLINT(build/c++11)  std::once_flag

@@ -870,8 +870,8 @@ RECURSIVE              = YES
 # Note that relative paths are relative to the directory from which doxygen is
 # run.
 
-EXCLUDE                = argcv/cxx/base/test.h \
-                         argcv/cxx/base/test.cc
+EXCLUDE                = argcv/cxx/test/test.h \
+                         argcv/cxx/test/test.cc
 
 
 # The EXCLUDE_SYMLINKS tag can be used to select whether or not files or

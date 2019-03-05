@@ -29,25 +29,8 @@ cc_library(
     ],
 )
 
-cc_library(
-    name = "test",
-    srcs = [
-        "cxx/base/test.cc",
-    ],
-    hdrs = [
-        "cxx/base/test.h",
-    ],
-    copts = [
-        "-Wno-unused-function",
-    ],
-    deps = [
-        "//external:glog",
-        "//external:gtest_main",
-    ],
-)
-
 cc_test(
-    name = "argcv_test",
+    name = "test",
     srcs = glob([
         "**/*_test.cc",
         "**/*_test.h",
@@ -57,17 +40,17 @@ cc_test(
     ],
     deps = [
         ":argcv",
-        ":test",
+        "//argcv/cxx/test",
     ],
 )
 
-cc_binary(
-    name = "argcv.so",
-    linkshared = 1,
-    deps = [
-        ":argcv",
-    ],
-)
+# cc_binary(
+#     name = "argcv.so",
+#     linkshared = 1,
+#     deps = [
+#         ":argcv",
+#     ],
+# )
 
 # configure settings
 # based on https://github.com/tensorflow/tensorflow/blob/master/tensorflow/BUILD
