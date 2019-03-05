@@ -23,7 +23,7 @@ ENV NOTVISIBLE "in users profile"
 RUN echo "export VISIBLE=now" >> /etc/profile
 RUN echo "export JAVA_HOME=/usr/lib/jvm/java" >> /etc/profile
 
-ENV BAZEL_VERSION 0.14.1
+ENV BAZEL_VERSION 0.23.1
 
 # add bazel
 RUN wget https://github.com/bazelbuild/bazel/releases/download/${BAZEL_VERSION}/bazel-${BAZEL_VERSION}-installer-linux-x86_64.sh \
