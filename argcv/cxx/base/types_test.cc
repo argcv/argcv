@@ -16,7 +16,7 @@ TEST(Types, Atomic) {
     data->fetch_add(1, std::memory_order_relaxed);
   };
 
-  InitTestGoogleLogging();
+  InitGoogleTestLogging();
   atomic<int> data(0);
 
   std::thread th1(incr, &data);

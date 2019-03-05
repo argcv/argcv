@@ -11,7 +11,7 @@
 
 static std::once_flag glog_init;
 
-void InitTestGoogleLogging() {
+void InitGoogleTestLogging() {
   std::call_once(glog_init, []() {
     google::InitGoogleLogging("argcv-testing");
 

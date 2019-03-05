@@ -25,7 +25,7 @@ cc_library(
         ],
     ),
     deps = [
-        # "//argcv/cxx/config:config",
+        "//external:absl/strings",
     ],
 )
 

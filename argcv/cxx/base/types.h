@@ -14,6 +14,8 @@
 #include <unordered_set>
 #include <vector>
 
+#include "absl/strings/string_view.h"
+
 /*! \brief Type definitions
 
     Some predefined types to make code shorter & friendly
@@ -47,6 +49,10 @@ using std::stack;
 using std::unordered_map;
 using std::unordered_set;
 using std::vector;
+
+// This `absl::string_view` abstraction is designed to be a drop-in
+// replacement for the C++17 `std::string_view` abstraction.
+using string_view = absl::string_view;
 
 }  // namespace argcv
 

@@ -28,7 +28,7 @@ class CompariableInteger {
 };
 
 TEST(Macros, OpComparableTypeEq) {
-  InitTestGoogleLogging();
+  InitGoogleTestLogging();
 
   CompariableInteger lhs(1);
   CompariableInteger rhs_sm(0);
@@ -58,7 +58,7 @@ TEST(Macros, OpComparableTypeEq) {
 }
 
 TEST(Macros, OpComparableTypeNE) {
-  InitTestGoogleLogging();
+  InitGoogleTestLogging();
 
   CompariableInteger lhs(1);
 

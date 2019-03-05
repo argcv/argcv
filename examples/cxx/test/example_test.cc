@@ -3,7 +3,9 @@
 
 #include <cstdio>
 
+#include <chrono>
 #include <map>
+#include <thread>
 
 #include "argcv/cxx/base/test.h"
 #include "glog/logging.h"
@@ -51,7 +53,7 @@ class ExampleOfTestFTest : public testing::Test {
   }
 
   virtual void SetUp() {
-    InitTestGoogleLogging();
+    InitGoogleTestLogging();
 
     LOG(INFO) << "ExampleOfTestFTest::SetUp start";
     (*this)[1] = 2;

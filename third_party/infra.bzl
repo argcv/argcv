@@ -37,6 +37,23 @@ def argcv_infra_repositories(repo_name):
     actual = "@com_github_google_benchmark//:benchmark_main",
   )
 
+  # please see https://github.com/abseil/abseil-cpp/tree/master/absl
+  # for other packages
+  native.bind(
+    name = "absl/strings",
+    actual = "@com_google_absl//absl/strings",
+  )
+  
+  # native.bind(
+  #   name = "absl/algorithm",
+  #   actual = "@com_google_absl//absl/algorithm",
+  # )
+
+  # native.bind(
+  #   name = "absl/base",
+  #   actual = "@com_google_absl//absl/algorithm",
+  # )
+
   arq(
     name = "bazel_toolchains",
     urls = [
@@ -72,10 +89,10 @@ def argcv_infra_repositories(repo_name):
   arq(
     name = "com_github_google_benchmark",
     urls = [
-      "https://github.com/google/benchmark/archive/4c2af0788977d3bd900585528c2d08b875b2cd39.zip",
+      "https://github.com/google/benchmark/archive/d205ead299c7cddd5e1bc3478d57ad4320a4a53c.zip",
     ],
-    sha256 = "d1ab75f9e20c294246a31ff25035c0239d7367804edbf6529ae98eed1f79ddf7",
-    strip_prefix = "benchmark-4c2af0788977d3bd900585528c2d08b875b2cd39",
+    sha256 = "5ac8c2d8c4cd9751c78a28651c34fada1ea31a12e1e3f12009365c5a686312ca",
+    strip_prefix = "benchmark-d205ead299c7cddd5e1bc3478d57ad4320a4a53c",
     repository = repo_name,
   )
 
@@ -88,5 +105,15 @@ def argcv_infra_repositories(repo_name):
       sha256 = "f3ed3b58511efd272eb074a3a6d6fb79d7c2e6a0e374323d1e6bcbcc1ef141bf",
       strip_prefix = "googletest-release-1.8.0",
       build_file = clean_dep("//third_party:gmock.BUILD"),
+      repository = repo_name,
+  )
+
+  arq(
+      name = "com_google_absl",
+      urls = [
+          "https://github.com/abseil/abseil-cpp/archive/419f3184f8ebcdb23105295eadd2a569f3351eb9.zip",
+      ],
+      sha256 = "318a6e11de01dbda14e3d587e08c691dd0b7b7e2a43030cd3f02917135933acb",
+      strip_prefix = "abseil-cpp-419f3184f8ebcdb23105295eadd2a569f3351eb9",
       repository = repo_name,
   )

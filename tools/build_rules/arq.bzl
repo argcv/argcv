@@ -61,12 +61,6 @@ def _arq_impl(ctx):
     sha256, # sha256
     type, # type (e.gi. zip, jar, war, tar.gz, tgz, tar.bz2, tar.xz )
     strip_prefix) # stripPrefix
-  # ctx.download_and_extract(
-  #   ctx.attr.urls, # url
-  #   "", # output
-  #   ctx.attr.sha256, # sha256
-  #   ctx.attr.type, # type (e.gi. zip, jar, war, tar.gz, tgz, tar.bz2, tar.xz )
-  #   ctx.attr.strip_prefix) # stripPrefix
 
   # remove specified files
   if ctx.attr.delete:
@@ -87,6 +81,7 @@ def _arq_impl(ctx):
       }, # substitutions
       False) # executable
 
+# TODO(yu): add local search path
 arq_configure = repository_rule(
   attrs = {
     "urls": attr.string_list(default = []),
