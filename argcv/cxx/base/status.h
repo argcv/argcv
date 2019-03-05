@@ -30,18 +30,25 @@ namespace argcv {
   MACRO_FUNC(PermissionDenied)               \
   MACRO_FUNC(Unauthenticated)
 
+/**
+ * \brief A generic return type
+ *
+ * There are a few ways to return a Status with error message.
+ * In this project, we are supposed to create a global type, contains
+ * Successful information with error message instead of throwing a exception.
+ */
 class Status {
  public:
   Status() noexcept : state_(nullptr) {}
   ~Status() { delete[] state_; }
 
-  Status(const Status& rhs) {
+  Status(const Status& rhs) noexcept {
     state_ = (rhs.state_ == nullptr) ? nullptr : CopyState(rhs.state_);
   }
 
-  Status& operator=(const Status& rhs) {
-    // The following condition catches both aliasing (when this == &rhs),
-    // and the common case where both rhs and *this are ok.
+  Status& operator=(const Status& rhs) noexcept {
+    /// The following condition catches both aliasing (when this == &rhs),
+    /// and the common case where both rhs and *this are ok.
     if (state_ != rhs.state_) {
       delete[] state_;
       state_ = (rhs.state_ == nullptr) ? nullptr : CopyState(rhs.state_);
@@ -56,17 +63,17 @@ class Status {
 
   Status(Status&& rhs) noexcept : state_(rhs.state_) { rhs.state_ = nullptr; }
 
-  // Returns true iff the status indicates success.
-  bool ok() const { return (state_ == nullptr); }
+  /// Returns true if the status indicates success.
+  bool ok() const noexcept { return (state_ == nullptr); }
 
-  // Return status code
-  Code code() const {
+  /// Return status code
+  Code code() const noexcept {
     return (state_ == nullptr) ? kOk : static_cast<Code>(state_[4]);
   }
 
-  // Return a string representation of this status suitable for printing.
-  // Returns the string "OK" for success.
-  std::string ToString() const {
+  /// Return a string representation of this status suitable for printing.
+  /// Returns the string "OK" for success.
+  std::string ToString() const noexcept {
     if (state_ == nullptr) {
       return "OK";
     } else {
@@ -89,15 +96,20 @@ class Status {
     }
   }
 
-  // Return a success status.
-  static Status OK() { return Status(); }
+  /// Return a success status.
+  ///
+  /// usage: Status st_ok = Status::OK();
+  static Status OK() noexcept { return Status(); }
 
-#define DECLARE_ERROR_FUNC(FUNC)                   \
-  template <typename... Args>                      \
-  static Status FUNC(Args... args) {               \
-    return Status(k##FUNC, absl::StrCat(args...)); \
-  }                                                \
-  bool Is##FUNC() const { return code() == k##FUNC; }
+#define DECLARE_ERROR_FUNC(FUNC)                         \
+  /*! \brief Return a `FUNC` status with messages */     \
+  template <typename... Args>                            \
+  static Status FUNC(Args... args) noexcept {            \
+    return Status(k##FUNC, absl::StrCat(args...));       \
+  }                                                      \
+                                                         \
+  /*! \brief Returns true if the error code is `FUNC` */ \
+  bool Is##FUNC() const noexcept { return code() == k##FUNC; }
 
   DECLARE_EACH_STATUS_CODE(DECLARE_ERROR_FUNC)
 
@@ -112,7 +124,7 @@ class Status {
   const char* state_;
   const static std::map<int, std::string> code_desc_;
 
-  Status(Code code, const string_view& msg) {
+  Status(Code code, const string_view& msg) noexcept {
     assert(code != kOk);
     const uint32_t size = msg.size();
     char* result = new char[size + 5];
@@ -122,7 +134,7 @@ class Status {
     state_ = result;
   }
 
-  static const char* CopyState(const char* state) {
+  static const char* CopyState(const char* state) noexcept {
     uint32_t size;
     memcpy(&size, state, sizeof(size));
     char* result = new char[size + 5];

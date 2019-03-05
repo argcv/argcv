@@ -109,6 +109,7 @@ $(document).ready(function(){initNavTree('status_8h.html','');});
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classargcv_1_1_status.html">argcv::Status</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A generic return type.  <a href="classargcv_1_1_status.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -178,7 +179,7 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;                      \</div><div class="line">  static Status FUNC(Args... args) {               \</div><div class="line">    return Status(k##FUNC, absl::StrCat(args...)); \</div><div class="line">  }                                                \</div><div class="line">  bool Is##FUNC()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> code() == k##FUNC; }</div></div><!-- fragment -->
+<b>Value:</b><div class="fragment"><div class="line"><span class="comment">/*! \brief Return a `FUNC` status with messages */</span>     \</div><div class="line">  template &lt;<span class="keyword">typename</span>... Args&gt;                            \</div><div class="line">  static Status FUNC(Args... args) noexcept {            \</div><div class="line">    return Status(k##FUNC, absl::StrCat(args...));       \</div><div class="line">  }                                                      \</div><div class="line">                                                         \<span class="comment"></span></div><div class="line"><span class="comment">  /*! \brief Returns true if the error code is `FUNC` */</span> \</div><div class="line">  bool Is##FUNC() const noexcept { <span class="keywordflow">return</span> code() == k##FUNC; }</div></div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

@@ -1,7 +1,7 @@
 var searchData=
 [
   ['scanf_5fattribute',['SCANF_ATTRIBUTE',['../macros_8h.html#a85d26d9807454bfb4747a6bc9175c123',1,'macros.h']]],
-  ['status',['Status',['../classargcv_1_1_status.html',1,'argcv::Status'],['../classargcv_1_1_status.html#a196346ceb47f4f09f41762d982cefed8',1,'argcv::Status::Status() noexcept'],['../classargcv_1_1_status.html#a34bd3b8e1af7545aa80d013f26575fe9',1,'argcv::Status::Status(const Status &amp;rhs)'],['../classargcv_1_1_status.html#ac42ed9fb5fbb1bfba42f37d487821c0b',1,'argcv::Status::Status(Status &amp;&amp;rhs) noexcept']]],
+  ['status',['Status',['../classargcv_1_1_status.html',1,'argcv::Status'],['../classargcv_1_1_status.html#a196346ceb47f4f09f41762d982cefed8',1,'argcv::Status::Status() noexcept'],['../classargcv_1_1_status.html#a9bb8cd9b9d579de9a43e6caa4d9eb17f',1,'argcv::Status::Status(const Status &amp;rhs) noexcept'],['../classargcv_1_1_status.html#ac42ed9fb5fbb1bfba42f37d487821c0b',1,'argcv::Status::Status(Status &amp;&amp;rhs) noexcept']]],
   ['status_2eh',['status.h',['../status_8h.html',1,'']]],
   ['stb_5fc_5flex_5f0_5fis_5feof',['STB_C_LEX_0_IS_EOF',['../stb__c__lexer_8c.html#a0f542b9ad62fddebb4b498ee0e079825',1,'stb_c_lexer.c']]],
   ['stb_5fc_5flex_5fc99_5fhex_5ffloats',['STB_C_LEX_C99_HEX_FLOATS',['../stb__c__lexer_8c.html#ae9d79cc1a8a92670e79d2679665c25df',1,'stb_c_lexer.c']]],
