@@ -18,13 +18,13 @@ def argcv_infra_repositories(repo_name):
   # //external:gtest
   native.bind(
       name = "gtest",
-      actual = "@com_github_google_googletest//:gtest",
+      actual = "@com_google_googletest//:gtest",
   )
 
   # //external:gtest_main
   native.bind(
       name = "gtest_main",
-      actual = "@com_github_google_googletest//:gtest_main",
+      actual = "@com_google_googletest//:gtest_main",
   )
 
   native.bind(
@@ -37,16 +37,17 @@ def argcv_infra_repositories(repo_name):
     actual = "@com_github_google_benchmark//:benchmark_main",
   )
 
-  # arq(
-  #     name = "com_github_gflags_gflags",
-  #     urls = [
-  #         "https://github.com/gflags/gflags/archive/v2.2.0.zip",
-  #     ],
-  #     sha256 = "99f9e8b63ea53e4b23f0fd0f68a6f1e397d5512be36716c17cc75966a90f0d57",
-  #     strip_prefix = "gflags-2.2.0",
-  #     build_file = clean_dep("//third_party:gflags.BUILD"), # Use Customized Build File
-  #     repository = repo_name,
-  # )
+  arq(
+    name = "bazel_toolchains",
+    urls = [
+      "https://mirror.bazel.build/github.com/bazelbuild/bazel-toolchains/archive/bc09b995c137df042bb80a395b73d7ce6f26afbe.tar.gz",
+      "https://github.com/bazelbuild/bazel-toolchains/archive/bc09b995c137df042bb80a395b73d7ce6f26afbe.tar.gz",
+    ],
+    sha256 = "4329663fe6c523425ad4d3c989a8ac026b04e1acedeceb56aa4b190fa7f3973c",
+    strip_prefix = "bazel-toolchains-bc09b995c137df042bb80a395b73d7ce6f26afbe",
+    repository = repo_name,
+  )
+
   arq(
       name = "com_github_gflags_gflags",
       urls = [
@@ -79,7 +80,7 @@ def argcv_infra_repositories(repo_name):
   )
 
   arq(
-      name = "com_github_google_googletest",
+      name = "com_google_googletest",
       urls = [
           "http://bazel-mirror.storage.googleapis.com/github.com/google/googletest/archive/release-1.8.0.zip",
           "https://github.com/google/googletest/archive/release-1.8.0.zip",
