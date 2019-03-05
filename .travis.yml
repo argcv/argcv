@@ -68,13 +68,15 @@ install:
 
 script:
   # build by stage for cache
-  - bazel build //...
+  # - bazel build //...
+  - make
   # - bazel build //external:nasm
   # test if there is any library missing
   # - bazel run //examples/c/libxml2:gjobread $(pwd)/examples/c/libxml2/gjobs.xml
   # - bazel run //examples/cxx/libxml2:gjobread $(pwd)/examples/c/libxml2/gjobs.xml
   # - bazel test --genrule_strategy=standalone --spawn_strategy=standalone  //...
-  - bazel test  --test_output=errors //...
+  # - bazel test  --test_output=errors //...
+  - make test-all
 
 # temporary stop deploying
 # deploy:
