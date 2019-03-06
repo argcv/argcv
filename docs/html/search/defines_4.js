@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['op_5fcomparable',['OP_COMPARABLE',['../x_2base_2macros_8h.html#a74ae2dd0741a97813dd887ec4530ccb8',1,'macros.h']]]
+  ['must_5fuse_5fresult',['MUST_USE_RESULT',['../macros_8h.html#afefbce768b9d0df9c9ebc30dd6d13fed',1,'macros.h']]]
 ];

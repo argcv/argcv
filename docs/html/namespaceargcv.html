@@ -91,9 +91,11 @@ $(document).ready(function(){initNavTree('namespaceargcv.html','');});
 
 <div class="header">
   <div class="summary">
+<a href="#namespaces">Namespaces</a> &#124;
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
-<a href="#enum-members">Enumerations</a>  </div>
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">argcv Namespace Reference</div>  </div>
 </div><!--header-->
@@ -102,6 +104,11 @@ $(document).ready(function(){initNavTree('namespaceargcv.html','');});
 <p>Type definitions.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespaceargcv_1_1error"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceargcv_1_1error.html">error</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classargcv_1_1_status.html">Status</a></td></tr>
@@ -110,6 +117,8 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
+<tr class="memitem:a1c595be2b1c86c8d59ab796811c9a555"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceargcv.html#a1c595be2b1c86c8d59ab796811c9a555">ECode</a> = <a class="el" href="namespaceargcv_1_1error.html#a6f8b33bed60c971b643c3eac9167298b">error::Code</a></td></tr>
+<tr class="separator:a1c595be2b1c86c8d59ab796811c9a555"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb76906e20741769f2fd983a58bdd7de"><td class="memItemLeft" align="right" valign="top">typedef int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceargcv.html#adb76906e20741769f2fd983a58bdd7de">i64t</a></td></tr>
 <tr class="separator:adb76906e20741769f2fd983a58bdd7de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b323921564846b1d4035b64d1d38f1f"><td class="memItemLeft" align="right" valign="top">typedef int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceargcv.html#a7b323921564846b1d4035b64d1d38f1f">i32t</a></td></tr>
@@ -141,37 +150,36 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a37daffa201ac9119ed604cf49b069dbe"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceargcv.html#a37daffa201ac9119ed604cf49b069dbe">Code</a> { <br />
-&#160;&#160;<a class="el" href="namespaceargcv.html#a37daffa201ac9119ed604cf49b069dbea5088a472ac702c8d9eaaa6b9827680f5">kOk</a> = 0, 
-<a class="el" href="namespaceargcv.html#a37daffa201ac9119ed604cf49b069dbead545aa68698e2fbaf1290f4ad17da806">kCancelled</a> = 1, 
-<a class="el" href="namespaceargcv.html#a37daffa201ac9119ed604cf49b069dbea9902535f68732d187582f41b0ac39727">kUnknown</a> = 2, 
-<a class="el" href="namespaceargcv.html#a37daffa201ac9119ed604cf49b069dbea8767b891762763eda0439a34a6e2d2a6">kInvalidArgument</a> = 3, 
-<br />
-&#160;&#160;<a class="el" href="namespaceargcv.html#a37daffa201ac9119ed604cf49b069dbeafcdc9bd3925b456316f0c99ffdc041f4">kDeadlineExceeded</a> = 4, 
-<a class="el" href="namespaceargcv.html#a37daffa201ac9119ed604cf49b069dbea27451ad5f8c6a419ae9de8b8072929ce">kNotFound</a> = 5, 
-<a class="el" href="namespaceargcv.html#a37daffa201ac9119ed604cf49b069dbeac00fe8c4edda4606607b6da1242829b9">kAlreadyExists</a> = 6, 
-<a class="el" href="namespaceargcv.html#a37daffa201ac9119ed604cf49b069dbeaef6b6494bc940134af360f7b0d16bd1d">kPermissionDenied</a> = 7, 
-<br />
-&#160;&#160;<a class="el" href="namespaceargcv.html#a37daffa201ac9119ed604cf49b069dbeaa498431e0440877456bab1987c0b1eba">kUnauthenticated</a> = 16, 
-<a class="el" href="namespaceargcv.html#a37daffa201ac9119ed604cf49b069dbea4c5415cf6a834d30a2466a0911549b2d">kResourceExhausted</a> = 8, 
-<a class="el" href="namespaceargcv.html#a37daffa201ac9119ed604cf49b069dbeaa328dcd8e5e17b15d785a050c86fd55f">kFailedPrecondition</a> = 9, 
-<a class="el" href="namespaceargcv.html#a37daffa201ac9119ed604cf49b069dbeacaa28ec9a4dab05f833e8db3014085d1">kAborted</a> = 10, 
-<br />
-&#160;&#160;<a class="el" href="namespaceargcv.html#a37daffa201ac9119ed604cf49b069dbea1323b8df15f3fc857e685a171fdccc9f">kOutOfRange</a> = 11, 
-<a class="el" href="namespaceargcv.html#a37daffa201ac9119ed604cf49b069dbea91b6b87c0a2e6e1bdc20c16716fc1244">kUnimplemented</a> = 12, 
-<a class="el" href="namespaceargcv.html#a37daffa201ac9119ed604cf49b069dbeaddd9f7ea5486ce2a63a2584d528a2d0a">kInternal</a> = 13, 
-<a class="el" href="namespaceargcv.html#a37daffa201ac9119ed604cf49b069dbea1c13332b1e76114106b4d4bb8981e383">kUnavailable</a> = 14, 
-<br />
-&#160;&#160;<a class="el" href="namespaceargcv.html#a37daffa201ac9119ed604cf49b069dbeabcb9a8285b89be6e029cb4c46bfaa1ca">kDataLoss</a> = 15
-<br />
+<tr class="memitem:a03f72d87f116ef377e6faf869602c61b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceargcv.html#a03f72d87f116ef377e6faf869602c61b">SeekWhence</a> { <a class="el" href="namespaceargcv.html#a03f72d87f116ef377e6faf869602c61bad422221428dfab4730045a4b938bfb1b">kSeekStart</a> = 0, 
+<a class="el" href="namespaceargcv.html#a03f72d87f116ef377e6faf869602c61ba5b31de8d46de5ea635ff1f83f6a0b805">kSeekCurrent</a> = 1, 
+<a class="el" href="namespaceargcv.html#a03f72d87f116ef377e6faf869602c61ba87c64ac493b346b7899dac8a5eeabe31">kSeekEnd</a> = 2
  }</td></tr>
-<tr class="memdesc:a37daffa201ac9119ed604cf49b069dbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status, implemented google api: <a href="https://goo.gl/Z1je6x">https://goo.gl/Z1je6x</a>.  <a href="namespaceargcv.html#a37daffa201ac9119ed604cf49b069dbe">More...</a><br /></td></tr>
-<tr class="separator:a37daffa201ac9119ed604cf49b069dbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:a03f72d87f116ef377e6faf869602c61b"><td class="mdescLeft">&#160;</td><td class="mdescRight">seek whence values  <a href="namespaceargcv.html#a03f72d87f116ef377e6faf869602c61b">More...</a><br /></td></tr>
+<tr class="separator:a03f72d87f116ef377e6faf869602c61b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:afd344cc075c41c6d7f5d6af8424b7267"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceargcv.html#afd344cc075c41c6d7f5d6af8424b7267">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classargcv_1_1_status.html">Status</a> &amp;x)</td></tr>
+<tr class="separator:afd344cc075c41c6d7f5d6af8424b7267"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Type definitions. </p>
 <p>Some predefined types to make code shorter &amp; friendly </p>
 </div><h2 class="groupheader">Typedef Documentation</h2>
+<a id="a1c595be2b1c86c8d59ab796811c9a555"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c595be2b1c86c8d59ab796811c9a555">&#9670;&nbsp;</a></span>ECode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespaceargcv_1_1error.html#a6f8b33bed60c971b643c3eac9167298b">argcv::ECode</a> = typedef <a class="el" href="namespaceargcv_1_1error.html#a6f8b33bed60c971b643c3eac9167298b">error::Code</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ab2f3c7b33f6d9aa10e5853e07e6d59ad"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab2f3c7b33f6d9aa10e5853e07e6d59ad">&#9670;&nbsp;</a></span>f128t</h2>
 
@@ -369,38 +377,56 @@ Enumerations</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="a37daffa201ac9119ed604cf49b069dbe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a37daffa201ac9119ed604cf49b069dbe">&#9670;&nbsp;</a></span>Code</h2>
+<a id="a03f72d87f116ef377e6faf869602c61b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03f72d87f116ef377e6faf869602c61b">&#9670;&nbsp;</a></span>SeekWhence</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="namespaceargcv.html#a37daffa201ac9119ed604cf49b069dbe">argcv::Code</a></td>
+          <td class="memname">enum <a class="el" href="namespaceargcv.html#a03f72d87f116ef377e6faf869602c61b">argcv::SeekWhence</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="classargcv_1_1_status.html" title="A generic return type.">Status</a>, implemented google api: <a href="https://goo.gl/Z1je6x">https://goo.gl/Z1je6x</a>. </p>
+<p>seek whence values </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a37daffa201ac9119ed604cf49b069dbea5088a472ac702c8d9eaaa6b9827680f5"></a>kOk&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a37daffa201ac9119ed604cf49b069dbead545aa68698e2fbaf1290f4ad17da806"></a>kCancelled&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a37daffa201ac9119ed604cf49b069dbea9902535f68732d187582f41b0ac39727"></a>kUnknown&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a37daffa201ac9119ed604cf49b069dbea8767b891762763eda0439a34a6e2d2a6"></a>kInvalidArgument&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a37daffa201ac9119ed604cf49b069dbeafcdc9bd3925b456316f0c99ffdc041f4"></a>kDeadlineExceeded&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a37daffa201ac9119ed604cf49b069dbea27451ad5f8c6a419ae9de8b8072929ce"></a>kNotFound&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a37daffa201ac9119ed604cf49b069dbeac00fe8c4edda4606607b6da1242829b9"></a>kAlreadyExists&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a37daffa201ac9119ed604cf49b069dbeaef6b6494bc940134af360f7b0d16bd1d"></a>kPermissionDenied&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a37daffa201ac9119ed604cf49b069dbeaa498431e0440877456bab1987c0b1eba"></a>kUnauthenticated&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a37daffa201ac9119ed604cf49b069dbea4c5415cf6a834d30a2466a0911549b2d"></a>kResourceExhausted&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a37daffa201ac9119ed604cf49b069dbeaa328dcd8e5e17b15d785a050c86fd55f"></a>kFailedPrecondition&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a37daffa201ac9119ed604cf49b069dbeacaa28ec9a4dab05f833e8db3014085d1"></a>kAborted&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a37daffa201ac9119ed604cf49b069dbea1323b8df15f3fc857e685a171fdccc9f"></a>kOutOfRange&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a37daffa201ac9119ed604cf49b069dbea91b6b87c0a2e6e1bdc20c16716fc1244"></a>kUnimplemented&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a37daffa201ac9119ed604cf49b069dbeaddd9f7ea5486ce2a63a2584d528a2d0a"></a>kInternal&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a37daffa201ac9119ed604cf49b069dbea1c13332b1e76114106b4d4bb8981e383"></a>kUnavailable&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a37daffa201ac9119ed604cf49b069dbeabcb9a8285b89be6e029cb4c46bfaa1ca"></a>kDataLoss&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a03f72d87f116ef377e6faf869602c61bad422221428dfab4730045a4b938bfb1b"></a>kSeekStart&#160;</td><td class="fielddoc"><p>seek relative to the origin of the file </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a03f72d87f116ef377e6faf869602c61ba5b31de8d46de5ea635ff1f83f6a0b805"></a>kSeekCurrent&#160;</td><td class="fielddoc"><p>seek relative to the current offset </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a03f72d87f116ef377e6faf869602c61ba87c64ac493b346b7899dac8a5eeabe31"></a>kSeekEnd&#160;</td><td class="fielddoc"><p>seek relative to the end </p>
+</td></tr>
 </table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="afd344cc075c41c6d7f5d6af8424b7267"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd344cc075c41c6d7f5d6af8424b7267">&#9670;&nbsp;</a></span>operator&lt;&lt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream &amp; argcv::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classargcv_1_1_status.html">Status</a> &amp;&#160;</td>
+          <td class="paramname"><em>x</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

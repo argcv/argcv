@@ -10,7 +10,11 @@
 #include "argcv/cxx/base/code.h"
 #include "argcv/cxx/base/types.h"
 
+#include "glog/logging.h"
+
 namespace argcv {
+
+using ECode = error::Code;
 
 #define DECLARE_EACH_STATUS_CODE(MACRO_FUNC) \
   MACRO_FUNC(Cancelled)                      \
@@ -46,6 +50,7 @@ class Status {
     state_ = (rhs.state_ == nullptr) ? nullptr : CopyState(rhs.state_);
   }
 
+  /// copy
   Status& operator=(const Status& rhs) noexcept {
     /// The following condition catches both aliasing (when this == &rhs),
     /// and the common case where both rhs and *this are ok.
@@ -56,6 +61,7 @@ class Status {
     return *this;
   }
 
+  /// swap
   Status& operator=(Status&& rhs) noexcept {
     std::swap(state_, rhs.state_);
     return *this;
@@ -67,9 +73,31 @@ class Status {
   bool ok() const noexcept { return (state_ == nullptr); }
 
   /// Return status code
-  Code code() const noexcept {
-    return (state_ == nullptr) ? kOk : static_cast<Code>(state_[4]);
+  ECode code() const noexcept {
+    return (state_ == nullptr) ? ::argcv::error::kOk
+                               : static_cast<ECode>(state_[4]);
   }
+
+  /// Return error message
+  const string_view error_message() const noexcept {
+    if (ok()) {
+      return empty_string();
+    } else {
+      // std::string result;
+      // uint32_t length;
+      // memcpy(&length, state_, sizeof(length));
+      // result.append(state_ + 5, length);
+      // return result;
+      uint32_t length;
+      memcpy(&length, state_, sizeof(length));
+      return string_view(state_ + 5, length);
+    }
+  }
+
+  bool operator==(const Status& x) const noexcept {
+    return (this->state_ == x.state_) || (ToString() == x.ToString());
+  }
+  bool operator!=(const Status& x) const noexcept { return !(*this == x); }
 
   /// Return a string representation of this status suitable for printing.
   /// Returns the string "OK" for success.
@@ -96,20 +124,36 @@ class Status {
     }
   }
 
+  template <typename... Args>
+  Status& AppendToMessage(Args... args) noexcept {
+    ECode new_code = code();
+    if (ok()) {
+      new_code = ::argcv::error::kUnknown;
+    }
+    std::string msg = absl::StrCat(error_message(), "\n\t", args...);
+    const uint32_t size = msg.size();
+    char* result = new char[size + 5];
+    memcpy(result, &size, sizeof(size));
+    result[4] = static_cast<char>(new_code);
+    memcpy(result + 5, msg.data(), size);
+    std::swap(state_, result);
+    return *this;
+  }
+
   /// Return a success status.
   ///
   /// usage: Status st_ok = Status::OK();
   static Status OK() noexcept { return Status(); }
 
-#define DECLARE_ERROR_FUNC(FUNC)                         \
-  /*! \brief Return a `FUNC` status with messages */     \
-  template <typename... Args>                            \
-  static Status FUNC(Args... args) noexcept {            \
-    return Status(k##FUNC, absl::StrCat(args...));       \
-  }                                                      \
-                                                         \
-  /*! \brief Returns true if the error code is `FUNC` */ \
-  bool Is##FUNC() const noexcept { return code() == k##FUNC; }
+#define DECLARE_ERROR_FUNC(FUNC)                                   \
+  /*! \brief Return a `FUNC` status with messages */               \
+  template <typename... Args>                                      \
+  static Status FUNC(Args... args) noexcept {                      \
+    return Status(::argcv::error::k##FUNC, absl::StrCat(args...)); \
+  }                                                                \
+                                                                   \
+  /*! \brief Returns true if the error code is `FUNC` */           \
+  bool Is##FUNC() const noexcept { return code() == ::argcv::error::k##FUNC; }
 
   DECLARE_EACH_STATUS_CODE(DECLARE_ERROR_FUNC)
 
@@ -121,11 +165,13 @@ class Status {
   //    state_[0..3] == length of message
   //    state_[4]    == code
   //    state_[5..]  == message
-  const char* state_;
+  char* state_;
+  // const char* state_;
   const static std::map<int, std::string> code_desc_;
+  const static std::string& empty_string();
 
-  Status(Code code, const string_view& msg) noexcept {
-    assert(code != kOk);
+  Status(ECode code, const string_view& msg) noexcept {
+    assert(code != ::argcv::error::kOk);
     const uint32_t size = msg.size();
     char* result = new char[size + 5];
     memcpy(result, &size, sizeof(size));
@@ -134,7 +180,7 @@ class Status {
     state_ = result;
   }
 
-  static const char* CopyState(const char* state) noexcept {
+  static char* CopyState(const char* state) noexcept {
     uint32_t size;
     memcpy(&size, state, sizeof(size));
     char* result = new char[size + 5];
@@ -144,10 +190,25 @@ class Status {
 };
 
 const std::map<int, std::string> Status::code_desc_{
-#define DECLARE_CODE_DESC(ELEM) {k##ELEM, #ELEM},
+#define DECLARE_CODE_DESC(ELEM) {::argcv::error::k##ELEM, #ELEM},
     DECLARE_EACH_STATUS_CODE(DECLARE_CODE_DESC)
 #undef DECLARE_CODE_DESC
 };
+
+std::ostream& operator<<(std::ostream& os, const Status& x);
+
+// is it required?
+// typedef std::function<void(const Status&)> StatusCallback;
+
+/// see: http://rpg.ifi.uzh.ch/docs/glog.html#check
+#define CHECK_OK(val) CHECK_EQ(::argcv::Status::OK(), (val))
+
+// template <typename T>
+// class Result {
+//  public:
+
+//  private:
+// };
 
 #undef DECLARE_EACH_STATUS_CODE
 

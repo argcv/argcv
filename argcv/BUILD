@@ -24,6 +24,7 @@ cc_library(
     ),
     deps = [
         "//external:absl/strings",
+        "//external:glog",
     ],
 )
 

@@ -29,6 +29,7 @@ var NAVTREE =
     [ "FAQ", "md_docs_md_faq.html", null ],
     [ "Namespace Members", "namespacemembers.html", [
       [ "All", "namespacemembers.html", null ],
+      [ "Functions", "namespacemembers_func.html", null ],
       [ "Typedefs", "namespacemembers_type.html", null ],
       [ "Enumerations", "namespacemembers_enum.html", null ],
       [ "Enumerator", "namespacemembers_eval.html", null ]

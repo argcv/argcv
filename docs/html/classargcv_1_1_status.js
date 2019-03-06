@@ -4,7 +4,9 @@ var classargcv_1_1_status =
     [ "~Status", "classargcv_1_1_status.html#a587e1712ba651140fd6c6bb1f7a3fc92", null ],
     [ "Status", "classargcv_1_1_status.html#a9bb8cd9b9d579de9a43e6caa4d9eb17f", null ],
     [ "Status", "classargcv_1_1_status.html#ac42ed9fb5fbb1bfba42f37d487821c0b", null ],
-    [ "code", "classargcv_1_1_status.html#a58c1380158a28221a96b2e0fa0356b23", null ],
+    [ "AppendToMessage", "classargcv_1_1_status.html#ac1c1e154e8d34f6249edaaba88044df0", null ],
+    [ "code", "classargcv_1_1_status.html#af15d3fcb136fcdc3f1c74baa099aaca6", null ],
+    [ "error_message", "classargcv_1_1_status.html#a3815237f5b27b9e2410baae281bcb207", null ],
     [ "IsAborted", "classargcv_1_1_status.html#a2d7765dff943ee3c7d3ba510c14eafa9", null ],
     [ "IsAlreadyExists", "classargcv_1_1_status.html#ae7d208c59f13ae9b5a2a9d5dc661b3ef", null ],
     [ "IsCancelled", "classargcv_1_1_status.html#af95432f1b0efc884070a087957382956", null ],
@@ -22,7 +24,9 @@ var classargcv_1_1_status =
     [ "IsUnimplemented", "classargcv_1_1_status.html#acd1ccf21e21f8eaf5195e8438e1cffd9", null ],
     [ "IsUnknown", "classargcv_1_1_status.html#a7d4a751122854f2a92021aa40fd83a38", null ],
     [ "ok", "classargcv_1_1_status.html#a1b217540bd120076632ce6dfe37b1408", null ],
+    [ "operator!=", "classargcv_1_1_status.html#a6a3a740c9e1f4d5426c29b8b1f5fdec5", null ],
     [ "operator=", "classargcv_1_1_status.html#acd625839d81a06421426ae89ae19c3c5", null ],
     [ "operator=", "classargcv_1_1_status.html#a95fd2b391e7dc57a2718b1974d3404b4", null ],
+    [ "operator==", "classargcv_1_1_status.html#a9319fc74e21f2406adf2aae24adad484", null ],
     [ "ToString", "classargcv_1_1_status.html#a9ec990ff3edf5d81e98675c3a27f6992", null ]
 ];

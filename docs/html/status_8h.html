@@ -93,7 +93,9 @@ $(document).ready(function(){initNavTree('status_8h.html','');});
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#define-members">Macros</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">status.h File Reference</div>  </div>
 </div><!--header-->
@@ -103,6 +105,7 @@ $(document).ready(function(){initNavTree('status_8h.html','');});
 <code>#include &quot;absl/strings/str_cat.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="code_8h_source.html">argcv/cxx/base/code.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="types_8h_source.html">argcv/cxx/base/types.h</a>&quot;</code><br />
+<code>#include &quot;glog/logging.h&quot;</code><br />
 </div>
 <p><a href="status_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -124,10 +127,43 @@ Macros</h2></td></tr>
 <tr class="separator:aa6943c6d3fbfd044bb703bf839e78ae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5eec9a785ff24c734138838b6b7c5e9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="status_8h.html#aa5eec9a785ff24c734138838b6b7c5e9">DECLARE_ERROR_FUNC</a>(FUNC)</td></tr>
 <tr class="separator:aa5eec9a785ff24c734138838b6b7c5e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a757e2a7bab4d0c4f4bb1487c1c288b1e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="status_8h.html#a757e2a7bab4d0c4f4bb1487c1c288b1e">DECLARE_CODE_DESC</a>(ELEM)&#160;&#160;&#160;{k##ELEM, #ELEM},</td></tr>
+<tr class="memitem:a757e2a7bab4d0c4f4bb1487c1c288b1e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="status_8h.html#a757e2a7bab4d0c4f4bb1487c1c288b1e">DECLARE_CODE_DESC</a>(ELEM)&#160;&#160;&#160;{::argcv::error::k##ELEM, #ELEM},</td></tr>
 <tr class="separator:a757e2a7bab4d0c4f4bb1487c1c288b1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3fa3434db163f29d6e6aa9d1996ce62"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="status_8h.html#ad3fa3434db163f29d6e6aa9d1996ce62">CHECK_OK</a>(val)&#160;&#160;&#160;CHECK_EQ(::<a class="el" href="classargcv_1_1_status.html#aaf98553b21cdffc185c9f8278a8e5574">argcv::Status::OK</a>(), (val))</td></tr>
+<tr class="memdesc:ad3fa3434db163f29d6e6aa9d1996ce62"><td class="mdescLeft">&#160;</td><td class="mdescRight">see: <a href="http://rpg.ifi.uzh.ch/docs/glog.html#check">http://rpg.ifi.uzh.ch/docs/glog.html#check</a>  <a href="#ad3fa3434db163f29d6e6aa9d1996ce62">More...</a><br /></td></tr>
+<tr class="separator:ad3fa3434db163f29d6e6aa9d1996ce62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a1c595be2b1c86c8d59ab796811c9a555"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceargcv.html#a1c595be2b1c86c8d59ab796811c9a555">argcv::ECode</a> = error::Code</td></tr>
+<tr class="separator:a1c595be2b1c86c8d59ab796811c9a555"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:afd344cc075c41c6d7f5d6af8424b7267"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceargcv.html#afd344cc075c41c6d7f5d6af8424b7267">argcv::operator&lt;&lt;</a> (std::ostream &amp;os, const Status &amp;x)</td></tr>
+<tr class="separator:afd344cc075c41c6d7f5d6af8424b7267"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ad3fa3434db163f29d6e6aa9d1996ce62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3fa3434db163f29d6e6aa9d1996ce62">&#9670;&nbsp;</a></span>CHECK_OK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CHECK_OK</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">val</td><td>)</td>
+          <td>&#160;&#160;&#160;CHECK_EQ(::<a class="el" href="classargcv_1_1_status.html#aaf98553b21cdffc185c9f8278a8e5574">argcv::Status::OK</a>(), (val))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>see: <a href="http://rpg.ifi.uzh.ch/docs/glog.html#check">http://rpg.ifi.uzh.ch/docs/glog.html#check</a> </p>
+
+</div>
+</div>
 <a id="a757e2a7bab4d0c4f4bb1487c1c288b1e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a757e2a7bab4d0c4f4bb1487c1c288b1e">&#9670;&nbsp;</a></span>DECLARE_CODE_DESC</h2>
 
@@ -139,7 +175,7 @@ Macros</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">ELEM</td><td>)</td>
-          <td>&#160;&#160;&#160;{k##ELEM, #ELEM},</td>
+          <td>&#160;&#160;&#160;{::argcv::error::k##ELEM, #ELEM},</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -179,7 +215,7 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="comment">/*! \brief Return a `FUNC` status with messages */</span>     \</div><div class="line">  template &lt;<span class="keyword">typename</span>... Args&gt;                            \</div><div class="line">  static Status FUNC(Args... args) noexcept {            \</div><div class="line">    return Status(k##FUNC, absl::StrCat(args...));       \</div><div class="line">  }                                                      \</div><div class="line">                                                         \<span class="comment"></span></div><div class="line"><span class="comment">  /*! \brief Returns true if the error code is `FUNC` */</span> \</div><div class="line">  bool Is##FUNC() const noexcept { <span class="keywordflow">return</span> code() == k##FUNC; }</div></div><!-- fragment -->
+<b>Value:</b><div class="fragment"><div class="line"><span class="comment">/*! \brief Return a `FUNC` status with messages */</span>               \</div><div class="line">  template &lt;<span class="keyword">typename</span>... Args&gt;                                      \</div><div class="line">  static Status FUNC(Args... args) noexcept {                      \</div><div class="line">    return Status(::argcv::error::k##FUNC, absl::StrCat(args...)); \</div><div class="line">  }                                                                \</div><div class="line">                                                                   \<span class="comment"></span></div><div class="line"><span class="comment">  /*! \brief Returns true if the error code is `FUNC` */</span>           \</div><div class="line">  bool Is##FUNC() const noexcept { <span class="keywordflow">return</span> code() == ::argcv::error::k##FUNC; }</div></div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

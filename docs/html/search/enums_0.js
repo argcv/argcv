@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['code',['Code',['../namespaceargcv.html#a37daffa201ac9119ed604cf49b069dbe',1,'argcv']]]
+  ['code',['Code',['../namespaceargcv_1_1error.html#a6f8b33bed60c971b643c3eac9167298b',1,'argcv::error']]]
 ];

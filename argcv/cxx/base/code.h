@@ -4,6 +4,7 @@
 
 namespace argcv {
 
+namespace error {
 /**
  * \brief Status, implemented google api: https://goo.gl/Z1je6x
  */
@@ -161,6 +162,8 @@ enum Code {
   // HTTP Mapping: 500 Internal Server Error
   kDataLoss = 15
 };
+
+}  // namespace error
 
 }  // namespace argcv
 
