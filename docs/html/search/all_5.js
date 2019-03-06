@@ -4,6 +4,7 @@ var searchData=
   ['fallthrough_5fintended',['FALLTHROUGH_INTENDED',['../x_2base_2macros_8h.html#adbc889df74eb0efe177d0dcde1541a24',1,'macros.h']]],
   ['faq_2emd',['faq.md',['../faq_8md.html',1,'']]],
   ['file',['File',['../classargcv_1_1_file.html',1,'argcv']]],
+  ['file_2eh',['file.h',['../file_8h.html',1,'']]],
   ['fileinfo',['FileInfo',['../classargcv_1_1_file_info.html',1,'argcv']]],
   ['filemode',['FileMode',['../namespaceargcv.html#af84e96356d9862a82439efe81fdf2e39',1,'argcv']]],
   ['float128',['float128',['../namespaceargcv.html#a1475e85043035197e5fb737adc44d2b9',1,'argcv']]],

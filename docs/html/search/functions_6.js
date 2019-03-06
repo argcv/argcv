@@ -14,6 +14,7 @@ var searchData=
   ['isnotfound',['IsNotFound',['../classargcv_1_1_status.html#a4fe7f013feb7392aa0b296f09f5f666b',1,'argcv::Status']]],
   ['isoutofrange',['IsOutOfRange',['../classargcv_1_1_status.html#ab726d824c9ea7e536dd2ace112714993',1,'argcv::Status']]],
   ['ispermissiondenied',['IsPermissionDenied',['../classargcv_1_1_status.html#aa5dcf1bf5d0e516a8f05403b8331eec1',1,'argcv::Status']]],
+  ['isregular',['IsRegular',['../classargcv_1_1_file_info.html#ac989cf9ff8926c1d88d5f232c0616ef5',1,'argcv::FileInfo']]],
   ['isresourceexhausted',['IsResourceExhausted',['../classargcv_1_1_status.html#a915fa3c9848ea4fd82c29337514e2c39',1,'argcv::Status']]],
   ['isunauthenticated',['IsUnauthenticated',['../classargcv_1_1_status.html#a88ff242274bcd05a0fa1f60bdfdfcc40',1,'argcv::Status']]],
   ['isunavailable',['IsUnavailable',['../classargcv_1_1_status.html#a632d8cd0b2cdbe5fc542d8259c6b2e18',1,'argcv::Status']]],

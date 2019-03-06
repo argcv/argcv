@@ -16,7 +16,7 @@ namespace argcv {
 ///
 /// See: https://golang.org/pkg/os/#FileMode
 enum FileMode : uint32 {
-  kModeDir = static_cast<uint32>(0x1) << (32 - 1),      //!< d: is a directory
+  kModeDir = static_cast<uint32>(1) << (32 - 1),        //!< d: is a directory
   kModeAppend = static_cast<uint32>(1) << (32 - 2),     //!< a: append-only
   kModeExclusive = static_cast<uint32>(1) << (32 - 3),  //!< l: exclusive use
 
@@ -47,7 +47,13 @@ enum FileMode : uint32 {
 /// A FileInfo describes a file and is returned by Stat and Lstat.
 class FileInfo {
  public:
-  bool IsDir() const noexcept { return kModeDir & mode_; }
+  bool IsDir() const noexcept { return mode_ & kModeDir; }
+
+  bool IsRegular() const noexcept { return 0 == (mode_ & kModeType); }
+
+  FileMode Perm() const noexcept {
+    return static_cast<FileMode>(mode_ & kModePerm);
+  }
 
   SETTER_GETTER(FileInfo, string, name)
   SETTER_GETTER(FileInfo, size_t, size)
