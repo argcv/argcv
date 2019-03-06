@@ -7,6 +7,7 @@ var searchData=
   ['iscancelled',['IsCancelled',['../classargcv_1_1_status.html#af95432f1b0efc884070a087957382956',1,'argcv::Status']]],
   ['isdataloss',['IsDataLoss',['../classargcv_1_1_status.html#afec808d9a739f8f656e89036204d1d3b',1,'argcv::Status']]],
   ['isdeadlineexceeded',['IsDeadlineExceeded',['../classargcv_1_1_status.html#a1ef6494840c66ab7cf9342ecbe7b8c79',1,'argcv::Status']]],
+  ['isdir',['IsDir',['../classargcv_1_1_file_info.html#ac8a5eeebac4f8a2056140dc484fc2ae7',1,'argcv::FileInfo']]],
   ['isfailedprecondition',['IsFailedPrecondition',['../classargcv_1_1_status.html#af26695653994aa00611472f6940c8839',1,'argcv::Status']]],
   ['isinternal',['IsInternal',['../classargcv_1_1_status.html#a60054099daa6a2bcf8ba9caa192804d0',1,'argcv::Status']]],
   ['isinvalidargument',['IsInvalidArgument',['../classargcv_1_1_status.html#af61479bf2beab5292cc185d593d6ed31',1,'argcv::Status']]],

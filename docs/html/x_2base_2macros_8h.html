@@ -114,6 +114,8 @@ Macros</h2></td></tr>
 <tr class="separator:adbc889df74eb0efe177d0dcde1541a24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74ae2dd0741a97813dd887ec4530ccb8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x_2base_2macros_8h.html#a74ae2dd0741a97813dd887ec4530ccb8">OP_COMPARABLE</a>(TypeName)</td></tr>
 <tr class="separator:a74ae2dd0741a97813dd887ec4530ccb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f4de9d4d73e401087342c870129e596"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x_2base_2macros_8h.html#a3f4de9d4d73e401087342c870129e596">SETTER_GETTER</a>(ClassName,  TypeName,  Name)</td></tr>
+<tr class="separator:a3f4de9d4d73e401087342c870129e596"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="aad1fea22deb09279b4487665bb0b0d0e"></a>
@@ -218,6 +220,40 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+</div>
+</div>
+<a id="a3f4de9d4d73e401087342c870129e596"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f4de9d4d73e401087342c870129e596">&#9670;&nbsp;</a></span>SETTER_GETTER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SETTER_GETTER</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ClassName, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">TypeName, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Name&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">TypeName Name() const noexcept { <span class="keywordflow">return</span> Name##_; } \</div><div class="line">  ClassName &amp;Name(TypeName Name) noexcept {          \</div><div class="line">    Name##_ = Name;                                  \</div><div class="line">    return *<span class="keyword">this</span>;                                    \</div><div class="line">  }</div></div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

@@ -2,13 +2,9 @@
 #include "argcv/cxx/base/status.h"
 
 #include <ostream>
+#include <string>
 
 namespace argcv {
-
-const std::string& Status::empty_string() {
-  static std::string empty;
-  return empty;
-}
 
 std::ostream& operator<<(std::ostream& os, const Status& x) {
   os << x.ToString();

@@ -5,6 +5,8 @@
 #include <string.h>  // memcpy
 
 #include <map>
+#include <string>
+#include <utility>  // swap
 
 #include "absl/strings/str_cat.h"
 #include "argcv/cxx/base/code.h"
@@ -107,11 +109,11 @@ class Status {
     } else {
       char tmp[30];
       const char* type;
-      int icode = static_cast<int>(code());
-      auto it = code_desc_.find(icode);
-      if (it != code_desc_.end()) {
-        snprintf(tmp, sizeof(tmp), "Error %s (%d): ", it->second.c_str(),
-                 icode);
+      ECode ecode = code();
+      int icode = static_cast<int>(ecode);
+      const std::string desc = CodeDesc(ecode);
+      if (desc != empty_string()) {
+        snprintf(tmp, sizeof(tmp), "Error %s (%d): ", desc.c_str(), icode);
       } else {
         snprintf(tmp, sizeof(tmp), "Unknown Error (%d): ", icode);
       }
@@ -167,8 +169,22 @@ class Status {
   //    state_[5..]  == message
   char* state_;
   // const char* state_;
-  const static std::map<int, std::string> code_desc_;
-  const static std::string& empty_string();
+  // const static std::map<int, std::string> code_desc_;
+
+  static const std::string& empty_string() {
+    static std::string empty;
+    return empty;
+  }
+
+  static const std::string CodeDesc(ECode code) {
+    static std::map<int, std::string> descs{
+#define DECLARE_CODE_DESC(ELEM) {::argcv::error::k##ELEM, #ELEM},
+        DECLARE_EACH_STATUS_CODE(DECLARE_CODE_DESC)
+#undef DECLARE_CODE_DESC
+    };
+    auto it = descs.find(static_cast<int>(code));
+    return it != descs.end() ? it->second : empty_string();
+  }
 
   Status(ECode code, const string_view& msg) noexcept {
     assert(code != ::argcv::error::kOk);
@@ -189,11 +205,11 @@ class Status {
   }
 };
 
-const std::map<int, std::string> Status::code_desc_{
-#define DECLARE_CODE_DESC(ELEM) {::argcv::error::k##ELEM, #ELEM},
-    DECLARE_EACH_STATUS_CODE(DECLARE_CODE_DESC)
-#undef DECLARE_CODE_DESC
-};
+// const std::map<int, std::string> Status::code_desc_{
+// #define DECLARE_CODE_DESC(ELEM) {::argcv::error::k##ELEM, #ELEM},
+//     DECLARE_EACH_STATUS_CODE(DECLARE_CODE_DESC)
+// #undef DECLARE_CODE_DESC
+// };
 
 std::ostream& operator<<(std::ostream& os, const Status& x);
 
@@ -202,13 +218,6 @@ std::ostream& operator<<(std::ostream& os, const Status& x);
 
 /// see: http://rpg.ifi.uzh.ch/docs/glog.html#check
 #define CHECK_OK(val) CHECK_EQ(::argcv::Status::OK(), (val))
-
-// template <typename T>
-// class Result {
-//  public:
-
-//  private:
-// };
 
 #undef DECLARE_EACH_STATUS_CODE
 

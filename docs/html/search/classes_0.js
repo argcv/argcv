@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['status',['Status',['../classargcv_1_1_status.html',1,'argcv']]]
+  ['closer',['Closer',['../classargcv_1_1_closer.html',1,'argcv']]]
 ];

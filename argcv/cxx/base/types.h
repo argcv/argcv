@@ -6,10 +6,13 @@
 
 #include <atomic>
 #include <deque>
+#include <functional>  // std::equal_to<>
 #include <map>
-#include <queue>  // queue & priority_queue
+#include <memory>  // std::allocator<>
+#include <queue>   // queue & priority_queue
 #include <set>
 #include <stack>
+#include <string>
 #include <unordered_map>
 #include <unordered_set>
 #include <vector>
@@ -22,37 +25,64 @@
 */
 namespace argcv {
 
-typedef int64_t i64t;
-typedef int32_t i32t;
-typedef int16_t i16t;
-typedef int8_t i8t;
-typedef char i4t;
-typedef uint64_t u64t;
-typedef uint32_t u32t;
-typedef uint16_t u16t;
-typedef uint8_t u8t;
-typedef unsigned char u4t;
-typedef long double f128t;
-typedef double f64t;
-typedef float f32t;
+typedef int64_t int64;
+typedef int32_t int32;
+typedef int16_t int16;
+typedef int8_t int8;
+typedef char int4;
+typedef uint64_t uint64;
+typedef uint32_t uint32;
+typedef uint16_t uint16;
+typedef uint8_t uint8;
+typedef unsigned char uint4;
+typedef long double float128;
+typedef double float64;
+typedef float float32;
 
 // typedef std::atomic<T> as atomic<T>
-// template <typename T>
-// using atomic = std::atomic<T>;
-using std::atomic;
-using std::deque;
-using std::map;
-using std::priority_queue;
-using std::queue;
-using std::set;
-using std::stack;
-using std::unordered_map;
-using std::unordered_set;
-using std::vector;
+template <typename T>
+using atomic = std::atomic<T>;
+
+template <class T, class Allocator = std::allocator<T>>
+using deque = std::deque<T, Allocator>;
+
+template <class Key, class T, class Compare = std::less<Key>>
+using map = std::map<Key, T, Compare>;
+
+template <class T, class Container = deque<T>>
+using queue = std::queue<T, Container>;
+
+template <class Value, class Compare = std::less<Value>>
+using set = std::set<Value, Compare>;
+
+template <class Value, class Compare = std::less<Value>>
+using multiset = std::multiset<Value, Compare>;
+
+template <class T, class Container = deque<T>>
+using stack = std::stack<T, Container>;
+
+template <class Key, class T, class Hash = std::hash<Key>,
+          class Pred = std::equal_to<Key>>
+using unordered_map = std::unordered_map<Key, T, Hash, Pred>;
+
+template <class T, class Hash = std::hash<T>, class Pred = std::equal_to<T>>
+using unordered_set = std::unordered_set<T, Hash, Pred>;
+
+template <class T, class Hash = std::hash<T>, class Pred = std::equal_to<T>>
+using unordered_multiset = std::unordered_multiset<T, Hash, Pred>;
+
+template <class T>
+using vector = std::vector<T>;
+
+template <class T, class Container = vector<T>,
+          class Compare = std::less<typename Container::value_type>>
+using priority_queue = std::priority_queue<T, Container, Compare>;
 
 // This `absl::string_view` abstraction is designed to be a drop-in
 // replacement for the C++17 `std::string_view` abstraction.
 using string_view = absl::string_view;
+
+using string = std::basic_string<char>;
 
 }  // namespace argcv
 

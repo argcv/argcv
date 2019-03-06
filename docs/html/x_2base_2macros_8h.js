@@ -5,5 +5,6 @@ var x_2base_2macros_8h =
     [ "FALLTHROUGH_INTENDED", "x_2base_2macros_8h.html#adbc889df74eb0efe177d0dcde1541a24", null ],
     [ "OP_COMPARABLE", "x_2base_2macros_8h.html#a74ae2dd0741a97813dd887ec4530ccb8", null ],
     [ "PREDICT_FALSE", "x_2base_2macros_8h.html#aff70f3c8f03aae06b9011058a8da0cf0", null ],
-    [ "PREDICT_TRUE", "x_2base_2macros_8h.html#a9e276e58cb5539281d80bf7676bd73a7", null ]
+    [ "PREDICT_TRUE", "x_2base_2macros_8h.html#a9e276e58cb5539281d80bf7676bd73a7", null ],
+    [ "SETTER_GETTER", "x_2base_2macros_8h.html#a3f4de9d4d73e401087342c870129e596", null ]
 ];

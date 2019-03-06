@@ -72,4 +72,11 @@
     return this->Compare(that) >= 0;                     \
   }
 
+#define SETTER_GETTER(ClassName, TypeName, Name)     \
+  TypeName Name() const noexcept { return Name##_; } \
+  ClassName &Name(TypeName Name) noexcept {          \
+    Name##_ = Name;                                  \
+    return *this;                                    \
+  }
+
 #endif  // ARGCV_CXX_BASE_MACROS_H_

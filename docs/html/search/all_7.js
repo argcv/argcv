@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['i16t',['i16t',['../namespaceargcv.html#ac84eb97d8c82ab1b92e6f430cadba696',1,'argcv']]],
-  ['i32t',['i32t',['../namespaceargcv.html#a7b323921564846b1d4035b64d1d38f1f',1,'argcv']]],
-  ['i4t',['i4t',['../namespaceargcv.html#a9e200566732e74a3c3810b965de17727',1,'argcv']]],
-  ['i64t',['i64t',['../namespaceargcv.html#adb76906e20741769f2fd983a58bdd7de',1,'argcv']]],
-  ['i8t',['i8t',['../namespaceargcv.html#a9df5481da97fbce55cdc32e8cd60ec40',1,'argcv']]],
+  ['int16',['int16',['../namespaceargcv.html#a8e1dfb2137291bd1df588e9baf080d67',1,'argcv']]],
+  ['int32',['int32',['../namespaceargcv.html#a714a0aea3e5392a44edcd88430aaacb4',1,'argcv']]],
+  ['int4',['int4',['../namespaceargcv.html#af9bac30301b040107e77d1557d993524',1,'argcv']]],
+  ['int64',['int64',['../namespaceargcv.html#acbf91fead4e2aededdc6a069206ef898',1,'argcv']]],
+  ['int8',['int8',['../namespaceargcv.html#a74316bef67500ab6854702226fbf826e',1,'argcv']]],
   ['internal',['Internal',['../classargcv_1_1_status.html#afb40685ff33430212a8707008dfe5921',1,'argcv::Status']]],
   ['invalidargument',['InvalidArgument',['../classargcv_1_1_status.html#a770a1db04fc46dc79fad074083069fa4',1,'argcv::Status']]],
   ['io_2eh',['io.h',['../io_8h.html',1,'']]],
@@ -13,6 +13,7 @@ var searchData=
   ['iscancelled',['IsCancelled',['../classargcv_1_1_status.html#af95432f1b0efc884070a087957382956',1,'argcv::Status']]],
   ['isdataloss',['IsDataLoss',['../classargcv_1_1_status.html#afec808d9a739f8f656e89036204d1d3b',1,'argcv::Status']]],
   ['isdeadlineexceeded',['IsDeadlineExceeded',['../classargcv_1_1_status.html#a1ef6494840c66ab7cf9342ecbe7b8c79',1,'argcv::Status']]],
+  ['isdir',['IsDir',['../classargcv_1_1_file_info.html#ac8a5eeebac4f8a2056140dc484fc2ae7',1,'argcv::FileInfo']]],
   ['isfailedprecondition',['IsFailedPrecondition',['../classargcv_1_1_status.html#af26695653994aa00611472f6940c8839',1,'argcv::Status']]],
   ['isinternal',['IsInternal',['../classargcv_1_1_status.html#a60054099daa6a2bcf8ba9caa192804d0',1,'argcv::Status']]],
   ['isinvalidargument',['IsInvalidArgument',['../classargcv_1_1_status.html#af61479bf2beab5292cc185d593d6ed31',1,'argcv::Status']]],

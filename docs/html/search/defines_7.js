@@ -1,6 +1,7 @@
 var searchData=
 [
   ['scanf_5fattribute',['SCANF_ATTRIBUTE',['../macros_8h.html#a85d26d9807454bfb4747a6bc9175c123',1,'macros.h']]],
+  ['setter_5fgetter',['SETTER_GETTER',['../x_2base_2macros_8h.html#a3f4de9d4d73e401087342c870129e596',1,'macros.h']]],
   ['stb_5fc_5flex_5f0_5fis_5feof',['STB_C_LEX_0_IS_EOF',['../stb__c__lexer_8c.html#a0f542b9ad62fddebb4b498ee0e079825',1,'stb_c_lexer.c']]],
   ['stb_5fc_5flex_5fc99_5fhex_5ffloats',['STB_C_LEX_C99_HEX_FLOATS',['../stb__c__lexer_8c.html#ae9d79cc1a8a92670e79d2679665c25df',1,'stb_c_lexer.c']]],
   ['stb_5fc_5flex_5fc_5faritheq',['STB_C_LEX_C_ARITHEQ',['../stb__c__lexer_8c.html#ac53b480c5d1e46a75d3b47cdb5194e3a',1,'stb_c_lexer.c']]],
