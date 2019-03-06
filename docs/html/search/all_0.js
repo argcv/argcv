@@ -11,5 +11,6 @@ var searchData=
   ['attribute_5fnoinline',['ATTRIBUTE_NOINLINE',['../macros_8h.html#a4611a2ff86f137a40238505f0df60c27',1,'macros.h']]],
   ['attribute_5fnoreturn',['ATTRIBUTE_NORETURN',['../macros_8h.html#afaad0abfed30e8ee5ae7d27b5ecea29f',1,'macros.h']]],
   ['attribute_5funused',['ATTRIBUTE_UNUSED',['../macros_8h.html#a635a8d08da53567d5c3b67deb7f98ed3',1,'macros.h']]],
-  ['error',['error',['../namespaceargcv_1_1error.html',1,'argcv']]]
+  ['error',['error',['../namespaceargcv_1_1error.html',1,'argcv']]],
+  ['io',['io',['../namespaceargcv_1_1io.html',1,'argcv']]]
 ];

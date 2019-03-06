@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['notfound',['NotFound',['../classargcv_1_1_status.html#a974a6d59d57da4a4a76b283ddf650235',1,'argcv::Status']]]
+  ['joinpath',['JoinPath',['../namespaceargcv_1_1io.html#a0e8b8c6b7816cda6a721d5d9a8f03993',1,'argcv::io']]]
 ];

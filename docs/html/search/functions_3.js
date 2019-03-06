@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['error_5fmessage',['error_message',['../classargcv_1_1_status.html#a3815237f5b27b9e2410baae281bcb207',1,'argcv::Status']]]
+  ['data',['data',['../classargcv_1_1_result.html#abcc0678a8655cdc2ba0480c29d69c30b',1,'argcv::Result']]],
+  ['dataloss',['DataLoss',['../classargcv_1_1_status.html#aab589593f0bfdfaca0e7ac7a363245e2',1,'argcv::Status']]],
+  ['deadlineexceeded',['DeadlineExceeded',['../classargcv_1_1_status.html#ab2f2048393ea0bc84b2dd8772018dba4',1,'argcv::Status']]],
+  ['dirname',['Dirname',['../namespaceargcv_1_1io.html#ac0eede78dbe175ed611ebc3ce46f8ebb',1,'argcv::io']]]
 ];

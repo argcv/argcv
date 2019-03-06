@@ -1,6 +1,6 @@
 // Copyright 2019 Yu Jing
-#ifndef ARGCV_CXX_OS_COMMOM_H_
-#define ARGCV_CXX_OS_COMMOM_H_
+#ifndef ARGCV_CXX_OS_FILE_H_
+#define ARGCV_CXX_OS_FILE_H_
 
 #include <stdio.h>
 #include <time.h>
@@ -44,7 +44,7 @@ enum FileMode : uint32 {
   kModePerm = 0777  ///< Unix permission bits
 };
 
-/// A FileInfo describes a file and is returned by Stat and Lstat.
+/// \brief A FileInfo describes a file and is returned by Stat and Lstat.
 class FileInfo {
  public:
   bool IsDir() const noexcept { return mode_ & kModeDir; }
@@ -67,7 +67,7 @@ class FileInfo {
   time_t mode_time_;
 };
 
-// TODO
+// TODO(yu): Not completed yet
 class File {
  public:
   FILE* underlying_ref() noexcept { return f_; }
@@ -78,4 +78,4 @@ class File {
 
 }  // namespace argcv
 
-#endif  // ARGCV_CXX_OS_COMMOM_H_
+#endif  // ARGCV_CXX_OS_FILE_H_

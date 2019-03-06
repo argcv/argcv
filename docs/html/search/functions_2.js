@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['data',['data',['../classargcv_1_1_result.html#abcc0678a8655cdc2ba0480c29d69c30b',1,'argcv::Result']]],
-  ['dataloss',['DataLoss',['../classargcv_1_1_status.html#aab589593f0bfdfaca0e7ac7a363245e2',1,'argcv::Status']]],
-  ['deadlineexceeded',['DeadlineExceeded',['../classargcv_1_1_status.html#ab2f2048393ea0bc84b2dd8772018dba4',1,'argcv::Status']]]
+  ['cancelled',['Cancelled',['../classargcv_1_1_status.html#a10dae11eaed5a877c4c315a16c0da9dc',1,'argcv::Status']]],
+  ['cleanpath',['CleanPath',['../namespaceargcv_1_1io.html#a1ec803369e4989dc89d4f2f3e31d88e5',1,'argcv::io']]],
+  ['close',['Close',['../classargcv_1_1_closer.html#adfc0b53ec74f8105b2516a29eebb2120',1,'argcv::Closer::Close()'],['../classargcv_1_1_nop_closer.html#af4994da281c83b85288cc3704ea39db9',1,'argcv::NopCloser::Close()']]],
+  ['code',['code',['../classargcv_1_1_status.html#af15d3fcb136fcdc3f1c74baa099aaca6',1,'argcv::Status']]]
 ];

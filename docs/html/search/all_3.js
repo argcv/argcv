@@ -7,5 +7,6 @@ var searchData=
   ['declare_5feach_5fstatus_5fcode',['DECLARE_EACH_STATUS_CODE',['../status_8h.html#aa6943c6d3fbfd044bb703bf839e78ae4',1,'status.h']]],
   ['declare_5ferror_5ffunc',['DECLARE_ERROR_FUNC',['../status_8h.html#aa5eec9a785ff24c734138838b6b7c5e9',1,'status.h']]],
   ['deque',['deque',['../namespaceargcv.html#a9ad102510ba82b58bb26a9235c8b7de7',1,'argcv']]],
+  ['dirname',['Dirname',['../namespaceargcv_1_1io.html#ac0eede78dbe175ed611ebc3ce46f8ebb',1,'argcv::io']]],
   ['disallow_5fcopy_5fand_5fassign',['DISALLOW_COPY_AND_ASSIGN',['../x_2base_2macros_8h.html#af8df3547bfde53a5acb93e2607b0034a',1,'macros.h']]]
 ];

@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['unauthenticated',['Unauthenticated',['../classargcv_1_1_status.html#a500f9011dbc76451b761b62ac00f38da',1,'argcv::Status']]],
-  ['unavailable',['Unavailable',['../classargcv_1_1_status.html#ae410fb8a81019e5f0ad41a070ec8c0d5',1,'argcv::Status']]],
-  ['underlying_5fref',['underlying_ref',['../classargcv_1_1_file.html#ae2067a6c34cf3c7ad3284f736fecb069',1,'argcv::File']]],
-  ['unimplemented',['Unimplemented',['../classargcv_1_1_status.html#a7fd8f4c8bc408392d4c89f8205cc8bbe',1,'argcv::Status']]],
-  ['unknown',['Unknown',['../classargcv_1_1_status.html#a5bc0813d64586fedd9b082c7c3e7b02a',1,'argcv::Status']]]
+  ['seek',['Seek',['../classargcv_1_1_seeker.html#a281bb72ead282bbfaca3d49731fd004b',1,'argcv::Seeker']]],
+  ['splitfilename',['SplitFilename',['../namespaceargcv_1_1io.html#a303bd6d79da50b68e5adb74ab8dab884',1,'argcv::io']]],
+  ['status',['Status',['../classargcv_1_1_status.html#a196346ceb47f4f09f41762d982cefed8',1,'argcv::Status::Status() noexcept'],['../classargcv_1_1_status.html#a9bb8cd9b9d579de9a43e6caa4d9eb17f',1,'argcv::Status::Status(const Status &amp;rhs) noexcept'],['../classargcv_1_1_status.html#ac42ed9fb5fbb1bfba42f37d487821c0b',1,'argcv::Status::Status(Status &amp;&amp;rhs) noexcept'],['../classargcv_1_1_result.html#a3fbd8445781db73695be124489696dc3',1,'argcv::Result::status()']]]
 ];
