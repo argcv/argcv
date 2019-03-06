@@ -12,7 +12,7 @@ namespace argcv {
 
 namespace io {
 namespace internal {
-PathBuff::PathBuff(const std::string &data, size_t len) noexcept
+PathBuff::PathBuff(const string_view &data, size_t len) noexcept
     : sz_(len), sz_buff_(2 * len + 1) {
   buff_ = new char[sz_buff_];
   if (sz_ > 0) {

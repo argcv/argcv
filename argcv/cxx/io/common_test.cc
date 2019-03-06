@@ -6,7 +6,6 @@
 #include "glog/logging.h"
 #include "gtest/gtest.h"
 
-
 TEST(IO, IO) {
   // init log
   InitGoogleTestLogging();

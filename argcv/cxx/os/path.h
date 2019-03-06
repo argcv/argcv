@@ -7,6 +7,8 @@
 
 #include "argcv/cxx/base/types.h"
 
+// #include "glog/logging.h"
+
 namespace argcv {
 namespace io {
 
@@ -15,10 +17,10 @@ class PathBuff {
  public:
   PathBuff() noexcept : PathBuff("", 0) {}
 
-  explicit PathBuff(const string &data) noexcept
+  explicit PathBuff(const string_view &data) noexcept
       : PathBuff(data, data.length()) {}
 
-  explicit PathBuff(const string &data, size_t len) noexcept;
+  explicit PathBuff(const string_view &data, size_t len) noexcept;
 
   ~PathBuff() noexcept { delete[] buff_; }
 
@@ -40,6 +42,8 @@ class PathBuff {
   PathBuff &Append(char c) noexcept;
 
   string ToString() const noexcept { return string(buff_, sz_); }
+
+  string_view ToView() const noexcept { return string_view(buff_, sz_); }
 
  private:
   size_t sz_;
@@ -68,7 +72,7 @@ string JoinPathImpl(std::initializer_list<const string_view> paths) noexcept;
 //
 // If the result of this process is an empty string, Clean
 // returns the string ".".
-inline string CleanPath(const string &in) noexcept {
+inline string CleanPath(string_view in) noexcept {
   if (in == "") {
     return ".";
   }
@@ -161,17 +165,20 @@ string JoinPath(const T &... args) {
 /// If there is no slash in path, Split returns an empty dir and
 /// file set to path.
 /// The returned values have the property that in = dir+file.
-inline void SplitFilename(const string &in, string *dir,
-                          string *file) noexcept {
+inline void SplitFilename(string_view in, string_view *dir,
+                          string_view *file) noexcept {
   // http://www.cplusplus.com/reference/string/string/find_last_of/
-  // std::size_t found = in.find_last_of("/\\");
   std::size_t found = in.find_last_of("/");
-  // found == string::npos if there is NO slash here
+  // LOG(INFO) << "SplitFilename...[" << in << "]=> [" << found << "]"
+  //           << "check" << (found == string_view::npos);
   if (dir) {
-    if (found == string::npos) {
+    if (found == string_view::npos) {
       *dir = "";
     } else {
-      *dir = in.substr(0, found);  //
+      // LOG(INFO) << "SplitFilename...[" << in << "]=> [" << found << "]"
+      //           << "check" << (found == string_view::npos) << " ~~~ "
+      //           << in.substr(0, found + 1);
+      *dir = in.substr(0, found + 1);  //
     }
   }
   if (file) {
@@ -180,7 +187,7 @@ inline void SplitFilename(const string &in, string *dir,
 }
 
 /// IsAbsPath detecteted whether to be a absolute path
-inline bool IsAbsPath(const string &in) {
+inline bool IsAbsPath(string_view in) {
   return in.length() > 0 && in[0] == '/';
 }
 
@@ -192,9 +199,10 @@ inline bool IsAbsPath(const string &in) {
 /// If the path consists entirely of slashes followed by non-slash bytes,
 /// Dirname returns a single slash. In any other case, the returned path does
 /// not end in a slash.
-inline string Dirname(const string &in) noexcept {
-  string dir;
+inline string Dirname(string_view in) noexcept {
+  string_view dir;
   SplitFilename(in, &dir, nullptr);
+  // LOG(INFO) << "Dirname... [" << in << "] => [" << dir << "]";
   return CleanPath(dir);
 }
 
@@ -202,7 +210,7 @@ inline string Dirname(const string &in) noexcept {
 /// Trailing slashes are removed before extracting the last element.
 /// If the path is empty, Base returns ".".
 /// If the path consists entirely of slashes, Base returns "/".
-inline string Basename(const string &in) noexcept {
+inline string Basename(string_view in) noexcept {
   if (in == "") {
     return ".";
   }
@@ -212,14 +220,15 @@ inline string Basename(const string &in) noexcept {
     out.Backspace();
   }
 
-  string oin = out.ToString();
-  string elem;
-  SplitFilename(out.ToString(), nullptr, &elem);
+  // string oin = out.ToString();
+  string_view elem;
+  // SplitFilename(out.ToString(), nullptr, &elem);
+  SplitFilename(out.ToView(), nullptr, &elem);
   // If empty now, it had only slashes.
   if (elem == "") {
     return "/";
   }
-  return elem;
+  return string(elem);
 }
 
 }  // namespace io
