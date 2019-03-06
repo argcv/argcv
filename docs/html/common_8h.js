@@ -13,6 +13,9 @@ var common_8h =
     [ "ReadWriteSeeker", "classargcv_1_1_read_write_seeker.html", "classargcv_1_1_read_write_seeker" ],
     [ "RandomWriter", "classargcv_1_1_random_writer.html", "classargcv_1_1_random_writer" ],
     [ "RandomReader", "classargcv_1_1_random_reader.html", "classargcv_1_1_random_reader" ],
+    [ "RandomReadCloser", "classargcv_1_1_random_read_closer.html", "classargcv_1_1_random_read_closer" ],
+    [ "RandomWriteCloser", "classargcv_1_1_random_write_closer.html", "classargcv_1_1_random_write_closer" ],
+    [ "RandomReadWriteCloser", "classargcv_1_1_random_read_write_closer.html", "classargcv_1_1_random_read_write_closer" ],
     [ "NopCloser", "classargcv_1_1_nop_closer.html", "classargcv_1_1_nop_closer" ],
     [ "Whence", "common_8h.html#a97276ac08e7f3b0c8eae074f21523976", [
       [ "kSeekStart", "common_8h.html#a97276ac08e7f3b0c8eae074f21523976ad422221428dfab4730045a4b938bfb1b", null ],

@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
-<title>ArgCV: argcv::Closer Class Reference</title>
+<title>ArgCV: argcv::RandomWriteCloser Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -71,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('classargcv_1_1_closer.html','');});
+$(document).ready(function(){initNavTree('classargcv_1_1_random_write_closer.html','');});
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -92,39 +92,47 @@ $(document).ready(function(){initNavTree('classargcv_1_1_closer.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="classargcv_1_1_closer-members.html">List of all members</a>  </div>
+<a href="classargcv_1_1_random_write_closer-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">argcv::Closer Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">argcv::RandomWriteCloser Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
+<p><a class="el" href="classargcv_1_1_random_write_closer.html" title="RandomWriteCloser.">RandomWriteCloser</a>.  
+ <a href="classargcv_1_1_random_write_closer.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="common_8h_source.html">common.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for argcv::Closer:</div>
+Inheritance diagram for argcv::RandomWriteCloser:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classargcv_1_1_closer.png" usemap="#argcv::Closer_map" alt=""/>
-  <map id="argcv::Closer_map" name="argcv::Closer_map">
-<area href="classargcv_1_1_nop_closer.html" alt="argcv::NopCloser" shape="rect" coords="0,56,191,80"/>
-<area href="classargcv_1_1_random_read_closer.html" title="RandomReadCloser." alt="argcv::RandomReadCloser" shape="rect" coords="201,56,392,80"/>
-<area href="classargcv_1_1_random_read_write_closer.html" title="RandomReadWriteCloser." alt="argcv::RandomReadWriteCloser" shape="rect" coords="402,56,593,80"/>
-<area href="classargcv_1_1_random_write_closer.html" title="RandomWriteCloser." alt="argcv::RandomWriteCloser" shape="rect" coords="603,56,794,80"/>
-<area href="classargcv_1_1_read_closer.html" title="ReadCloser is the interface that groups the basic Read and Close methods." alt="argcv::ReadCloser" shape="rect" coords="804,56,995,80"/>
-<area href="classargcv_1_1_read_write_closer.html" alt="argcv::ReadWriteCloser" shape="rect" coords="1005,56,1196,80"/>
-<area href="classargcv_1_1_write_closer.html" title="WriteCloser is the interface that groups the basic Write and Close methods." alt="argcv::WriteCloser" shape="rect" coords="1206,56,1397,80"/>
+  <img src="classargcv_1_1_random_write_closer.png" usemap="#argcv::RandomWriteCloser_map" alt=""/>
+  <map id="argcv::RandomWriteCloser_map" name="argcv::RandomWriteCloser_map">
+<area href="classargcv_1_1_random_writer.html" title="Write data.size() data into output stream from offset." alt="argcv::RandomWriter" shape="rect" coords="0,0,162,24"/>
+<area href="classargcv_1_1_closer.html" alt="argcv::Closer" shape="rect" coords="172,0,334,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad591baf244d17d33a0a97217b5497320"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classargcv_1_1_closer.html#ad591baf244d17d33a0a97217b5497320">~Closer</a> ()</td></tr>
-<tr class="separator:ad591baf244d17d33a0a97217b5497320"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adfc0b53ec74f8105b2516a29eebb2120"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classargcv_1_1_status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classargcv_1_1_closer.html#adfc0b53ec74f8105b2516a29eebb2120">Close</a> () noexcept=0</td></tr>
-<tr class="separator:adfc0b53ec74f8105b2516a29eebb2120"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e9979a5604c92e45ffc109401aa2ff9"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classargcv_1_1_random_write_closer.html#a5e9979a5604c92e45ffc109401aa2ff9">~RandomWriteCloser</a> ()</td></tr>
+<tr class="separator:a5e9979a5604c92e45ffc109401aa2ff9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classargcv_1_1_random_writer"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classargcv_1_1_random_writer')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classargcv_1_1_random_writer.html">argcv::RandomWriter</a></td></tr>
+<tr class="memitem:a782e84817d7860c5612f09bd25144b6b inherit pub_methods_classargcv_1_1_random_writer"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classargcv_1_1_random_writer.html#a782e84817d7860c5612f09bd25144b6b">~RandomWriter</a> ()</td></tr>
+<tr class="separator:a782e84817d7860c5612f09bd25144b6b inherit pub_methods_classargcv_1_1_random_writer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fd99f8e0360ffd0305bce444e83160e inherit pub_methods_classargcv_1_1_random_writer"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classargcv_1_1_result.html">Result</a>&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classargcv_1_1_random_writer.html#a1fd99f8e0360ffd0305bce444e83160e">WriteAt</a> (<a class="el" href="namespaceargcv.html#ae745cc95971bef0fe6c12feee4356e1c">uint64</a> offset, <a class="el" href="namespaceargcv.html#a775cf32fa3d656254b2dbc0b62dc0ea1">string_view</a> data) const noexcept=0</td></tr>
+<tr class="separator:a1fd99f8e0360ffd0305bce444e83160e inherit pub_methods_classargcv_1_1_random_writer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classargcv_1_1_closer"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classargcv_1_1_closer')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classargcv_1_1_closer.html">argcv::Closer</a></td></tr>
+<tr class="memitem:ad591baf244d17d33a0a97217b5497320 inherit pub_methods_classargcv_1_1_closer"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classargcv_1_1_closer.html#ad591baf244d17d33a0a97217b5497320">~Closer</a> ()</td></tr>
+<tr class="separator:ad591baf244d17d33a0a97217b5497320 inherit pub_methods_classargcv_1_1_closer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfc0b53ec74f8105b2516a29eebb2120 inherit pub_methods_classargcv_1_1_closer"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classargcv_1_1_status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classargcv_1_1_closer.html#adfc0b53ec74f8105b2516a29eebb2120">Close</a> () noexcept=0</td></tr>
+<tr class="separator:adfc0b53ec74f8105b2516a29eebb2120 inherit pub_methods_classargcv_1_1_closer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ad591baf244d17d33a0a97217b5497320"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad591baf244d17d33a0a97217b5497320">&#9670;&nbsp;</a></span>~Closer()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="classargcv_1_1_random_write_closer.html" title="RandomWriteCloser.">RandomWriteCloser</a>. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a5e9979a5604c92e45ffc109401aa2ff9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e9979a5604c92e45ffc109401aa2ff9">&#9670;&nbsp;</a></span>~RandomWriteCloser()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -133,7 +141,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual argcv::Closer::~Closer </td>
+          <td class="memname">virtual argcv::RandomWriteCloser::~RandomWriteCloser </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -148,34 +156,6 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="adfc0b53ec74f8105b2516a29eebb2120"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adfc0b53ec74f8105b2516a29eebb2120">&#9670;&nbsp;</a></span>Close()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual <a class="el" href="classargcv_1_1_status.html">Status</a> argcv::Closer::Close </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implemented in <a class="el" href="classargcv_1_1_nop_closer.html#af4994da281c83b85288cc3704ea39db9">argcv::NopCloser</a>.</p>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>argcv/cxx/io/<a class="el" href="common_8h_source.html">common.h</a></li>
 </ul>
@@ -185,7 +165,7 @@ Public Member Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespaceargcv.html">argcv</a></li><li class="navelem"><a class="el" href="classargcv_1_1_closer.html">Closer</a></li>
+    <li class="navelem"><a class="el" href="namespaceargcv.html">argcv</a></li><li class="navelem"><a class="el" href="classargcv_1_1_random_write_closer.html">RandomWriteCloser</a></li>
   </ul>
 </div>
 </body>

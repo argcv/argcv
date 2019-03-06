@@ -2,7 +2,10 @@ var searchData=
 [
   ['_7ecloser',['~Closer',['../classargcv_1_1_closer.html#ad591baf244d17d33a0a97217b5497320',1,'argcv::Closer']]],
   ['_7enopcloser',['~NopCloser',['../classargcv_1_1_nop_closer.html#a9733749a1e4e57ba63f6b5b8b1a74923',1,'argcv::NopCloser']]],
+  ['_7erandomreadcloser',['~RandomReadCloser',['../classargcv_1_1_random_read_closer.html#ad508b8d11e56fdbe1c5729977cfcaa06',1,'argcv::RandomReadCloser']]],
   ['_7erandomreader',['~RandomReader',['../classargcv_1_1_random_reader.html#a45de578333741ae968871d1009a986ae',1,'argcv::RandomReader']]],
+  ['_7erandomreadwritecloser',['~RandomReadWriteCloser',['../classargcv_1_1_random_read_write_closer.html#a61c0fe1e994c48e79decb919ad0c1e10',1,'argcv::RandomReadWriteCloser']]],
+  ['_7erandomwritecloser',['~RandomWriteCloser',['../classargcv_1_1_random_write_closer.html#a5e9979a5604c92e45ffc109401aa2ff9',1,'argcv::RandomWriteCloser']]],
   ['_7erandomwriter',['~RandomWriter',['../classargcv_1_1_random_writer.html#a782e84817d7860c5612f09bd25144b6b',1,'argcv::RandomWriter']]],
   ['_7ereadcloser',['~ReadCloser',['../classargcv_1_1_read_closer.html#a53ba6d265675a59bb15295e720b3d76d',1,'argcv::ReadCloser']]],
   ['_7ereader',['~Reader',['../classargcv_1_1_reader.html#ac0040e2f3650b6a7e086a71960272c87',1,'argcv::Reader']]],

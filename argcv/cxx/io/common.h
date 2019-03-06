@@ -159,6 +159,26 @@ class RandomReader {
   // }
 };
 
+/// RandomReadCloser
+class RandomReadCloser : public RandomReader, public Closer {
+ public:
+  virtual ~RandomReadCloser() {}
+};
+
+/// RandomWriteCloser
+class RandomWriteCloser : public RandomWriter, public Closer {
+ public:
+  virtual ~RandomWriteCloser() {}
+};
+
+/// RandomReadWriteCloser
+class RandomReadWriteCloser : public RandomReader,
+                              public RandomWriter,
+                              public Closer {
+ public:
+  virtual ~RandomReadWriteCloser() {}
+};
+
 class NopCloser : public Closer {
  public:
   virtual ~NopCloser() {}
