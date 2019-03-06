@@ -60,7 +60,7 @@ class FileInfo {
   SETTER_GETTER(FileInfo, FileMode, mode)
   SETTER_GETTER(FileInfo, time_t, mode_time)
 
- protected:
+ private:
   string name_;
   size_t size_;
   FileMode mode_;
