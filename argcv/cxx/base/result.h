@@ -43,6 +43,7 @@ class Result {
  private:
   Status status_;
   T r_;
+  Result() = delete;
 };
 
 }  // namespace argcv
