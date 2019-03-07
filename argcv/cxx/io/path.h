@@ -1,6 +1,6 @@
 // Copyright 2019 Yu Jing
-#ifndef ARGCV_CXX_OS_PATH_H_
-#define ARGCV_CXX_OS_PATH_H_
+#ifndef ARGCV_CXX_IO_PATH_H_
+#define ARGCV_CXX_IO_PATH_H_
 
 #include <initializer_list>
 #include <string>
@@ -235,4 +235,4 @@ inline string Basename(string_view in) noexcept {
 
 }  // namespace argcv
 
-#endif  // ARGCV_CXX_OS_PATH_H_
+#endif  // ARGCV_CXX_IO_PATH_H_

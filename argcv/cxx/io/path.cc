@@ -1,5 +1,5 @@
 // Copyright 2019 Yu Jing
-#include "argcv/cxx/os/path.h"
+#include "argcv/cxx/io/path.h"
 
 #include <string.h>  // memcpy(void *restrict dst, const void *restrict src, size_t n);
 
