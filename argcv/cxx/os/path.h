@@ -155,7 +155,7 @@ inline string CleanPath(string_view in) noexcept {
 /// separating slash if necessary. The result is Cleaned; in particular,
 /// all empty strings are ignored.
 template <typename... T>
-string JoinPath(const T &... args) {
+string JoinPath(const T &... args) noexcept {
   return internal::JoinPathImpl({args...});
 }
 
@@ -187,7 +187,7 @@ inline void SplitFilename(string_view in, string_view *dir,
 }
 
 /// IsAbsPath detecteted whether to be a absolute path
-inline bool IsAbsPath(string_view in) {
+inline bool IsAbsPath(string_view in) noexcept {
   return in.length() > 0 && in[0] == '/';
 }
 
