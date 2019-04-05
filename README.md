@@ -61,5 +61,5 @@ Here is a list of related libraries:
 + [x] [snappy](https://github.com/google/snappy) -- a fast compressor/decompressor
 + [ ] [zlib](https://zlib.net/) -- a massively spiffy yet delicately unobtrusive compression library
 + [ ] [tink](https://github.com/google/tink) -- a multi-language, cross-platform library that provides cryptographic APIs that are secure, easy to use correctly, and hard(er) to misuse.
-
++ [ ] [jemalloc](https://github.com/jemalloc/jemalloc) -- a general purpose malloc(3) implementation that emphasizes fragmentation avoidance and scalable concurrency support.
 -->

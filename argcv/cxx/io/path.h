@@ -22,7 +22,7 @@ class PathBuff {
 
   explicit PathBuff(const string_view &data, size_t len) noexcept;
 
-  ~PathBuff() noexcept { delete[] buff_; }
+  virtual ~PathBuff() noexcept { delete[] buff_; }
 
   size_t W() noexcept { return sz_; }
 
