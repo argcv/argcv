@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
-<title>ArgCV: Namespace Members</title>
+<title>ArgCV: argcv/cxx/base/lock.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -71,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('namespacemembers_func.html','');});
+$(document).ready(function(){initNavTree('lock_8h_source.html','');});
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -89,54 +89,19 @@ $(document).ready(function(){initNavTree('namespacemembers_func.html','');});
 </iframe>
 </div>
 
+<div class="header">
+  <div class="headertitle">
+<div class="title">lock.h</div>  </div>
+</div><!--header-->
 <div class="contents">
-&#160;<ul>
-<li>AtomicFetchAdd()
-: <a class="el" href="namespaceargcv.html#a149e58c67d27a7109020f77cecd35a51">argcv</a>
-</li>
-<li>AtomicFetchOr()
-: <a class="el" href="namespaceargcv.html#ab679eb833d81216e73ac919bd1bdc3eb">argcv</a>
-</li>
-<li>AtomicFetchSub()
-: <a class="el" href="namespaceargcv.html#a9332a4d2dee6353c592849cffef17ff2">argcv</a>
-</li>
-<li>AtomicFetchXor()
-: <a class="el" href="namespaceargcv.html#a91872fc06795f33958248ed850ef8159">argcv</a>
-</li>
-<li>AtomicLoad()
-: <a class="el" href="namespaceargcv.html#ae7a005d7dbfb51a0769e94295f448bd5">argcv</a>
-</li>
-<li>AtomicStore()
-: <a class="el" href="namespaceargcv.html#a5391b3edff01e7cdf251920fcc2cbb28">argcv</a>
-</li>
-<li>Basename()
-: <a class="el" href="namespaceargcv_1_1io.html#a2aa88ffc226492c3c1bc7dc8f3e0193c">argcv::io</a>
-</li>
-<li>CleanPath()
-: <a class="el" href="namespaceargcv_1_1io.html#acd575060c4b3ac5cecc91741f3bc261e">argcv::io</a>
-</li>
-<li>Dirname()
-: <a class="el" href="namespaceargcv_1_1io.html#a7823d9f54539a538d55fc9e6a23d293b">argcv::io</a>
-</li>
-<li>IsAbsPath()
-: <a class="el" href="namespaceargcv_1_1io.html#a72a6dcdff4c6b46be725a2cd374d24a2">argcv::io</a>
-</li>
-<li>JoinPath()
-: <a class="el" href="namespaceargcv_1_1io.html#ab48f8c1c1c3dc8653a3bf7d961f6332e">argcv::io</a>
-</li>
-<li>operator&lt;&lt;()
-: <a class="el" href="namespaceargcv.html#afd344cc075c41c6d7f5d6af8424b7267">argcv</a>
-</li>
-<li>SplitFilename()
-: <a class="el" href="namespaceargcv_1_1io.html#a9b9aa17d1239c69ea4c4c22a37a1a6c0">argcv::io</a>
-</li>
-</ul>
-</div><!-- contents -->
+<a href="lock_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright 2019 Yu Jing</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef ARGCV_CXX_BASE_LOCK_H_</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define ARGCV_CXX_BASE_LOCK_H_</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;atomic&gt;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceargcv.html">argcv</a> {}  <span class="comment">// namespace argcv</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#endif  // ARGCV_CXX_BASE_LOCK_H_</span></div><div class="ttc" id="namespaceargcv_html"><div class="ttname"><a href="namespaceargcv.html">argcv</a></div><div class="ttdoc">Type definitions.</div><div class="ttdef"><b>Definition:</b> atomic.h:8</div></div>
+</div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.8.7-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="dir_35fe26ecdb9ad765d53fed138617535f.html">argcv</a></li><li class="navelem"><a class="el" href="dir_f4c1d4d5e01226d96972d9b937662d15.html">cxx</a></li><li class="navelem"><a class="el" href="dir_8406e34757e41b9fe978b83e765508d4.html">base</a></li><li class="navelem"><a class="el" href="lock_8h.html">lock.h</a></li>
   </ul>
 </div>
 </body>

@@ -15,6 +15,7 @@ var searchData=
   ['_7ereadwriteseeker',['~ReadWriteSeeker',['../classargcv_1_1_read_write_seeker.html#a5a8a9f33cdd2658e3501122a425de8bc',1,'argcv::ReadWriteSeeker']]],
   ['_7eresult',['~Result',['../classargcv_1_1_result.html#a3bd09942922cb08b6eba5a95718613f8',1,'argcv::Result']]],
   ['_7eseeker',['~Seeker',['../classargcv_1_1_seeker.html#a3ae31fee1649612ab635e6cb2d393f2d',1,'argcv::Seeker']]],
+  ['_7esignalslot',['~SignalSlot',['../classargcv_1_1_signal_slot.html#afbf340571d4a3753f516c28d18d90375',1,'argcv::SignalSlot']]],
   ['_7estatus',['~Status',['../classargcv_1_1_status.html#a587e1712ba651140fd6c6bb1f7a3fc92',1,'argcv::Status']]],
   ['_7ewritecloser',['~WriteCloser',['../classargcv_1_1_write_closer.html#a9cfe9291a01807305ff92682838c26d0',1,'argcv::WriteCloser']]],
   ['_7ewriter',['~Writer',['../classargcv_1_1_writer.html#adf66464f1ff3230b2003ad860e9bc9a8',1,'argcv::Writer']]],

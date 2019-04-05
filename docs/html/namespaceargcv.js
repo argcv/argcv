@@ -17,6 +17,7 @@ var namespaceargcv =
     [ "ReadWriteSeeker", "classargcv_1_1_read_write_seeker.html", "classargcv_1_1_read_write_seeker" ],
     [ "Result", "classargcv_1_1_result.html", "classargcv_1_1_result" ],
     [ "Seeker", "classargcv_1_1_seeker.html", "classargcv_1_1_seeker" ],
+    [ "SignalSlot", "classargcv_1_1_signal_slot.html", "classargcv_1_1_signal_slot" ],
     [ "Status", "classargcv_1_1_status.html", "classargcv_1_1_status" ],
     [ "WriteCloser", "classargcv_1_1_write_closer.html", "classargcv_1_1_write_closer" ],
     [ "Writer", "classargcv_1_1_writer.html", "classargcv_1_1_writer" ],

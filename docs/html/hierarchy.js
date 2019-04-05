@@ -32,6 +32,7 @@ var hierarchy =
       [ "argcv::ReadWriteSeeker", "classargcv_1_1_read_write_seeker.html", null ],
       [ "argcv::WriteSeeker", "classargcv_1_1_write_seeker.html", null ]
     ] ],
+    [ "argcv::SignalSlot< Args >", "classargcv_1_1_signal_slot.html", null ],
     [ "argcv::Status", "classargcv_1_1_status.html", null ],
     [ "argcv::Writer", "classargcv_1_1_writer.html", [
       [ "argcv::ReadWriteCloser", "classargcv_1_1_read_write_closer.html", null ],
