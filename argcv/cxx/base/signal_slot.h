@@ -5,6 +5,7 @@
 #include <cstdint>
 #include <functional>
 #include <map>
+#include <utility>  // make_pair
 
 #include "argcv/cxx/base/macros.h"
 

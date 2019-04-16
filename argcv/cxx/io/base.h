@@ -1,6 +1,6 @@
 // Copyright 2019 Yu Jing
-#ifndef ARGCV_CXX_IO_COMMON_H_
-#define ARGCV_CXX_IO_COMMON_H_
+#ifndef ARGCV_CXX_IO_BASE_H_
+#define ARGCV_CXX_IO_BASE_H_
 
 #include <string>
 
@@ -192,4 +192,4 @@ class NopCloser : public Closer {
 
 }  // namespace argcv
 
-#endif  // ARGCV_CXX_IO_COMMON_H_
+#endif  // ARGCV_CXX_IO_BASE_H_

@@ -33,6 +33,13 @@ PathBuff &PathBuff::Append(char c) noexcept {
   return *this;
 }
 
+size_t PathBuff::Backspace() noexcept {
+  if (sz_ > 0) {
+    sz_--;
+  }
+  return sz_;
+}
+
 string JoinPathImpl(std::initializer_list<const string_view> paths) noexcept {
   return CleanPath(absl::StrJoin(paths, "/"));
 }

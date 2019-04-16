@@ -1,5 +1,8 @@
 // Copyright 2019 Yu Jing
 #include "argcv/cxx/base/signal_slot.h"
+
+#include <string>
+
 #include "argcv/cxx/test/test.h"
 
 #include "glog/logging.h"

@@ -26,12 +26,7 @@ class PathBuff {
 
   size_t W() noexcept { return sz_; }
 
-  size_t Backspace() noexcept {
-    if (sz_ > 0) {
-      sz_--;
-    }
-    return sz_;
-  }
+  size_t Backspace() noexcept;
 
   // Warning: There is NO out_of_range check here
   char Index(int idx) noexcept { return buff_[idx]; }
