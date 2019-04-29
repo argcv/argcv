@@ -1,5 +1,5 @@
 // Copyright 2019 Yu Jing
-#include "argcv/cxx/io/path.h"
+#include "argcv/cxx/path/path.h"
 
 #include <string.h>  // memcpy(void *restrict dst, const void *restrict src, size_t n);
 
@@ -10,7 +10,7 @@
 
 namespace argcv {
 
-namespace io {
+namespace path {
 namespace internal {
 PathBuff::PathBuff(const string_view &data, size_t len) noexcept
     : sz_(len), sz_buff_(2 * len + 1) {
@@ -45,6 +45,6 @@ string JoinPathImpl(std::initializer_list<const string_view> paths) noexcept {
 }
 
 }  // namespace internal
-}  // namespace io
+}  // namespace path
 
 }  // namespace argcv

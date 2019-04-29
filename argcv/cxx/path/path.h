@@ -1,6 +1,6 @@
 // Copyright 2019 Yu Jing
-#ifndef ARGCV_CXX_IO_PATH_H_
-#define ARGCV_CXX_IO_PATH_H_
+#ifndef ARGCV_CXX_PATH_PATH_H_
+#define ARGCV_CXX_PATH_PATH_H_
 
 #include <initializer_list>
 #include <string>
@@ -10,7 +10,7 @@
 // #include "glog/logging.h"
 
 namespace argcv {
-namespace io {
+namespace path {
 
 namespace internal {
 class PathBuff {
@@ -226,8 +226,8 @@ inline string Basename(string_view in) noexcept {
   return string(elem);
 }
 
-}  // namespace io
+}  // namespace path
 
 }  // namespace argcv
 
-#endif  // ARGCV_CXX_IO_PATH_H_
+#endif  // ARGCV_CXX_PATH_PATH_H_
