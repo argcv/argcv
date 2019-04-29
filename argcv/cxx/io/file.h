@@ -1,6 +1,6 @@
 // Copyright 2019 Yu Jing
-#ifndef ARGCV_CXX_OS_FILE_H_
-#define ARGCV_CXX_OS_FILE_H_
+#ifndef ARGCV_CXX_IO_FILE_H_
+#define ARGCV_CXX_IO_FILE_H_
 
 #include <stdio.h>
 #include <time.h>
@@ -11,6 +11,8 @@
 #include "argcv/cxx/base/types.h"
 
 namespace argcv {
+
+namespace io {
 
 /// Defined a set of FileMode
 ///
@@ -76,6 +78,8 @@ class File {
   FILE* f_;
 };
 
+}  // namespace io
+
 }  // namespace argcv
 
-#endif  // ARGCV_CXX_OS_FILE_H_
+#endif  // ARGCV_CXX_IO_FILE_H_

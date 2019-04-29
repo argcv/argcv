@@ -1,3 +1,4 @@
 # ArgCV IO
 
-The `io` folder defined a few 
+The `io` folder defined a few basic IO streams.
+

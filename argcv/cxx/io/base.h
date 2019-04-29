@@ -9,6 +9,8 @@
 #include "argcv/cxx/base/types.h"
 
 namespace argcv {
+
+namespace io {
 /**
  * \brief seek whence values
  */
@@ -189,6 +191,8 @@ class NopCloser : public Closer {
     return Status::OK();
   }
 };
+
+}  // namespace io
 
 }  // namespace argcv
 
