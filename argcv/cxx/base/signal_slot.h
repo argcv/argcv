@@ -48,6 +48,7 @@ class SignalSlot {
  private:
   std::map<uint64_t, Functor> functors_;
   uint64_t top_id_;
+  DISALLOW_COPY_AND_ASSIGN(SignalSlot);
 };
 }  // namespace argcv
 
