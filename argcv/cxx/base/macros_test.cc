@@ -6,7 +6,29 @@
 #include "glog/logging.h"
 #include "gtest/gtest.h"
 
-class CompariableInteger {
+// class CompariableInteger {
+//  public:
+//   explicit CompariableInteger(int value) : value_(value) {}
+
+//   const int Compare(const int& rhs) const noexcept {
+//     LOG(INFO) << "CALLED: [int Compare(const int& rhs)]";
+//     return value_ - rhs;
+//   }
+
+//   const int Compare(const CompariableInteger& rhs) const noexcept {
+//     LOG(INFO) << "CALLED: [int Compare(const CompariableInteger& rhs)]";
+//     return value_ - rhs.value_;
+//   }
+
+//   OP_COMPARABLE(int);
+//   OP_COMPARABLE(CompariableInteger);
+
+//  private:
+//   int value_;
+// };
+
+class CompariableInteger : public Comparable<int>,
+                           public Comparable<CompariableInteger> {
  public:
   explicit CompariableInteger(int value) : value_(value) {}
 
@@ -19,9 +41,6 @@ class CompariableInteger {
     LOG(INFO) << "CALLED: [int Compare(const CompariableInteger& rhs)]";
     return value_ - rhs.value_;
   }
-
-  OP_COMPARABLE(int);
-  OP_COMPARABLE(CompariableInteger);
 
  private:
   int value_;

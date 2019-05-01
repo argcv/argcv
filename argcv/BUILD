@@ -36,6 +36,7 @@ cc_test(
     ]),
     copts = [
         "-Wno-unused-function",
+        "-Wno-unused-local-typedef",
     ],
     deps = [
         ":argcv",

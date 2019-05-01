@@ -82,4 +82,31 @@
     return *this;                                    \
   }
 
+/// Similar to OP_COMPARABLE but using extends instead
+template <typename T>
+class Comparable {
+ public:
+  virtual ~Comparable() {}
+  virtual const int Compare(const T &that) const noexcept = 0;
+
+  bool operator==(const T &that) const noexcept {
+    return this->Compare(that) == 0;
+  }
+  bool operator!=(const T &that) const noexcept {
+    return this->Compare(that) != 0;
+  }
+  bool operator<(const T &that) const noexcept {
+    return this->Compare(that) < 0;
+  }
+  bool operator>(const T &that) const noexcept {
+    return this->Compare(that) > 0;
+  }
+  bool operator<=(const T &that) const noexcept {
+    return this->Compare(that) <= 0;
+  }
+  bool operator>=(const T &that) const noexcept {
+    return this->Compare(that) >= 0;
+  }
+};
+
 #endif  // ARGCV_CXX_BASE_MACROS_H_

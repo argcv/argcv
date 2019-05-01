@@ -5,29 +5,43 @@
 #include <atomic>
 #include <memory>
 
+#include "argcv/cxx/base/types.h"
+
 namespace argcv {
 
 /**
  *  \brief fetch_add
  */
 template <typename T>
-T AtomicFetchAdd(std::atomic<T>* obj, T arg) noexcept {
+T AtomicFetchAdd(atomic<T>* obj, T arg) noexcept {
   return obj->fetch_add(arg);
+}
+
+/// increment 1
+template <typename T>
+T AtomicIncr(atomic<T>* obj) noexcept {
+  return AtomicFetchAdd<T>(obj, static_cast<T>(1));
 }
 
 /**
  *  \brief fetch_sub
  */
 template <typename T>
-T AtomicFetchSub(std::atomic<T>* obj, const T& arg) noexcept {
+T AtomicFetchSub(atomic<T>* obj, const T& arg) noexcept {
   return obj->fetch_sub(arg);
+}
+
+// decrement
+template <typename T>
+T AtomicDecr(atomic<T>* obj) noexcept {
+  return AtomicFetchSub<T>(obj, static_cast<T>(1));
 }
 
 /**
  *  \brief fetch_or
  */
 template <typename T>
-T AtomicFetchOr(std::atomic<T>* obj, const T& arg) noexcept {
+T AtomicFetchOr(atomic<T>* obj, const T& arg) noexcept {
   return obj->fetch_or(arg);
 }
 
@@ -35,7 +49,7 @@ T AtomicFetchOr(std::atomic<T>* obj, const T& arg) noexcept {
  *  \brief fetch_xor
  */
 template <typename T>
-T AtomicFetchXor(std::atomic<T>* obj, const T& arg) noexcept {
+T AtomicFetchXor(atomic<T>* obj, const T& arg) noexcept {
   return obj->fetch_xor(arg);
 }
 
@@ -43,7 +57,7 @@ T AtomicFetchXor(std::atomic<T>* obj, const T& arg) noexcept {
  *  \brief store
  */
 template <typename T>
-void AtomicStore(std::atomic<T>* obj, const T& arg) noexcept {
+void AtomicStore(atomic<T>* obj, const T& arg) noexcept {
   return obj->store(arg);
 }
 
@@ -51,7 +65,7 @@ void AtomicStore(std::atomic<T>* obj, const T& arg) noexcept {
  *  \brief load
  */
 template <typename T>
-T AtomicLoad(std::atomic<T>* obj) noexcept {
+T AtomicLoad(const atomic<T>* obj) noexcept {
   return obj->load();
 }
 
