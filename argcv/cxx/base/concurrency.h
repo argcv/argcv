@@ -20,20 +20,20 @@ bool Sleep(uint64 millis, uint64 nanos = 0) noexcept;
 uint64 GetCurrentNanoseconds() noexcept;
 
 /// \brief Returns the number of micro-seconds since the Unix epoch.
-uint64 GetCurrentMicros() noexcept {
+inline uint64 GetCurrentMicros() noexcept {
   return GetCurrentNanoseconds() / 1000L;
 }
 
 /// \brief Returns the number of milli-seconds since the Unix epoch.
-uint64 GetCurrentMillis() noexcept {
+inline uint64 GetCurrentMillis() noexcept {
   return GetCurrentNanoseconds() / 1000000L;
 }
 
 /// \brief Returns the number of milli-seconds since the Unix epoch.
-uint64 GetCurrentMs() noexcept { return GetCurrentMillis(); }
+inline uint64 GetCurrentMs() noexcept { return GetCurrentMillis(); }
 
 /// \brief Returns the number of seconds since the Unix epoch.
-uint64 GetCurrentSeconds() noexcept {
+inline uint64 GetCurrentSeconds() noexcept {
   return GetCurrentNanoseconds() / 1000000000L;
 }
 
