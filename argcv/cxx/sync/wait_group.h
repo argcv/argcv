@@ -30,7 +30,7 @@ class WaitGroup {
     return st;
   }
 
-  virtual void Wait() const noexcept;
+  void Wait() const noexcept;
 
  private:
   atomic<int64> state_;
