@@ -16,7 +16,7 @@ TEST(Concurrency, Timing) {
   uint64 gap = time_out - time_in;
   uint64 expect_gap = 1200 * 1000000L + 100;
 
-  EXPECT_GT(gap, expect_gap);
+  EXPECT_GT(gap, expect_gap * 0.8);
   EXPECT_LT(gap, expect_gap * 1.2);
 
   LOG(INFO) << "gap:" << gap << " expected: " << expect_gap;
