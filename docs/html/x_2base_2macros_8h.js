@@ -1,5 +1,6 @@
 var x_2base_2macros_8h =
 [
+    [ "Comparable", "class_comparable.html", "class_comparable" ],
     [ "ARRAYSIZE", "x_2base_2macros_8h.html#aad1fea22deb09279b4487665bb0b0d0e", null ],
     [ "DISALLOW_COPY_AND_ASSIGN", "x_2base_2macros_8h.html#af8df3547bfde53a5acb93e2607b0034a", null ],
     [ "FALLTHROUGH_INTENDED", "x_2base_2macros_8h.html#adbc889df74eb0efe177d0dcde1541a24", null ],

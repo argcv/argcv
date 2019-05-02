@@ -96,6 +96,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>Aborted()
 : <a class="el" href="classargcv_1_1_status.html#af65172d25c46f623ed49d0e25f4f02b2">argcv::Status</a>
 </li>
+<li>Add()
+: <a class="el" href="classargcv_1_1sync_1_1_wait_group.html#ae9568d8c6e2d88631fd51cd12a25514f">argcv::sync::WaitGroup</a>
+</li>
 <li>AlreadyExists()
 : <a class="el" href="classargcv_1_1_status.html#a1016bfc92a6d8069e9f53a3a87bd16af">argcv::Status</a>
 </li>
@@ -113,11 +116,14 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="classargcv_1_1_status.html#a10dae11eaed5a877c4c315a16c0da9dc">argcv::Status</a>
 </li>
 <li>Close()
-: <a class="el" href="classargcv_1_1_closer.html#adfc0b53ec74f8105b2516a29eebb2120">argcv::Closer</a>
-, <a class="el" href="classargcv_1_1_nop_closer.html#af4994da281c83b85288cc3704ea39db9">argcv::NopCloser</a>
+: <a class="el" href="classargcv_1_1io_1_1_closer.html#a262c7910012ec9bba83dcb9f0e0f4c31">argcv::io::Closer</a>
+, <a class="el" href="classargcv_1_1io_1_1_nop_closer.html#aceb118b09f73ffc7d3f02f9be5aa542c">argcv::io::NopCloser</a>
 </li>
 <li>code()
 : <a class="el" href="classargcv_1_1_status.html#af15d3fcb136fcdc3f1c74baa099aaca6">argcv::Status</a>
+</li>
+<li>Compare()
+: <a class="el" href="class_comparable.html#ad7fc12337437d83f8bb657924d14cb79">Comparable&lt; T &gt;</a>
 </li>
 <li>Connect()
 : <a class="el" href="classargcv_1_1_signal_slot.html#a10fc078388562d8db3a6ec3d503c74e4">argcv::SignalSlot&lt; Args &gt;</a>
@@ -141,10 +147,19 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>DisconnectAll()
 : <a class="el" href="classargcv_1_1_signal_slot.html#ab43a02069cda05373d11b475694dba96">argcv::SignalSlot&lt; Args &gt;</a>
 </li>
+<li>Do()
+: <a class="el" href="classargcv_1_1sync_1_1_once.html#a6ab525fb4c372ed3c305edaa55234168">argcv::sync::Once</a>
+</li>
+<li>Done()
+: <a class="el" href="classargcv_1_1sync_1_1_wait_group.html#a7bd10e44320e466b835c2e61270f5b9e">argcv::sync::WaitGroup</a>
+</li>
 </ul>
 
 
 <h3><a id="index_e"></a>- e -</h3><ul>
+<li>Enqueue()
+: <a class="el" href="classargcv_1_1_thread_pool.html#a330c3745ab11ce77d20ff5cc5fa4061f">argcv::ThreadPool</a>
+</li>
 <li>error_message()
 : <a class="el" href="classargcv_1_1_status.html#a3815237f5b27b9e2410baae281bcb207">argcv::Status</a>
 </li>
@@ -157,6 +172,13 @@ $(document).ready(function(){initNavTree('functions.html','');});
 </li>
 <li>Functor
 : <a class="el" href="classargcv_1_1_signal_slot.html#a733bd31dd8924f25434f39362bd606e0">argcv::SignalSlot&lt; Args &gt;</a>
+</li>
+</ul>
+
+
+<h3><a id="index_g"></a>- g -</h3><ul>
+<li>Guard()
+: <a class="el" href="classargcv_1_1sync_1_1_locker.html#afdfe0b8264627bf642ca67ca1299fb23">argcv::sync::Locker</a>
 </li>
 </ul>
 
@@ -184,7 +206,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="classargcv_1_1_status.html#a1ef6494840c66ab7cf9342ecbe7b8c79">argcv::Status</a>
 </li>
 <li>IsDir()
-: <a class="el" href="classargcv_1_1_file_info.html#ac8a5eeebac4f8a2056140dc484fc2ae7">argcv::FileInfo</a>
+: <a class="el" href="classargcv_1_1io_1_1_file_info.html#a5b9ec7524bd0642756b837cd1edb5515">argcv::io::FileInfo</a>
 </li>
 <li>IsFailedPrecondition()
 : <a class="el" href="classargcv_1_1_status.html#af26695653994aa00611472f6940c8839">argcv::Status</a>
@@ -205,7 +227,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="classargcv_1_1_status.html#aa5dcf1bf5d0e516a8f05403b8331eec1">argcv::Status</a>
 </li>
 <li>IsRegular()
-: <a class="el" href="classargcv_1_1_file_info.html#ac989cf9ff8926c1d88d5f232c0616ef5">argcv::FileInfo</a>
+: <a class="el" href="classargcv_1_1io_1_1_file_info.html#a5b90793576c1e418ebfe46b592642815">argcv::io::FileInfo</a>
 </li>
 <li>IsResourceExhausted()
 : <a class="el" href="classargcv_1_1_status.html#a915fa3c9848ea4fd82c29337514e2c39">argcv::Status</a>
@@ -225,7 +247,28 @@ $(document).ready(function(){initNavTree('functions.html','');});
 </ul>
 
 
+<h3><a id="index_l"></a>- l -</h3><ul>
+<li>Lock()
+: <a class="el" href="classargcv_1_1sync_1_1_locker.html#a95732730903b6fd42ad26fd32d44a151">argcv::sync::Locker</a>
+, <a class="el" href="classargcv_1_1sync_1_1_mutex.html#a3a91e68fa0546ddee3f8f5faca71d4ab">argcv::sync::Mutex</a>
+</li>
+<li>LockGuard()
+: <a class="el" href="classargcv_1_1sync_1_1_lock_guard.html#abe6a0842ed444efa0aa702f4233b5a76">argcv::sync::LockGuard</a>
+</li>
+</ul>
+
+
+<h3><a id="index_m"></a>- m -</h3><ul>
+<li>Mutex()
+: <a class="el" href="classargcv_1_1sync_1_1_mutex.html#aefa2fbe4a329ae6501a8dcb66cb74ab4">argcv::sync::Mutex</a>
+</li>
+</ul>
+
+
 <h3><a id="index_n"></a>- n -</h3><ul>
+<li>Next()
+: <a class="el" href="classargcv_1_1_iterator.html#a3ab7268a9bdfd949e4cb9ae6d2f0fc46">argcv::Iterator&lt; T &gt;</a>
+</li>
 <li>NotFound()
 : <a class="el" href="classargcv_1_1_status.html#a974a6d59d57da4a4a76b283ddf650235">argcv::Status</a>
 </li>
@@ -235,15 +278,23 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <h3><a id="index_o"></a>- o -</h3><ul>
 <li>ok()
 : <a class="el" href="classargcv_1_1_result.html#adf0d9d0f777a0767844f592696494c2f">argcv::Result&lt; T &gt;</a>
+, <a class="el" href="classargcv_1_1_status.html#a1b217540bd120076632ce6dfe37b1408">argcv::Status</a>
 </li>
 <li>OK()
 : <a class="el" href="classargcv_1_1_status.html#aaf98553b21cdffc185c9f8278a8e5574">argcv::Status</a>
 </li>
-<li>ok()
-: <a class="el" href="classargcv_1_1_status.html#a1b217540bd120076632ce6dfe37b1408">argcv::Status</a>
+<li>Once()
+: <a class="el" href="classargcv_1_1sync_1_1_once.html#ab3d9e266155a367e3ae23e4d2123b8ef">argcv::sync::Once</a>
 </li>
 <li>operator!=()
 : <a class="el" href="classargcv_1_1_status.html#a6a3a740c9e1f4d5426c29b8b1f5fdec5">argcv::Status</a>
+, <a class="el" href="class_comparable.html#a2e9c9531664c775974a8f32b0157321d">Comparable&lt; T &gt;</a>
+</li>
+<li>operator&lt;()
+: <a class="el" href="class_comparable.html#ab132f77208d2d79259fdac2b9fcf6faf">Comparable&lt; T &gt;</a>
+</li>
+<li>operator&lt;=()
+: <a class="el" href="class_comparable.html#af94bde05ebb5b9aba7302e4faf6e00fb">Comparable&lt; T &gt;</a>
 </li>
 <li>operator=()
 : <a class="el" href="classargcv_1_1_result.html#a991e406eec688245ef40ff8b6f1d2379">argcv::Result&lt; T &gt;</a>
@@ -251,6 +302,13 @@ $(document).ready(function(){initNavTree('functions.html','');});
 </li>
 <li>operator==()
 : <a class="el" href="classargcv_1_1_status.html#a9319fc74e21f2406adf2aae24adad484">argcv::Status</a>
+, <a class="el" href="class_comparable.html#a09a440ea57aebce18757311dae42abff">Comparable&lt; T &gt;</a>
+</li>
+<li>operator&gt;()
+: <a class="el" href="class_comparable.html#a8fd9e8295a87184aeec43ee0f849c83b">Comparable&lt; T &gt;</a>
+</li>
+<li>operator&gt;=()
+: <a class="el" href="class_comparable.html#afb89dfdcb52321e5186ef7b2dd332b9d">Comparable&lt; T &gt;</a>
 </li>
 <li>OutOfRange()
 : <a class="el" href="classargcv_1_1_status.html#a94a8174fc030672d6439cc7e3916c69a">argcv::Status</a>
@@ -260,7 +318,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
 
 <h3><a id="index_p"></a>- p -</h3><ul>
 <li>Perm()
-: <a class="el" href="classargcv_1_1_file_info.html#aaf90f8a37e84349825bf5ef428d132c6">argcv::FileInfo</a>
+: <a class="el" href="classargcv_1_1io_1_1_file_info.html#a707a5c447d636f684524c5d3e00b4149">argcv::io::FileInfo</a>
 </li>
 <li>PermissionDenied()
 : <a class="el" href="classargcv_1_1_status.html#a9aed1e7794543d02bc1f1a3d560f5bb5">argcv::Status</a>
@@ -270,10 +328,10 @@ $(document).ready(function(){initNavTree('functions.html','');});
 
 <h3><a id="index_r"></a>- r -</h3><ul>
 <li>Read()
-: <a class="el" href="classargcv_1_1_reader.html#af183b0f5c2e4458d396e32613926d6dc">argcv::Reader</a>
+: <a class="el" href="classargcv_1_1io_1_1_reader.html#a2d4af2da65229187fc1aa05027c803c7">argcv::io::Reader</a>
 </li>
 <li>ReadAt()
-: <a class="el" href="classargcv_1_1_random_reader.html#a43065ab08f2c02207c5f61498cbe91f1">argcv::RandomReader</a>
+: <a class="el" href="classargcv_1_1io_1_1_random_reader.html#a24745f936cbdaa072132aa7ad4d922df">argcv::io::RandomReader</a>
 </li>
 <li>ResourceExhausted()
 : <a class="el" href="classargcv_1_1_status.html#af1959373edfbd6227ed8bad0e330f02d">argcv::Status</a>
@@ -286,7 +344,10 @@ $(document).ready(function(){initNavTree('functions.html','');});
 
 <h3><a id="index_s"></a>- s -</h3><ul>
 <li>Seek()
-: <a class="el" href="classargcv_1_1_seeker.html#a281bb72ead282bbfaca3d49731fd004b">argcv::Seeker</a>
+: <a class="el" href="classargcv_1_1io_1_1_seeker.html#ad6485a91a43da3348dce5b22db528c8b">argcv::io::Seeker</a>
+</li>
+<li>Send()
+: <a class="el" href="classargcv_1_1_thread_pool.html#a1211ed39265e49ee08375c0e8549540a">argcv::ThreadPool</a>
 </li>
 <li>SignalSlot()
 : <a class="el" href="classargcv_1_1_signal_slot.html#a2826771596952fa559facd42e2df774a">argcv::SignalSlot&lt; Args &gt;</a>
@@ -301,8 +362,14 @@ $(document).ready(function(){initNavTree('functions.html','');});
 
 
 <h3><a id="index_t"></a>- t -</h3><ul>
+<li>ThreadPool()
+: <a class="el" href="classargcv_1_1_thread_pool.html#a5bf6cb82300270b6e5c31712ac277b3c">argcv::ThreadPool</a>
+</li>
 <li>ToString()
 : <a class="el" href="classargcv_1_1_status.html#a9ec990ff3edf5d81e98675c3a27f6992">argcv::Status</a>
+</li>
+<li>TryLock()
+: <a class="el" href="classargcv_1_1sync_1_1_mutex.html#a434e915881c9e25f8489d3c54dabcf6a">argcv::sync::Mutex</a>
 </li>
 </ul>
 
@@ -315,7 +382,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="classargcv_1_1_status.html#ae410fb8a81019e5f0ad41a070ec8c0d5">argcv::Status</a>
 </li>
 <li>underlying_ref()
-: <a class="el" href="classargcv_1_1_file.html#ae2067a6c34cf3c7ad3284f736fecb069">argcv::File</a>
+: <a class="el" href="classargcv_1_1io_1_1_file.html#a1963f59e4a70a778dfb6b8d4e16a6fc1">argcv::io::File</a>
 </li>
 <li>Unimplemented()
 : <a class="el" href="classargcv_1_1_status.html#a7fd8f4c8bc408392d4c89f8205cc8bbe">argcv::Status</a>
@@ -323,64 +390,86 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>Unknown()
 : <a class="el" href="classargcv_1_1_status.html#a5bc0813d64586fedd9b082c7c3e7b02a">argcv::Status</a>
 </li>
+<li>Unlock()
+: <a class="el" href="classargcv_1_1sync_1_1_locker.html#aeba83f1c00edfca44ac9e7b62043e4f2">argcv::sync::Locker</a>
+, <a class="el" href="classargcv_1_1sync_1_1_mutex.html#afd93d3777132450c21bf887c697f00b7">argcv::sync::Mutex</a>
+</li>
 </ul>
 
 
 <h3><a id="index_w"></a>- w -</h3><ul>
+<li>Wait()
+: <a class="el" href="classargcv_1_1sync_1_1_wait_group.html#a3dfe1485ac718120a0634206d85e3b11">argcv::sync::WaitGroup</a>
+</li>
+<li>WaitGroup()
+: <a class="el" href="classargcv_1_1sync_1_1_wait_group.html#a6c1f517ae2f02981469ff3388f6376be">argcv::sync::WaitGroup</a>
+</li>
 <li>Write()
-: <a class="el" href="classargcv_1_1_writer.html#ab2b6fd9a549732a4c4e3088233d3ba76">argcv::Writer</a>
+: <a class="el" href="classargcv_1_1io_1_1_writer.html#a14064f9d76ccb4954f0fbaa1c4d207fc">argcv::io::Writer</a>
 </li>
 <li>WriteAt()
-: <a class="el" href="classargcv_1_1_random_writer.html#a1fd99f8e0360ffd0305bce444e83160e">argcv::RandomWriter</a>
+: <a class="el" href="classargcv_1_1io_1_1_random_writer.html#a149e37d961ddc4410c82f2e2c5f98195">argcv::io::RandomWriter</a>
 </li>
 </ul>
 
 
 <h3><a id="index__7E"></a>- ~ -</h3><ul>
 <li>~Closer()
-: <a class="el" href="classargcv_1_1_closer.html#ad591baf244d17d33a0a97217b5497320">argcv::Closer</a>
+: <a class="el" href="classargcv_1_1io_1_1_closer.html#a5b271e15044c0df1d333f91cae3f8f99">argcv::io::Closer</a>
+</li>
+<li>~Comparable()
+: <a class="el" href="class_comparable.html#af69a5ad966d481b12c63c6e207b98d67">Comparable&lt; T &gt;</a>
+</li>
+<li>~Iterator()
+: <a class="el" href="classargcv_1_1_iterator.html#ac222a8fc195f068e9ea2caf2882248b3">argcv::Iterator&lt; T &gt;</a>
+</li>
+<li>~LockGuard()
+: <a class="el" href="classargcv_1_1sync_1_1_lock_guard.html#a494a459ff1e018614943baaae6b08a4a">argcv::sync::LockGuard</a>
 </li>
 <li>~NopCloser()
-: <a class="el" href="classargcv_1_1_nop_closer.html#a9733749a1e4e57ba63f6b5b8b1a74923">argcv::NopCloser</a>
+: <a class="el" href="classargcv_1_1io_1_1_nop_closer.html#aa1efca0c4227ef026773f5cdc5a81e72">argcv::io::NopCloser</a>
+</li>
+<li>~Once()
+: <a class="el" href="classargcv_1_1sync_1_1_once.html#a366cd96e451277d1553013dc759c82fa">argcv::sync::Once</a>
 </li>
 <li>~RandomReadCloser()
-: <a class="el" href="classargcv_1_1_random_read_closer.html#ad508b8d11e56fdbe1c5729977cfcaa06">argcv::RandomReadCloser</a>
+: <a class="el" href="classargcv_1_1io_1_1_random_read_closer.html#a34a2e1d92286fd7a003e0dfa4079ee98">argcv::io::RandomReadCloser</a>
 </li>
 <li>~RandomReader()
-: <a class="el" href="classargcv_1_1_random_reader.html#a45de578333741ae968871d1009a986ae">argcv::RandomReader</a>
+: <a class="el" href="classargcv_1_1io_1_1_random_reader.html#a2d377a8865f0cb1c75d72810dc1b003a">argcv::io::RandomReader</a>
 </li>
 <li>~RandomReadWriteCloser()
-: <a class="el" href="classargcv_1_1_random_read_write_closer.html#a61c0fe1e994c48e79decb919ad0c1e10">argcv::RandomReadWriteCloser</a>
+: <a class="el" href="classargcv_1_1io_1_1_random_read_write_closer.html#a6e30aedea62037466813bf80d9fba72c">argcv::io::RandomReadWriteCloser</a>
 </li>
 <li>~RandomWriteCloser()
-: <a class="el" href="classargcv_1_1_random_write_closer.html#a5e9979a5604c92e45ffc109401aa2ff9">argcv::RandomWriteCloser</a>
+: <a class="el" href="classargcv_1_1io_1_1_random_write_closer.html#adeaee03bf54771af714261cf11498177">argcv::io::RandomWriteCloser</a>
 </li>
 <li>~RandomWriter()
-: <a class="el" href="classargcv_1_1_random_writer.html#a782e84817d7860c5612f09bd25144b6b">argcv::RandomWriter</a>
+: <a class="el" href="classargcv_1_1io_1_1_random_writer.html#af8a9535cea01381f3e858ce4a826d651">argcv::io::RandomWriter</a>
 </li>
 <li>~ReadCloser()
-: <a class="el" href="classargcv_1_1_read_closer.html#a53ba6d265675a59bb15295e720b3d76d">argcv::ReadCloser</a>
+: <a class="el" href="classargcv_1_1io_1_1_read_closer.html#a98de10d3dfe7f5604d566f012bb58104">argcv::io::ReadCloser</a>
 </li>
 <li>~Reader()
-: <a class="el" href="classargcv_1_1_reader.html#ac0040e2f3650b6a7e086a71960272c87">argcv::Reader</a>
+: <a class="el" href="classargcv_1_1io_1_1_reader.html#a0d6c70b708801595af3a7d8e19d8c01c">argcv::io::Reader</a>
 </li>
 <li>~ReadSeeker()
-: <a class="el" href="classargcv_1_1_read_seeker.html#ae020e87ef49cfad00682244be08c07a6">argcv::ReadSeeker</a>
+: <a class="el" href="classargcv_1_1io_1_1_read_seeker.html#aa6ca8e4c282c8b621998eb9ba0b9d53b">argcv::io::ReadSeeker</a>
 </li>
 <li>~ReadWriteCloser()
-: <a class="el" href="classargcv_1_1_read_write_closer.html#a7923e567b4a20b496afd74badb480a39">argcv::ReadWriteCloser</a>
+: <a class="el" href="classargcv_1_1io_1_1_read_write_closer.html#a7d96c4e0a6efa50dd48c972c096a9b2c">argcv::io::ReadWriteCloser</a>
 </li>
 <li>~ReadWriter()
-: <a class="el" href="classargcv_1_1_read_writer.html#a0d36541c1015b85c03dedb9211b264a6">argcv::ReadWriter</a>
+: <a class="el" href="classargcv_1_1io_1_1_read_writer.html#a591baac0d53f0b9f2d0069f67423a262">argcv::io::ReadWriter</a>
 </li>
 <li>~ReadWriteSeeker()
-: <a class="el" href="classargcv_1_1_read_write_seeker.html#a5a8a9f33cdd2658e3501122a425de8bc">argcv::ReadWriteSeeker</a>
+: <a class="el" href="classargcv_1_1io_1_1_read_write_seeker.html#a690a3742650c0b610af5ffb9bd2b1237">argcv::io::ReadWriteSeeker</a>
 </li>
 <li>~Result()
 : <a class="el" href="classargcv_1_1_result.html#a3bd09942922cb08b6eba5a95718613f8">argcv::Result&lt; T &gt;</a>
 </li>
 <li>~Seeker()
-: <a class="el" href="classargcv_1_1_seeker.html#a3ae31fee1649612ab635e6cb2d393f2d">argcv::Seeker</a>
+: <a class="el" href="classargcv_1_1io_1_1_seeker.html#a0a269c19325ba3cec47716fbd4fb034b">argcv::io::Seeker</a>
 </li>
 <li>~SignalSlot()
 : <a class="el" href="classargcv_1_1_signal_slot.html#afbf340571d4a3753f516c28d18d90375">argcv::SignalSlot&lt; Args &gt;</a>
@@ -388,14 +477,20 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>~Status()
 : <a class="el" href="classargcv_1_1_status.html#a587e1712ba651140fd6c6bb1f7a3fc92">argcv::Status</a>
 </li>
+<li>~ThreadPool()
+: <a class="el" href="classargcv_1_1_thread_pool.html#a5a559c451fbcc83db59040122fe98e75">argcv::ThreadPool</a>
+</li>
+<li>~WaitGroup()
+: <a class="el" href="classargcv_1_1sync_1_1_wait_group.html#a9b4628cda2b603f73939dac36edd8c7f">argcv::sync::WaitGroup</a>
+</li>
 <li>~WriteCloser()
-: <a class="el" href="classargcv_1_1_write_closer.html#a9cfe9291a01807305ff92682838c26d0">argcv::WriteCloser</a>
+: <a class="el" href="classargcv_1_1io_1_1_write_closer.html#ac4de83c36b8e59cf845ef5cb7a63e7c4">argcv::io::WriteCloser</a>
 </li>
 <li>~Writer()
-: <a class="el" href="classargcv_1_1_writer.html#adf66464f1ff3230b2003ad860e9bc9a8">argcv::Writer</a>
+: <a class="el" href="classargcv_1_1io_1_1_writer.html#aac3ccb05ecf0260ab5372d4da9b8012c">argcv::io::Writer</a>
 </li>
 <li>~WriteSeeker()
-: <a class="el" href="classargcv_1_1_write_seeker.html#aa14c7a965da4a63962453bc54a74a0ab">argcv::WriteSeeker</a>
+: <a class="el" href="classargcv_1_1io_1_1_write_seeker.html#af8139ca590596a65c65ab0ed8c95b21d">argcv::io::WriteSeeker</a>
 </li>
 </ul>
 </div><!-- contents -->

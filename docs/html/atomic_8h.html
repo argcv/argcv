@@ -99,6 +99,7 @@ $(document).ready(function(){initNavTree('atomic_8h.html','');});
 <div class="contents">
 <div class="textblock"><code>#include &lt;atomic&gt;</code><br />
 <code>#include &lt;memory&gt;</code><br />
+<code>#include &quot;<a class="el" href="types_8h_source.html">argcv/cxx/base/types.h</a>&quot;</code><br />
 </div>
 <p><a href="atomic_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -110,30 +111,37 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a149e58c67d27a7109020f77cecd35a51"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a149e58c67d27a7109020f77cecd35a51"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceargcv.html#a149e58c67d27a7109020f77cecd35a51">argcv::AtomicFetchAdd</a> (std::atomic&lt; T &gt; *obj, T arg) noexcept</td></tr>
-<tr class="memdesc:a149e58c67d27a7109020f77cecd35a51"><td class="mdescLeft">&#160;</td><td class="mdescRight">fetch_add  <a href="namespaceargcv.html#a149e58c67d27a7109020f77cecd35a51">More...</a><br /></td></tr>
-<tr class="separator:a149e58c67d27a7109020f77cecd35a51"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9332a4d2dee6353c592849cffef17ff2"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a9332a4d2dee6353c592849cffef17ff2"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceargcv.html#a9332a4d2dee6353c592849cffef17ff2">argcv::AtomicFetchSub</a> (std::atomic&lt; T &gt; *obj, const T &amp;arg) noexcept</td></tr>
-<tr class="memdesc:a9332a4d2dee6353c592849cffef17ff2"><td class="mdescLeft">&#160;</td><td class="mdescRight">fetch_sub  <a href="namespaceargcv.html#a9332a4d2dee6353c592849cffef17ff2">More...</a><br /></td></tr>
-<tr class="separator:a9332a4d2dee6353c592849cffef17ff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab679eb833d81216e73ac919bd1bdc3eb"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ab679eb833d81216e73ac919bd1bdc3eb"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceargcv.html#ab679eb833d81216e73ac919bd1bdc3eb">argcv::AtomicFetchOr</a> (std::atomic&lt; T &gt; *obj, const T &amp;arg) noexcept</td></tr>
-<tr class="memdesc:ab679eb833d81216e73ac919bd1bdc3eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">fetch_or  <a href="namespaceargcv.html#ab679eb833d81216e73ac919bd1bdc3eb">More...</a><br /></td></tr>
-<tr class="separator:ab679eb833d81216e73ac919bd1bdc3eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91872fc06795f33958248ed850ef8159"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a91872fc06795f33958248ed850ef8159"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceargcv.html#a91872fc06795f33958248ed850ef8159">argcv::AtomicFetchXor</a> (std::atomic&lt; T &gt; *obj, const T &amp;arg) noexcept</td></tr>
-<tr class="memdesc:a91872fc06795f33958248ed850ef8159"><td class="mdescLeft">&#160;</td><td class="mdescRight">fetch_xor  <a href="namespaceargcv.html#a91872fc06795f33958248ed850ef8159">More...</a><br /></td></tr>
-<tr class="separator:a91872fc06795f33958248ed850ef8159"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5391b3edff01e7cdf251920fcc2cbb28"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a5391b3edff01e7cdf251920fcc2cbb28"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceargcv.html#a5391b3edff01e7cdf251920fcc2cbb28">argcv::AtomicStore</a> (std::atomic&lt; T &gt; *obj, const T &amp;arg) noexcept</td></tr>
-<tr class="memdesc:a5391b3edff01e7cdf251920fcc2cbb28"><td class="mdescLeft">&#160;</td><td class="mdescRight">store  <a href="namespaceargcv.html#a5391b3edff01e7cdf251920fcc2cbb28">More...</a><br /></td></tr>
-<tr class="separator:a5391b3edff01e7cdf251920fcc2cbb28"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7a005d7dbfb51a0769e94295f448bd5"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ae7a005d7dbfb51a0769e94295f448bd5"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceargcv.html#ae7a005d7dbfb51a0769e94295f448bd5">argcv::AtomicLoad</a> (std::atomic&lt; T &gt; *obj) noexcept</td></tr>
-<tr class="memdesc:ae7a005d7dbfb51a0769e94295f448bd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">load  <a href="namespaceargcv.html#ae7a005d7dbfb51a0769e94295f448bd5">More...</a><br /></td></tr>
-<tr class="separator:ae7a005d7dbfb51a0769e94295f448bd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2456aa548e009159f0c1a1385b7c4cef"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a2456aa548e009159f0c1a1385b7c4cef"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceargcv.html#a2456aa548e009159f0c1a1385b7c4cef">argcv::AtomicFetchAdd</a> (atomic&lt; T &gt; *obj, T arg) noexcept</td></tr>
+<tr class="memdesc:a2456aa548e009159f0c1a1385b7c4cef"><td class="mdescLeft">&#160;</td><td class="mdescRight">fetch_add  <a href="namespaceargcv.html#a2456aa548e009159f0c1a1385b7c4cef">More...</a><br /></td></tr>
+<tr class="separator:a2456aa548e009159f0c1a1385b7c4cef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af537c6888e20284ea4f847e1c95f136c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:af537c6888e20284ea4f847e1c95f136c"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceargcv.html#af537c6888e20284ea4f847e1c95f136c">argcv::AtomicIncr</a> (atomic&lt; T &gt; *obj) noexcept</td></tr>
+<tr class="memdesc:af537c6888e20284ea4f847e1c95f136c"><td class="mdescLeft">&#160;</td><td class="mdescRight">increment 1  <a href="namespaceargcv.html#af537c6888e20284ea4f847e1c95f136c">More...</a><br /></td></tr>
+<tr class="separator:af537c6888e20284ea4f847e1c95f136c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7526fc1b873bf760b418e7e2f400019a"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a7526fc1b873bf760b418e7e2f400019a"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceargcv.html#a7526fc1b873bf760b418e7e2f400019a">argcv::AtomicFetchSub</a> (atomic&lt; T &gt; *obj, const T &amp;arg) noexcept</td></tr>
+<tr class="memdesc:a7526fc1b873bf760b418e7e2f400019a"><td class="mdescLeft">&#160;</td><td class="mdescRight">fetch_sub  <a href="namespaceargcv.html#a7526fc1b873bf760b418e7e2f400019a">More...</a><br /></td></tr>
+<tr class="separator:a7526fc1b873bf760b418e7e2f400019a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a163861039cf0041a2e25841925bc84bb"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a163861039cf0041a2e25841925bc84bb"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceargcv.html#a163861039cf0041a2e25841925bc84bb">argcv::AtomicDecr</a> (atomic&lt; T &gt; *obj) noexcept</td></tr>
+<tr class="separator:a163861039cf0041a2e25841925bc84bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab4817dffb09905a071e5707496bccec"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aab4817dffb09905a071e5707496bccec"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceargcv.html#aab4817dffb09905a071e5707496bccec">argcv::AtomicFetchOr</a> (atomic&lt; T &gt; *obj, const T &amp;arg) noexcept</td></tr>
+<tr class="memdesc:aab4817dffb09905a071e5707496bccec"><td class="mdescLeft">&#160;</td><td class="mdescRight">fetch_or  <a href="namespaceargcv.html#aab4817dffb09905a071e5707496bccec">More...</a><br /></td></tr>
+<tr class="separator:aab4817dffb09905a071e5707496bccec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe3779358eea29985eeeabb7cc9cd195"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:abe3779358eea29985eeeabb7cc9cd195"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceargcv.html#abe3779358eea29985eeeabb7cc9cd195">argcv::AtomicFetchXor</a> (atomic&lt; T &gt; *obj, const T &amp;arg) noexcept</td></tr>
+<tr class="memdesc:abe3779358eea29985eeeabb7cc9cd195"><td class="mdescLeft">&#160;</td><td class="mdescRight">fetch_xor  <a href="namespaceargcv.html#abe3779358eea29985eeeabb7cc9cd195">More...</a><br /></td></tr>
+<tr class="separator:abe3779358eea29985eeeabb7cc9cd195"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06820c017721b76b319f67dce073f9a5"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a06820c017721b76b319f67dce073f9a5"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceargcv.html#a06820c017721b76b319f67dce073f9a5">argcv::AtomicStore</a> (atomic&lt; T &gt; *obj, const T &amp;arg) noexcept</td></tr>
+<tr class="memdesc:a06820c017721b76b319f67dce073f9a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">store  <a href="namespaceargcv.html#a06820c017721b76b319f67dce073f9a5">More...</a><br /></td></tr>
+<tr class="separator:a06820c017721b76b319f67dce073f9a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f012847b652ff7e131b4a9d088566e3"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a7f012847b652ff7e131b4a9d088566e3"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceargcv.html#a7f012847b652ff7e131b4a9d088566e3">argcv::AtomicLoad</a> (const atomic&lt; T &gt; *obj) noexcept</td></tr>
+<tr class="memdesc:a7f012847b652ff7e131b4a9d088566e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">load  <a href="namespaceargcv.html#a7f012847b652ff7e131b4a9d088566e3">More...</a><br /></td></tr>
+<tr class="separator:a7f012847b652ff7e131b4a9d088566e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

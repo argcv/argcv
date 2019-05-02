@@ -1,9 +1,11 @@
 var atomic_8h =
 [
-    [ "AtomicFetchAdd", "atomic_8h.html#a149e58c67d27a7109020f77cecd35a51", null ],
-    [ "AtomicFetchOr", "atomic_8h.html#ab679eb833d81216e73ac919bd1bdc3eb", null ],
-    [ "AtomicFetchSub", "atomic_8h.html#a9332a4d2dee6353c592849cffef17ff2", null ],
-    [ "AtomicFetchXor", "atomic_8h.html#a91872fc06795f33958248ed850ef8159", null ],
-    [ "AtomicLoad", "atomic_8h.html#ae7a005d7dbfb51a0769e94295f448bd5", null ],
-    [ "AtomicStore", "atomic_8h.html#a5391b3edff01e7cdf251920fcc2cbb28", null ]
+    [ "AtomicDecr", "atomic_8h.html#a163861039cf0041a2e25841925bc84bb", null ],
+    [ "AtomicFetchAdd", "atomic_8h.html#a2456aa548e009159f0c1a1385b7c4cef", null ],
+    [ "AtomicFetchOr", "atomic_8h.html#aab4817dffb09905a071e5707496bccec", null ],
+    [ "AtomicFetchSub", "atomic_8h.html#a7526fc1b873bf760b418e7e2f400019a", null ],
+    [ "AtomicFetchXor", "atomic_8h.html#abe3779358eea29985eeeabb7cc9cd195", null ],
+    [ "AtomicIncr", "atomic_8h.html#af537c6888e20284ea4f847e1c95f136c", null ],
+    [ "AtomicLoad", "atomic_8h.html#a7f012847b652ff7e131b4a9d088566e3", null ],
+    [ "AtomicStore", "atomic_8h.html#a06820c017721b76b319f67dce073f9a5", null ]
 ];

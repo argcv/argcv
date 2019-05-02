@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
-<title>ArgCV: argcv/cxx/os/file.h File Reference</title>
+<title>ArgCV: argcv/cxx/io/file.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -108,10 +108,10 @@ $(document).ready(function(){initNavTree('file_8h.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classargcv_1_1_file_info.html">argcv::FileInfo</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classargcv_1_1_file_info.html" title="A FileInfo describes a file and is returned by Stat and Lstat.">FileInfo</a> describes a file and is returned by Stat and Lstat.  <a href="classargcv_1_1_file_info.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classargcv_1_1io_1_1_file_info.html">argcv::io::FileInfo</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classargcv_1_1io_1_1_file_info.html" title="A FileInfo describes a file and is returned by Stat and Lstat.">FileInfo</a> describes a file and is returned by Stat and Lstat.  <a href="classargcv_1_1io_1_1_file_info.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classargcv_1_1_file.html">argcv::File</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classargcv_1_1io_1_1_file.html">argcv::io::File</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -119,31 +119,33 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespaceargcv"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceargcv.html">argcv</a></td></tr>
 <tr class="memdesc:namespaceargcv"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type definitions. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceargcv_1_1io"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceargcv_1_1io.html">argcv::io</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:af84e96356d9862a82439efe81fdf2e39"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceargcv.html#af84e96356d9862a82439efe81fdf2e39">argcv::FileMode</a> : uint32 { <br />
-&#160;&#160;<a class="el" href="namespaceargcv.html#af84e96356d9862a82439efe81fdf2e39a4f53745e0abb2c17d52456812708cf15">argcv::kModeDir</a> = static_cast&lt;uint32&gt;(1) &lt;&lt; (32 - 1), 
-<a class="el" href="namespaceargcv.html#af84e96356d9862a82439efe81fdf2e39a1dec5983fe185bce1c9775cbb46c32b9">argcv::kModeAppend</a> = static_cast&lt;uint32&gt;(1) &lt;&lt; (32 - 2), 
-<a class="el" href="namespaceargcv.html#af84e96356d9862a82439efe81fdf2e39a5a72a94facd500e29fba6f5430020b69">argcv::kModeExclusive</a> = static_cast&lt;uint32&gt;(1) &lt;&lt; (32 - 3), 
-<a class="el" href="namespaceargcv.html#af84e96356d9862a82439efe81fdf2e39a9b7a41425f016c2c308e762d474f3d77">argcv::kModeTemporary</a> = static_cast&lt;uint32&gt;(1) &lt;&lt; (32 - 4), 
+<tr class="memitem:a13c6afd603d5cfc59aa2aee504b9e7a9"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceargcv_1_1io.html#a13c6afd603d5cfc59aa2aee504b9e7a9">argcv::io::FileMode</a> : uint32 { <br />
+&#160;&#160;<a class="el" href="namespaceargcv_1_1io.html#a13c6afd603d5cfc59aa2aee504b9e7a9a44557345a7e9ea874e764c35931447f2">argcv::io::kModeDir</a> = static_cast&lt;uint32&gt;(1) &lt;&lt; (32 - 1), 
+<a class="el" href="namespaceargcv_1_1io.html#a13c6afd603d5cfc59aa2aee504b9e7a9aea38a73578409d18ad40dc9cb9d349ce">argcv::io::kModeAppend</a> = static_cast&lt;uint32&gt;(1) &lt;&lt; (32 - 2), 
+<a class="el" href="namespaceargcv_1_1io.html#a13c6afd603d5cfc59aa2aee504b9e7a9ad748eeebf972431b4b484652c61297e6">argcv::io::kModeExclusive</a> = static_cast&lt;uint32&gt;(1) &lt;&lt; (32 - 3), 
+<a class="el" href="namespaceargcv_1_1io.html#a13c6afd603d5cfc59aa2aee504b9e7a9a2953078c5581bda53580eb346d3e63e1">argcv::io::kModeTemporary</a> = static_cast&lt;uint32&gt;(1) &lt;&lt; (32 - 4), 
 <br />
-&#160;&#160;<a class="el" href="namespaceargcv.html#af84e96356d9862a82439efe81fdf2e39a11ef62883e1b8da15c9bf96a693dbf70">argcv::kModeSymlink</a> = static_cast&lt;uint32&gt;(1) &lt;&lt; (32 - 5), 
-<a class="el" href="namespaceargcv.html#af84e96356d9862a82439efe81fdf2e39aa47bc980a5c543b54a52d8494ec94e39">argcv::kModeDevice</a> = static_cast&lt;uint32&gt;(1) &lt;&lt; (32 - 6), 
-<a class="el" href="namespaceargcv.html#af84e96356d9862a82439efe81fdf2e39afe3e855fcb93ff577025fa456c65da44">argcv::kModeNamedPipe</a> = static_cast&lt;uint32&gt;(1) &lt;&lt; (32 - 7), 
-<a class="el" href="namespaceargcv.html#af84e96356d9862a82439efe81fdf2e39a2baf5b2daca2e9b235683b8ca35cedce">argcv::kModeSocket</a> = static_cast&lt;uint32&gt;(1) &lt;&lt; (32 - 8), 
+&#160;&#160;<a class="el" href="namespaceargcv_1_1io.html#a13c6afd603d5cfc59aa2aee504b9e7a9acf262e2a15d2b4f53e19782e61e17ae7">argcv::io::kModeSymlink</a> = static_cast&lt;uint32&gt;(1) &lt;&lt; (32 - 5), 
+<a class="el" href="namespaceargcv_1_1io.html#a13c6afd603d5cfc59aa2aee504b9e7a9a4341e42c350023742b119ab955636fb6">argcv::io::kModeDevice</a> = static_cast&lt;uint32&gt;(1) &lt;&lt; (32 - 6), 
+<a class="el" href="namespaceargcv_1_1io.html#a13c6afd603d5cfc59aa2aee504b9e7a9a33a9ca6e22e5efd22be10e48996a5ea9">argcv::io::kModeNamedPipe</a> = static_cast&lt;uint32&gt;(1) &lt;&lt; (32 - 7), 
+<a class="el" href="namespaceargcv_1_1io.html#a13c6afd603d5cfc59aa2aee504b9e7a9addf541900ce4fc537842eae35dbfd3fe">argcv::io::kModeSocket</a> = static_cast&lt;uint32&gt;(1) &lt;&lt; (32 - 8), 
 <br />
-&#160;&#160;<a class="el" href="namespaceargcv.html#af84e96356d9862a82439efe81fdf2e39a70b2c6daabf1c2df0555ee8478af86a3">argcv::kModeSetuid</a> = static_cast&lt;uint32&gt;(1) &lt;&lt; (32 - 9), 
-<a class="el" href="namespaceargcv.html#af84e96356d9862a82439efe81fdf2e39a843d1f753f48098b1ad961fb2394ae7a">argcv::kModeSetgid</a> = static_cast&lt;uint32&gt;(1) &lt;&lt; (32 - 10), 
-<a class="el" href="namespaceargcv.html#af84e96356d9862a82439efe81fdf2e39a74af3c29c5fc20dcaefd8bc7a825b889">argcv::kModeCharDevice</a> = static_cast&lt;uint32&gt;(1) &lt;&lt; (32 - 11), 
-<a class="el" href="namespaceargcv.html#af84e96356d9862a82439efe81fdf2e39a77c1048b2375340708d37c8665f01d4c">argcv::kModeSticky</a> = static_cast&lt;uint32&gt;(1) &lt;&lt; (32 - 12), 
+&#160;&#160;<a class="el" href="namespaceargcv_1_1io.html#a13c6afd603d5cfc59aa2aee504b9e7a9a8757f6f7bda76189a384e384b1bd6947">argcv::io::kModeSetuid</a> = static_cast&lt;uint32&gt;(1) &lt;&lt; (32 - 9), 
+<a class="el" href="namespaceargcv_1_1io.html#a13c6afd603d5cfc59aa2aee504b9e7a9aa49f0b8317189b24c943b220890096b7">argcv::io::kModeSetgid</a> = static_cast&lt;uint32&gt;(1) &lt;&lt; (32 - 10), 
+<a class="el" href="namespaceargcv_1_1io.html#a13c6afd603d5cfc59aa2aee504b9e7a9a7647e27e962c7614225d9bd03d2fad94">argcv::io::kModeCharDevice</a> = static_cast&lt;uint32&gt;(1) &lt;&lt; (32 - 11), 
+<a class="el" href="namespaceargcv_1_1io.html#a13c6afd603d5cfc59aa2aee504b9e7a9acd782ae4b63d6c0cec47e98739922d7b">argcv::io::kModeSticky</a> = static_cast&lt;uint32&gt;(1) &lt;&lt; (32 - 12), 
 <br />
-&#160;&#160;<a class="el" href="namespaceargcv.html#af84e96356d9862a82439efe81fdf2e39a9cea1fed852cde8c4a728b25445606da">argcv::kModeIrregular</a> = static_cast&lt;uint32&gt;(1) &lt;&lt; (32 - 13), 
-<a class="el" href="namespaceargcv.html#af84e96356d9862a82439efe81fdf2e39a0fdb87e6901d622cdd78e05861c68ecd">argcv::kModeType</a>, 
-<a class="el" href="namespaceargcv.html#af84e96356d9862a82439efe81fdf2e39a6f553efca74b9b07c0a1de18ddecacf2">argcv::kModePerm</a> = 0777
+&#160;&#160;<a class="el" href="namespaceargcv_1_1io.html#a13c6afd603d5cfc59aa2aee504b9e7a9a9c43ae12407c7f4b7f098a0ad517ae90">argcv::io::kModeIrregular</a> = static_cast&lt;uint32&gt;(1) &lt;&lt; (32 - 13), 
+<a class="el" href="namespaceargcv_1_1io.html#a13c6afd603d5cfc59aa2aee504b9e7a9a90b53e451b28a4a6214bfee9000fbd70">argcv::io::kModeType</a>, 
+<a class="el" href="namespaceargcv_1_1io.html#a13c6afd603d5cfc59aa2aee504b9e7a9aeb91ed7686b938a330711f28610ea661">argcv::io::kModePerm</a> = 0777
 <br />
  }</td></tr>
-<tr class="separator:af84e96356d9862a82439efe81fdf2e39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a13c6afd603d5cfc59aa2aee504b9e7a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -151,7 +153,7 @@ Enumerations</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_35fe26ecdb9ad765d53fed138617535f.html">argcv</a></li><li class="navelem"><a class="el" href="dir_f4c1d4d5e01226d96972d9b937662d15.html">cxx</a></li><li class="navelem"><a class="el" href="dir_19fd8102782f04a8b27d4b75be6d31fb.html">os</a></li><li class="navelem"><a class="el" href="file_8h.html">file.h</a></li>
+    <li class="navelem"><a class="el" href="dir_35fe26ecdb9ad765d53fed138617535f.html">argcv</a></li><li class="navelem"><a class="el" href="dir_f4c1d4d5e01226d96972d9b937662d15.html">cxx</a></li><li class="navelem"><a class="el" href="dir_2a3e5a8dc51c14043aab1d0e31c63235.html">io</a></li><li class="navelem"><a class="el" href="file_8h.html">file.h</a></li>
   </ul>
 </div>
 </body>
