@@ -29,8 +29,8 @@ language:
 addons:
   apt:
     packages:
-      - oracle-java8-installer
-      - oracle-java8-set-default
+      # - oracle-java8-installer
+      # - oracle-java8-set-default
       - doxygen # see http://bit.ly/2T7EmhT for some introduction
       - doxygen-doc
       - doxygen-latex
