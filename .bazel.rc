@@ -3,6 +3,8 @@ build -c opt
 test -c opt
 run -c opt
 
+build --cxxopt='-std=c++11'
+
 build --show_timestamps
 build --verbose_failures
 
