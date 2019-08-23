@@ -60,8 +60,8 @@ cc_system_package_configure = repository_rule(
         # "mandatory": attr.bool(default=True),
         "build_file_template": attr.label(
             default = Label("//tools/build_rules/config:BUILD.tpl"),  # removed '@' here
-            single_file = True,
-            allow_files = True,
+            allow_single_file = True,
+            # allow_files = True,
         ),
     },
     local = True,

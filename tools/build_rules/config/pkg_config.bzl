@@ -172,8 +172,8 @@ pkg_config_package = repository_rule(
         "exact_version": attr.string(),
         "build_file_template": attr.label(
             default = Label("//tools/build_rules/config:BUILD.tpl"), # removed '@' here
-            single_file = True,
-            allow_files = True,
+            allow_single_file = True,
+            # allow_files = True,
         ),
     },
     local = True,
