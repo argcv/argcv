@@ -1,4 +1,4 @@
-.PHONY: build test  clean
+.PHONY: build test test-all fmt doc clean
 
 build:
 	bazel build //...
