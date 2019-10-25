@@ -1,12 +1,8 @@
-[![](https://travis-ci.org/argcv/argcv.svg?branch=master)](https://travis-ci.org/argcv/argcv)
-
-<!--
-![](doc/license.svg)
--->
-
 
 # ArgCV
 
+[![](https://travis-ci.org/argcv/argcv.svg?branch=master)](https://travis-ci.org/argcv/argcv)
+![](docs/license.svg)
 
 ## Motivation
 
