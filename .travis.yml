@@ -4,8 +4,8 @@ sudo: required
 # temp disable cache
 cache:
   directories:
-   - $HOME/mc
-   - $HOME/.cache/bazel
+    - $HOME/mc
+    - $HOME/.cache/bazel
 
 before_cache:
   - rm -f bazel-*
@@ -15,16 +15,7 @@ compiler:
   - gcc
   - clang
 
-language:
-  - java
-  - c++
-  - python
-  # - go
-
-# go:
-#   - 1.9
-#   - 1.10
-#   - master
+language: c++
 
 addons:
   apt:
@@ -41,12 +32,12 @@ addons:
 matrix:
   include:
     - os: linux
-      jdk: oraclejdk8  # Building Bazel requires JDK8.
+      jdk: oraclejdk8 # Building Bazel requires JDK8.
       # Bazel does not support jdk 9 yet
       env:
         - CACHE_NAME=linux
     - os: osx
-      osx_image: xcode8.3  # Building Bazel requires JDK8.
+      osx_image: xcode8.3 # Building Bazel requires JDK8.
       env:
         - CACHE_NAME=osx
 
@@ -93,8 +84,7 @@ notifications:
     urls:
       - https://webhooks.gitter.im/e/8d14bff0d2d10ace5289 # argcv
       - https://webhooks.gitter.im/e/74810b212d49d753d9a2 # argcv/argcv
-    on_success: always  # options: [always|never|change] default: always
-    on_failure: always  # options: [always|never|change] default: always
-    on_start: always    # options: [always|never|change] default: always
-
+    on_success: always # options: [always|never|change] default: always
+    on_failure: always # options: [always|never|change] default: always
+    on_start: always # options: [always|never|change] default: always
 
