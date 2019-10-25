@@ -11,10 +11,6 @@ before_cache:
   - rm -f bazel-*
   - rm -rf $HOME/.cache/bazel/_bazel_travis/install
 
-compiler:
-  - gcc
-  - clang
-
 language: c++
 
 addons:
@@ -31,17 +27,58 @@ addons:
 # JDK configuration, ref: https://github.com/travis-ci/travis-ci/issues/2316
 matrix:
   include:
-    - os: linux
-      jdk: oraclejdk8 # Building Bazel requires JDK8.
-      # Bazel does not support jdk 9 yet
+    - os: linux # linux + clang
+      jdk: oraclejdk8
       env:
         - CACHE_NAME=linux
+      compiler:
+        - clang
+
+    - os: linux # linux + gcc-5
+      jdk: oraclejdk8
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+          packages:
+            - g++-5
+      env:
+        - MATRIX_EVAL="CC=gcc-5 && CXX=g++-5"
+        - CACHE_NAME=linux
+
+    - os: linux # linux + gcc-6
+      jdk: oraclejdk8
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+          packages:
+            - g++-6
+      env:
+        - MATRIX_EVAL="CC=gcc-6 && CXX=g++-6"
+        - CACHE_NAME=linux
+
+    - os: linux # linux + gcc-7
+      jdk: oraclejdk8
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+          packages:
+            - g++-7
+      env:
+        - MATRIX_EVAL="CC=gcc-7 && CXX=g++-7"
+        - CACHE_NAME=linux
+
     - os: osx
       osx_image: xcode8.3 # Building Bazel requires JDK8.
       env:
         - CACHE_NAME=osx
+      compiler:
+        - clang
 
 before_install:
+  - if [[ ! -z "${MATRIX_EVAL}" ]]; then eval "${MATRIX_EVAL}" ; fi
   # debug
   - . .github/travis/before_install.sh
   - pwd # check current dir, result: /home/travis/build/yuikns/argcv
