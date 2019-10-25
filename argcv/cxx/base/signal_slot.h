@@ -37,7 +37,7 @@ class SignalSlot {
     }
   }
 
-  bool DisconnectAll() noexcept { functors_.clear(); }
+  void DisconnectAll() noexcept { functors_.clear(); }
 
   void Call(Args&&... args) noexcept {
     for (auto it : functors_) {
