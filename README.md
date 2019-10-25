@@ -1,4 +1,4 @@
-[![](https://travis-ci.org/yuikns/argcv.svg?branch=master)](https://travis-ci.org/yuikns/argcv)
+[![](https://travis-ci.org/argcv/argcv.svg?branch=master)](https://travis-ci.org/argcv/argcv)
 
 <!--
 ![](doc/license.svg)
