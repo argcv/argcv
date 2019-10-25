@@ -29,13 +29,6 @@ addons:
 # for detail
 matrix:
   include:
-    - os: linux # linux + clang
-      jdk: oraclejdk8
-      env:
-        - CACHE_NAME=linux
-      compiler:
-        - clang
-
     - os: linux # linux + gcc-5
       jdk: oraclejdk8
       addons:
