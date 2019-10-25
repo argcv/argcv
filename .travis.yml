@@ -25,6 +25,8 @@ addons:
       - graphviz
 
 # JDK configuration, ref: https://github.com/travis-ci/travis-ci/issues/2316
+# For compiler issue, please see https://docs.travis-ci.com/user/languages/cpp/#build-matrix
+# for detail
 matrix:
   include:
     - os: linux # linux + clang
