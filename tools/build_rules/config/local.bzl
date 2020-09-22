@@ -52,8 +52,8 @@ local_cc_library_configure = repository_rule(
         "defines": attr.string_list(),
         "build_file_template": attr.label(
             default = Label("//tools/build_rules/config:BUILD.tpl"), # removed '@' here
-            single_file = True,
-            allow_files = True,
+            allow_single_file = True,
+            # allow_files = True,
         ),
     },
     local = True,

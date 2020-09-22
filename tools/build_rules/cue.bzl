@@ -46,26 +46,31 @@ def _apply_delete(ctx, paths):
   cmd = _wrap_bash_cmd(ctx, ["rm", "-rf"] + [ctx.path(path) for path in paths])
   _execute_and_check_ret_code(ctx, cmd)
 
-# for cue
+# for arq
 # Temporary workaround to support including current project as a submodule until this
 # use-case is supported in the next Bazel release.
-def _cue_impl(ctx):
-  # name = ctx.name
-  # if name in native.existing_rules():
-  #   print("Archive [", name, "] is exists, skipping...")
-  #   return
-  # print("Archive [", name, "] is required, fetching...")
-  # length of urls: len(ctx.attr.urls)
+def _arq_impl(ctx):
+  urls = ctx.attr.urls
+  output = ""
+  sha256 = ctx.attr.sha256
+  type = ctx.attr.type
+  strip_prefix = ctx.attr.strip_prefix
   ctx.download_and_extract(
-    ctx.attr.urls, # url
-    "", # output
-    ctx.attr.sha256, # sha256
-    ctx.attr.type, # type (e.gi. zip, jar, war, tar.gz, tgz, tar.bz2, tar.xz )
-    ctx.attr.strip_prefix) # stripPrefix
+    urls, # url
+    output, # output
+    sha256, # sha256
+    type, # type (e.gi. zip, jar, war, tar.gz, tgz, tar.bz2, tar.xz )
+    strip_prefix) # stripPrefix
+
+  # remove specified files
   if ctx.attr.delete:
     _apply_delete(ctx, ctx.attr.delete)
+  
+  # 
   if ctx.attr.patch_file != None:
     _apply_patch(ctx, ctx.attr.patch_file)
+  
+  # apply template file
   if ctx.attr.build_file != None:
     ctx.template(
       "BUILD", # path
@@ -76,7 +81,8 @@ def _cue_impl(ctx):
       }, # substitutions
       False) # executable
 
-cue_configure = repository_rule(
+# TODO(yu): add local search path
+arq_configure = repository_rule(
   attrs = {
     "urls": attr.string_list(default = []),
     "build_file": attr.label(),
@@ -87,15 +93,22 @@ cue_configure = repository_rule(
     "repository": attr.string(mandatory=True),
     "delete": attr.string_list(),
   },
-  implementation = _cue_impl,
+  implementation = _arq_impl,
 )
 
-def cue(name, **kwargs):
+def arq(name, **kwargs):
   if name in native.existing_rules():
-    print("Archive [", name, "] already exists, skipping...")
+    # print("Archive [", name, "] already exists, skipping...")
     return
-  # print("Archive [", name, "] didn't exist, fetching...")
-  cue_configure(
+  print("[ARQ] **", name, "** fetching...")
+  arq_configure(
     name = name,
     **kwargs)
+  print("[ARQ] **", name, "** fetched")
 
+def cue(name, **kwargs):
+  print("[CUE] **", name, "** deprecated...")
+  arq(name, **kwargs)
+
+def clean_dep(dep):
+  return str(Label(dep))
