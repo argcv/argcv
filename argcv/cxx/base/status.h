@@ -11,7 +11,6 @@
 #include "absl/strings/str_cat.h"
 #include "argcv/cxx/base/code.h"
 #include "argcv/cxx/base/types.h"
-
 #include "glog/logging.h"
 
 namespace argcv {

@@ -150,7 +150,7 @@ inline string CleanPath(string_view in) noexcept {
 /// separating slash if necessary. The result is Cleaned; in particular,
 /// all empty strings are ignored.
 template <typename... T>
-string JoinPath(const T &... args) noexcept {
+string JoinPath(const T &...args) noexcept {
   return internal::JoinPathImpl({args...});
 }
 

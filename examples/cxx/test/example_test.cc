@@ -1,9 +1,8 @@
 // Copyright 2019 Yu Jing
 #include "examples/cxx/test/example_test.h"
 
-#include <cstdio>
-
 #include <chrono>
+#include <cstdio>
 #include <map>
 #include <thread>
 

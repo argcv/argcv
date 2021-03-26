@@ -27,4 +27,3 @@ cc_binary(
         ":svpng",
     ],
 )
-

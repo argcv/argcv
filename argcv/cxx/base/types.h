@@ -2,9 +2,8 @@
 #ifndef ARGCV_CXX_BASE_TYPES_H_
 #define ARGCV_CXX_BASE_TYPES_H_
 
-#include <cstdint>
-
 #include <atomic>
+#include <cstdint>
 #include <deque>
 #include <functional>  // std::equal_to<>
 #include <map>

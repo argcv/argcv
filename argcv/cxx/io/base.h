@@ -115,8 +115,8 @@ class RandomWriter {
  public:
   virtual ~RandomWriter() {}
 
-  virtual Result<size_t> WriteAt(uint64 offset, string_view data) const
-      noexcept = 0;
+  virtual Result<size_t> WriteAt(uint64 offset,
+                                 string_view data) const noexcept = 0;
 };
 
 class RandomReader {

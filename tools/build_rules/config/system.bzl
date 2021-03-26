@@ -22,30 +22,30 @@ load(":local.bzl", "setup_local_cc_library")
 load(":pkg_config.bzl", "setup_pkg_config_package")
 
 def try_local_library(repo_ctx):
-  if repo_ctx.attr.envvar and repo_ctx.attr.envvar in repo_ctx.os.environ:
-    error = setup_local_cc_library(repo_ctx).error
-    if not error:
-      return None
-    print(repo_ctx.attr.envvar, "defined but unusable:", error)
-  return ""  # Printed error as warning.
+    if repo_ctx.attr.envvar and repo_ctx.attr.envvar in repo_ctx.os.environ:
+        error = setup_local_cc_library(repo_ctx).error
+        if not error:
+            return None
+        print(repo_ctx.attr.envvar, "defined but unusable:", error)
+    return ""  # Printed error as warning.
 
 def try_pkg_config(repo_ctx):
-  return setup_pkg_config_package(repo_ctx).error
+    return setup_pkg_config_package(repo_ctx).error
 
 def try_default(repo_ctx):
-  if not repo_ctx.attr.default:
-    return ""
-  return setup_local_cc_library(repo_ctx).error
+    if not repo_ctx.attr.default:
+        return ""
+    return setup_local_cc_library(repo_ctx).error
 
 def _impl(repo_ctx):
-  errors = []
-  for setup in [try_local_library, try_pkg_config, try_default]:
-    error = setup(repo_ctx)
-    if error == None:
-      return
-    elif error:  # Ignore "empty" errors.
-      errors += [error]
-  fail("\n".join(errors))
+    errors = []
+    for setup in [try_local_library, try_pkg_config, try_default]:
+        error = setup(repo_ctx)
+        if error == None:
+            return
+        elif error:  # Ignore "empty" errors.
+            errors += [error]
+    fail("\n".join(errors))
 
 cc_system_package_configure = repository_rule(
     _impl,
@@ -68,24 +68,24 @@ cc_system_package_configure = repository_rule(
 )
 
 def cc_system_package(name, **kwargs):
-  # Set reponame
-  reponame = "local_" + name
+    # Set reponame
+    reponame = "local_" + name
 
-  # May override the default reponame
-  if 'reponame' in kwargs:
-    reponame = kwargs['reponame']
+    # May override the default reponame
+    if "reponame" in kwargs:
+        reponame = kwargs["reponame"]
 
-  # Avoid conflict
-  if reponame in native.existing_rules():
-    # print("Repository [", reponame, "] already exists, skipping...")
-    return
+    # Avoid conflict
+    if reponame in native.existing_rules():
+        # print("Repository [", reponame, "] already exists, skipping...")
+        return
 
-  print("[cc_system_package] **", reponame, "** configuring...")
+    print("[cc_system_package] **", reponame, "** configuring...")
 
-  # Set modname
-  if 'modname' not in kwargs:
-    kwargs['modname'] = name
-  cc_system_package_configure(name=reponame, **kwargs)
-  native.bind(name=name, actual="@local_{name}//:lib".format(name=name))
+    # Set modname
+    if "modname" not in kwargs:
+        kwargs["modname"] = name
+    cc_system_package_configure(name = reponame, **kwargs)
+    native.bind(name = name, actual = "@local_{name}//:lib".format(name = name))
 
-  print("[cc_system_package] **", reponame, "** configured")
+    print("[cc_system_package] **", reponame, "** configured")

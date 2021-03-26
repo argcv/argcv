@@ -6,7 +6,6 @@
 
 #include "argcv/cxx/base/thread_pool.h"
 #include "argcv/cxx/test/test.h"
-
 #include "glog/logging.h"
 #include "gtest/gtest.h"
 

@@ -2,7 +2,8 @@
 #include "argcv/cxx/test/test.h"
 
 #include <unistd.h>  // usleep microseconds
-#include <mutex>     // NOLINT(build/c++11)  std::once_flag
+
+#include <mutex>  // NOLINT(build/c++11)  std::once_flag
 
 #include "glog/logging.h"
 #include "gtest/gtest.h"

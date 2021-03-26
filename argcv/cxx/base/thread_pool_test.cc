@@ -2,7 +2,6 @@
 #include "argcv/cxx/base/thread_pool.h"
 
 #include <cstdio>
-
 #include <functional>
 #include <future>  // NOLINT(build/c++11)
 #include <vector>

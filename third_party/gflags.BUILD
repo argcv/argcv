@@ -31,11 +31,11 @@ cc_library(
         "-DHAVE_RWLOCK",
         "-DGFLAGS_INTTYPES_FORMAT_C99",
     ],
-    linkopts = [
-        "-lpthread",
-    ],
     includes = [
         "include",
+    ],
+    linkopts = [
+        "-lpthread",
     ],
     visibility = ["//visibility:public"],
 )

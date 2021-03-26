@@ -4,7 +4,6 @@
 #include <string>
 
 #include "argcv/cxx/test/test.h"
-
 #include "glog/logging.h"
 #include "gtest/gtest.h"
 

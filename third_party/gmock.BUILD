@@ -17,20 +17,20 @@ cc_library(
         "googletest/src/*.cc",
         "googlemock/src/*.cc",
     ]),
+    copts = [
+        "-Wno-deprecated-declarations",
+        "-Wno-unused-function",
+        "-Wno-unused-command-line-argument",
+    ],
     includes = [
         "googlemock",
         "googlemock/include",
         "googletest",
         "googletest/include",
     ],
-    copts = [
-      "-Wno-deprecated-declarations",
-      "-Wno-unused-function",
-      "-Wno-unused-command-line-argument",
-    ],
     linkopts = [
-      "-pthread",
-      "-Wno-unused-command-line-argument", # clang does not need pthread
+        "-pthread",
+        "-Wno-unused-command-line-argument",  # clang does not need pthread
     ],
     visibility = ["//visibility:public"],
 )
@@ -39,13 +39,13 @@ cc_library(
     name = "gtest_main",
     srcs = ["googlemock/src/gmock_main.cc"],
     copts = [
-      "-Wno-deprecated-declarations",
-      "-Wno-unused-function",
-      "-Wno-unused-command-line-argument",
+        "-Wno-deprecated-declarations",
+        "-Wno-unused-function",
+        "-Wno-unused-command-line-argument",
     ],
     linkopts = [
-      "-pthread",
-      "-Wno-unused-command-line-argument", # clang does not need pthread
+        "-pthread",
+        "-Wno-unused-command-line-argument",  # clang does not need pthread
     ],
     visibility = ["//visibility:public"],
     deps = [":gtest"],

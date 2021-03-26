@@ -12,6 +12,12 @@ test-all:
 fmt:
 	cfmt argcv
 	cfmt examples
+	find argcv | grep BUILD$ | xargs -n 1  buildifier --type=build
+	find examples | grep BUILD$ | xargs -n 1  buildifier --type=build
+	find tools | grep BUILD$ | xargs -n 1  buildifier --type=build
+	find third_party | grep \.bzl$ | xargs -n 1  buildifier --type=bzl
+	find tools | grep \.bzl$ | xargs -n 1  buildifier --type=bzl
+	ls WORKSPACE  | xargs -n 1  buildifier --type=workspace
 
 doc:
 	./.doxygen.sh

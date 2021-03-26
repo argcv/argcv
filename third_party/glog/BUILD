@@ -6,7 +6,7 @@ cc_library(
     name = "config_h",
     hdrs = ["src/config.h"],
     includes = [
-      ".",
-      "src/",
-    ]
+        ".",
+        "src/",
+    ],
 )
