@@ -30,8 +30,8 @@ var hierarchy =
       [ "argcv::io::ReadCloser", "classargcv_1_1io_1_1_read_closer.html", null ],
       [ "argcv::io::ReadSeeker", "classargcv_1_1io_1_1_read_seeker.html", null ],
       [ "argcv::io::ReadWriteCloser", "classargcv_1_1io_1_1_read_write_closer.html", null ],
-      [ "argcv::io::ReadWriter", "classargcv_1_1io_1_1_read_writer.html", null ],
-      [ "argcv::io::ReadWriteSeeker", "classargcv_1_1io_1_1_read_write_seeker.html", null ]
+      [ "argcv::io::ReadWriteSeeker", "classargcv_1_1io_1_1_read_write_seeker.html", null ],
+      [ "argcv::io::ReadWriter", "classargcv_1_1io_1_1_read_writer.html", null ]
     ] ],
     [ "argcv::Result< T >", "classargcv_1_1_result.html", null ],
     [ "argcv::io::Seeker", "classargcv_1_1io_1_1_seeker.html", [
@@ -45,8 +45,8 @@ var hierarchy =
     [ "argcv::sync::WaitGroup", "classargcv_1_1sync_1_1_wait_group.html", null ],
     [ "argcv::io::Writer", "classargcv_1_1io_1_1_writer.html", [
       [ "argcv::io::ReadWriteCloser", "classargcv_1_1io_1_1_read_write_closer.html", null ],
-      [ "argcv::io::ReadWriter", "classargcv_1_1io_1_1_read_writer.html", null ],
       [ "argcv::io::ReadWriteSeeker", "classargcv_1_1io_1_1_read_write_seeker.html", null ],
+      [ "argcv::io::ReadWriter", "classargcv_1_1io_1_1_read_writer.html", null ],
       [ "argcv::io::WriteCloser", "classargcv_1_1io_1_1_write_closer.html", null ],
       [ "argcv::io::WriteSeeker", "classargcv_1_1io_1_1_write_seeker.html", null ]
     ] ]
