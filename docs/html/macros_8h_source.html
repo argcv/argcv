@@ -173,7 +173,7 @@ $(document).ready(function(){initNavTree('macros_8h_source.html',''); initResiza
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">/// A macro to enable compare related operators</span></div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">/// This is usually placed in the public: declarations for a class.</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="macros_8h.html#a74ae2dd0741a97813dd887ec4530ccb8">   83</a></span>&#160;<span class="comment"></span><span class="preprocessor">#define OP_COMPARABLE(TypeName)                          \</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="macros_8h.html#a0614266bf292e520c782e5f752747945">   83</a></span>&#160;<span class="comment"></span><span class="preprocessor">#define COMPARABLE(TypeName)                          \</span></div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">  bool operator==(const TypeName &amp;that) const noexcept { \</span></div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">    return this-&gt;Compare(that) == 0;                     \</span></div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">  }                                                      \</span></div>
@@ -203,7 +203,7 @@ $(document).ready(function(){initNavTree('macros_8h_source.html',''); initResiza
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">    return *this;                                    \</span></div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="preprocessor">  }</span></div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="comment">/// Similar to OP_COMPARABLE but using extends instead</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="comment">/// Similar to COMPARABLE but using extends instead</span></div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment"></span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="class_comparable.html">  115</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_comparable.html">Comparable</a> {</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; <span class="keyword">public</span>:</div>
@@ -231,7 +231,7 @@ $(document).ready(function(){initNavTree('macros_8h_source.html',''); initResiza
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;};</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// ARGCV_BASE_MACROS_H_</span></div>
-<div class="ttc" id="aclass_comparable_html"><div class="ttname"><a href="class_comparable.html">Comparable</a></div><div class="ttdoc">Similar to OP_COMPARABLE but using extends instead.</div><div class="ttdef"><b>Definition:</b> macros.h:115</div></div>
+<div class="ttc" id="aclass_comparable_html"><div class="ttname"><a href="class_comparable.html">Comparable</a></div><div class="ttdoc">Similar to COMPARABLE but using extends instead.</div><div class="ttdef"><b>Definition:</b> macros.h:115</div></div>
 <div class="ttc" id="aclass_comparable_html_a09a440ea57aebce18757311dae42abff"><div class="ttname"><a href="class_comparable.html#a09a440ea57aebce18757311dae42abff">Comparable::operator==</a></div><div class="ttdeci">bool operator==(const T &amp;that) const noexcept</div><div class="ttdef"><b>Definition:</b> macros.h:120</div></div>
 <div class="ttc" id="aclass_comparable_html_a2e9c9531664c775974a8f32b0157321d"><div class="ttname"><a href="class_comparable.html#a2e9c9531664c775974a8f32b0157321d">Comparable::operator!=</a></div><div class="ttdeci">bool operator!=(const T &amp;that) const noexcept</div><div class="ttdef"><b>Definition:</b> macros.h:123</div></div>
 <div class="ttc" id="aclass_comparable_html_a8fd9e8295a87184aeec43ee0f849c83b"><div class="ttname"><a href="class_comparable.html#a8fd9e8295a87184aeec43ee0f849c83b">Comparable::operator&gt;</a></div><div class="ttdeci">bool operator&gt;(const T &amp;that) const noexcept</div><div class="ttdef"><b>Definition:</b> macros.h:129</div></div>

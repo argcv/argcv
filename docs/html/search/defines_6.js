@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['packed_565',['PACKED',['../macros_8h.html#a36d525cf4d116b2fe4ecc00222b256f1',1,'macros.h']]],
-  ['predict_5ffalse_566',['PREDICT_FALSE',['../macros_8h.html#aff70f3c8f03aae06b9011058a8da0cf0',1,'macros.h']]],
-  ['predict_5ftrue_567',['PREDICT_TRUE',['../macros_8h.html#a9e276e58cb5539281d80bf7676bd73a7',1,'macros.h']]],
-  ['printf_5fattribute_568',['PRINTF_ATTRIBUTE',['../macros_8h.html#adf205a2fcc1b6f724d01d397f9856f2d',1,'macros.h']]]
+  ['scanf_5fattribute_569',['SCANF_ATTRIBUTE',['../macros_8h.html#a85d26d9807454bfb4747a6bc9175c123',1,'macros.h']]],
+  ['setter_5fgetter_570',['SETTER_GETTER',['../macros_8h.html#a3f4de9d4d73e401087342c870129e596',1,'macros.h']]],
+  ['strip_5fflag_5fhelp_571',['STRIP_FLAG_HELP',['../gflags_2main_8cc.html#a718c759cde599602415a91b0d62e0c94',1,'main.cc']]]
 ];

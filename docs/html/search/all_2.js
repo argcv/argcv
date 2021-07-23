@@ -13,8 +13,9 @@ var searchData=
   ['code_39',['Code',['../namespaceargcv_1_1error.html#a6f8b33bed60c971b643c3eac9167298b',1,'argcv::error']]],
   ['code_2eh_40',['code.h',['../code_8h.html',1,'']]],
   ['comparable_41',['Comparable',['../class_comparable.html',1,'']]],
-  ['compare_42',['Compare',['../class_comparable.html#ad7fc12337437d83f8bb657924d14cb79',1,'Comparable']]],
-  ['concurrency_2ecc_43',['concurrency.cc',['../concurrency_8cc.html',1,'']]],
-  ['concurrency_2eh_44',['concurrency.h',['../concurrency_8h.html',1,'']]],
-  ['connect_45',['Connect',['../classargcv_1_1_signal_slot.html#a6e117c13ff98c31bca346c7602ab9689',1,'argcv::SignalSlot']]]
+  ['comparable_42',['COMPARABLE',['../macros_8h.html#a0614266bf292e520c782e5f752747945',1,'macros.h']]],
+  ['compare_43',['Compare',['../class_comparable.html#ad7fc12337437d83f8bb657924d14cb79',1,'Comparable']]],
+  ['concurrency_2ecc_44',['concurrency.cc',['../concurrency_8cc.html',1,'']]],
+  ['concurrency_2eh_45',['concurrency.h',['../concurrency_8h.html',1,'']]],
+  ['connect_46',['Connect',['../classargcv_1_1_signal_slot.html#a6e117c13ff98c31bca346c7602ab9689',1,'argcv::SignalSlot']]]
 ];
