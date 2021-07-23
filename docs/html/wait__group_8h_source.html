@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
-<title>ArgCV: argcv/cxx/sync/wait_group.h Source File</title>
+<title>ArgCV: argcv/sync/wait_group.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,16 +91,16 @@ $(document).ready(function(){initNavTree('wait__group_8h_source.html',''); initR
 <div class="title">wait_group.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="wait__group_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright 2019 Yu Jing</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef ARGCV_CXX_SYNC_WAIT_GROUP_H_</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define ARGCV_CXX_SYNC_WAIT_GROUP_H_</span></div>
+<a href="wait__group_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright 2021 Yu Jing</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef ARGCV_SYNC_WAIT_GROUP_H_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define ARGCV_SYNC_WAIT_GROUP_H_</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;cassert&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;mutex&gt;</span>  <span class="comment">// NOLINT(build/c++11)  std::once_flag</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="atomic_8h.html">argcv/cxx/base/atomic.h</a>&quot;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="cxx_2base_2macros_8h.html">argcv/cxx/base/macros.h</a>&quot;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="types_8h.html">argcv/cxx/base/types.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="atomic_8h.html">argcv/base/atomic.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="macros_8h.html">argcv/base/macros.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="types_8h.html">argcv/base/types.h</a>&quot;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceargcv.html">argcv</a> {</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
@@ -135,7 +135,7 @@ $(document).ready(function(){initNavTree('wait__group_8h_source.html',''); initR
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}  <span class="comment">// namespace argcv</span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// ARGCV_CXX_SYNC_WAIT_GROUP_H_</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// ARGCV_SYNC_WAIT_GROUP_H_</span></div>
 <div class="ttc" id="aatomic_8h_html"><div class="ttname"><a href="atomic_8h.html">atomic.h</a></div></div>
 <div class="ttc" id="aclassargcv_1_1sync_1_1_wait_group_html"><div class="ttname"><a href="classargcv_1_1sync_1_1_wait_group.html">argcv::sync::WaitGroup</a></div><div class="ttdef"><b>Definition:</b> wait_group.h:19</div></div>
 <div class="ttc" id="aclassargcv_1_1sync_1_1_wait_group_html_a3dfe1485ac718120a0634206d85e3b11"><div class="ttname"><a href="classargcv_1_1sync_1_1_wait_group.html#a3dfe1485ac718120a0634206d85e3b11">argcv::sync::WaitGroup::Wait</a></div><div class="ttdeci">void Wait() const noexcept</div><div class="ttdef"><b>Definition:</b> wait_group.cc:9</div></div>
@@ -143,12 +143,12 @@ $(document).ready(function(){initNavTree('wait__group_8h_source.html',''); initR
 <div class="ttc" id="aclassargcv_1_1sync_1_1_wait_group_html_a7bd10e44320e466b835c2e61270f5b9e"><div class="ttname"><a href="classargcv_1_1sync_1_1_wait_group.html#a7bd10e44320e466b835c2e61270f5b9e">argcv::sync::WaitGroup::Done</a></div><div class="ttdeci">int64 Done() noexcept</div><div class="ttdef"><b>Definition:</b> wait_group.h:27</div></div>
 <div class="ttc" id="aclassargcv_1_1sync_1_1_wait_group_html_a9b4628cda2b603f73939dac36edd8c7f"><div class="ttname"><a href="classargcv_1_1sync_1_1_wait_group.html#a9b4628cda2b603f73939dac36edd8c7f">argcv::sync::WaitGroup::~WaitGroup</a></div><div class="ttdeci">virtual ~WaitGroup()</div><div class="ttdef"><b>Definition:</b> wait_group.h:23</div></div>
 <div class="ttc" id="aclassargcv_1_1sync_1_1_wait_group_html_ae9568d8c6e2d88631fd51cd12a25514f"><div class="ttname"><a href="classargcv_1_1sync_1_1_wait_group.html#ae9568d8c6e2d88631fd51cd12a25514f">argcv::sync::WaitGroup::Add</a></div><div class="ttdeci">int64 Add(int64 delta=1) noexcept</div><div class="ttdef"><b>Definition:</b> wait_group.h:25</div></div>
-<div class="ttc" id="acxx_2base_2macros_8h_html"><div class="ttname"><a href="cxx_2base_2macros_8h.html">macros.h</a></div></div>
+<div class="ttc" id="amacros_8h_html"><div class="ttname"><a href="macros_8h.html">macros.h</a></div></div>
 <div class="ttc" id="anamespaceargcv_html"><div class="ttname"><a href="namespaceargcv.html">argcv</a></div><div class="ttdoc">Type definitions.</div><div class="ttdef"><b>Definition:</b> atomic.h:10</div></div>
 <div class="ttc" id="anamespaceargcv_html_a163861039cf0041a2e25841925bc84bb"><div class="ttname"><a href="namespaceargcv.html#a163861039cf0041a2e25841925bc84bb">argcv::AtomicDecr</a></div><div class="ttdeci">T AtomicDecr(atomic&lt; T &gt; *obj) noexcept</div><div class="ttdef"><b>Definition:</b> atomic.h:36</div></div>
 <div class="ttc" id="anamespaceargcv_html_a2456aa548e009159f0c1a1385b7c4cef"><div class="ttname"><a href="namespaceargcv.html#a2456aa548e009159f0c1a1385b7c4cef">argcv::AtomicFetchAdd</a></div><div class="ttdeci">T AtomicFetchAdd(atomic&lt; T &gt; *obj, T arg) noexcept</div><div class="ttdoc">fetch_add</div><div class="ttdef"><b>Definition:</b> atomic.h:16</div></div>
-<div class="ttc" id="anamespaceargcv_html_aa049cef949638fc02645210cd0f78cce"><div class="ttname"><a href="namespaceargcv.html#aa049cef949638fc02645210cd0f78cce">argcv::atomic</a></div><div class="ttdeci">std::atomic&lt; T &gt; atomic</div><div class="ttdef"><b>Definition:</b> types.h:44</div></div>
-<div class="ttc" id="anamespaceargcv_html_acbf91fead4e2aededdc6a069206ef898"><div class="ttname"><a href="namespaceargcv.html#acbf91fead4e2aededdc6a069206ef898">argcv::int64</a></div><div class="ttdeci">int64_t int64</div><div class="ttdef"><b>Definition:</b> types.h:28</div></div>
+<div class="ttc" id="anamespaceargcv_html_aa049cef949638fc02645210cd0f78cce"><div class="ttname"><a href="namespaceargcv.html#aa049cef949638fc02645210cd0f78cce">argcv::atomic</a></div><div class="ttdeci">std::atomic&lt; T &gt; atomic</div><div class="ttdef"><b>Definition:</b> types.h:43</div></div>
+<div class="ttc" id="anamespaceargcv_html_acbf91fead4e2aededdc6a069206ef898"><div class="ttname"><a href="namespaceargcv.html#acbf91fead4e2aededdc6a069206ef898">argcv::int64</a></div><div class="ttdeci">int64_t int64</div><div class="ttdef"><b>Definition:</b> types.h:27</div></div>
 <div class="ttc" id="atypes_8h_html"><div class="ttname"><a href="types_8h.html">types.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -156,7 +156,7 @@ $(document).ready(function(){initNavTree('wait__group_8h_source.html',''); initR
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_35fe26ecdb9ad765d53fed138617535f.html">argcv</a></li><li class="navelem"><a class="el" href="dir_f4c1d4d5e01226d96972d9b937662d15.html">cxx</a></li><li class="navelem"><a class="el" href="dir_449d0259f140035fdafbc8fb45e3013b.html">sync</a></li><li class="navelem"><a class="el" href="wait__group_8h.html">wait_group.h</a></li>
+    <li class="navelem"><a class="el" href="dir_35fe26ecdb9ad765d53fed138617535f.html">argcv</a></li><li class="navelem"><a class="el" href="dir_42d53064df27f048dc7d4a64861d860d.html">sync</a></li><li class="navelem"><a class="el" href="wait__group_8h.html">wait_group.h</a></li>
   </ul>
 </div>
 </body>

@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
-<title>ArgCV: argcv/cxx/base/atomic.h Source File</title>
+<title>ArgCV: argcv/base/atomic.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,14 +91,14 @@ $(document).ready(function(){initNavTree('atomic_8h_source.html',''); initResiza
 <div class="title">atomic.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="atomic_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright 2019 Yu Jing</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef ARGCV_CXX_BASE_ATOMIC_H_</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define ARGCV_CXX_BASE_ATOMIC_H_</span></div>
+<a href="atomic_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright 2021 Yu Jing</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef ARGCV_BASE_ATOMIC_H_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define ARGCV_BASE_ATOMIC_H_</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;atomic&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="types_8h.html">argcv/cxx/base/types.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="types_8h.html">argcv/base/types.h</a>&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
 <div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="namespaceargcv.html">   10</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceargcv.html">argcv</a> {</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"></span> </div>
@@ -164,14 +164,14 @@ $(document).ready(function(){initNavTree('atomic_8h_source.html',''); initResiza
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}  <span class="comment">// namespace argcv</span></div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">//  ARGCV_CXX_BASE_ATOMIC_H_</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">//  ARGCV_BASE_ATOMIC_H_</span></div>
 <div class="ttc" id="anamespaceargcv_html"><div class="ttname"><a href="namespaceargcv.html">argcv</a></div><div class="ttdoc">Type definitions.</div><div class="ttdef"><b>Definition:</b> atomic.h:10</div></div>
 <div class="ttc" id="anamespaceargcv_html_a06820c017721b76b319f67dce073f9a5"><div class="ttname"><a href="namespaceargcv.html#a06820c017721b76b319f67dce073f9a5">argcv::AtomicStore</a></div><div class="ttdeci">void AtomicStore(atomic&lt; T &gt; *obj, const T &amp;arg) noexcept</div><div class="ttdoc">store</div><div class="ttdef"><b>Definition:</b> atomic.h:60</div></div>
 <div class="ttc" id="anamespaceargcv_html_a163861039cf0041a2e25841925bc84bb"><div class="ttname"><a href="namespaceargcv.html#a163861039cf0041a2e25841925bc84bb">argcv::AtomicDecr</a></div><div class="ttdeci">T AtomicDecr(atomic&lt; T &gt; *obj) noexcept</div><div class="ttdef"><b>Definition:</b> atomic.h:36</div></div>
 <div class="ttc" id="anamespaceargcv_html_a2456aa548e009159f0c1a1385b7c4cef"><div class="ttname"><a href="namespaceargcv.html#a2456aa548e009159f0c1a1385b7c4cef">argcv::AtomicFetchAdd</a></div><div class="ttdeci">T AtomicFetchAdd(atomic&lt; T &gt; *obj, T arg) noexcept</div><div class="ttdoc">fetch_add</div><div class="ttdef"><b>Definition:</b> atomic.h:16</div></div>
 <div class="ttc" id="anamespaceargcv_html_a7526fc1b873bf760b418e7e2f400019a"><div class="ttname"><a href="namespaceargcv.html#a7526fc1b873bf760b418e7e2f400019a">argcv::AtomicFetchSub</a></div><div class="ttdeci">T AtomicFetchSub(atomic&lt; T &gt; *obj, const T &amp;arg) noexcept</div><div class="ttdoc">fetch_sub</div><div class="ttdef"><b>Definition:</b> atomic.h:30</div></div>
 <div class="ttc" id="anamespaceargcv_html_a7f012847b652ff7e131b4a9d088566e3"><div class="ttname"><a href="namespaceargcv.html#a7f012847b652ff7e131b4a9d088566e3">argcv::AtomicLoad</a></div><div class="ttdeci">T AtomicLoad(const atomic&lt; T &gt; *obj) noexcept</div><div class="ttdoc">load</div><div class="ttdef"><b>Definition:</b> atomic.h:68</div></div>
-<div class="ttc" id="anamespaceargcv_html_aa049cef949638fc02645210cd0f78cce"><div class="ttname"><a href="namespaceargcv.html#aa049cef949638fc02645210cd0f78cce">argcv::atomic</a></div><div class="ttdeci">std::atomic&lt; T &gt; atomic</div><div class="ttdef"><b>Definition:</b> types.h:44</div></div>
+<div class="ttc" id="anamespaceargcv_html_aa049cef949638fc02645210cd0f78cce"><div class="ttname"><a href="namespaceargcv.html#aa049cef949638fc02645210cd0f78cce">argcv::atomic</a></div><div class="ttdeci">std::atomic&lt; T &gt; atomic</div><div class="ttdef"><b>Definition:</b> types.h:43</div></div>
 <div class="ttc" id="anamespaceargcv_html_aab4817dffb09905a071e5707496bccec"><div class="ttname"><a href="namespaceargcv.html#aab4817dffb09905a071e5707496bccec">argcv::AtomicFetchOr</a></div><div class="ttdeci">T AtomicFetchOr(atomic&lt; T &gt; *obj, const T &amp;arg) noexcept</div><div class="ttdoc">fetch_or</div><div class="ttdef"><b>Definition:</b> atomic.h:44</div></div>
 <div class="ttc" id="anamespaceargcv_html_abe3779358eea29985eeeabb7cc9cd195"><div class="ttname"><a href="namespaceargcv.html#abe3779358eea29985eeeabb7cc9cd195">argcv::AtomicFetchXor</a></div><div class="ttdeci">T AtomicFetchXor(atomic&lt; T &gt; *obj, const T &amp;arg) noexcept</div><div class="ttdoc">fetch_xor</div><div class="ttdef"><b>Definition:</b> atomic.h:52</div></div>
 <div class="ttc" id="anamespaceargcv_html_af537c6888e20284ea4f847e1c95f136c"><div class="ttname"><a href="namespaceargcv.html#af537c6888e20284ea4f847e1c95f136c">argcv::AtomicIncr</a></div><div class="ttdeci">T AtomicIncr(atomic&lt; T &gt; *obj) noexcept</div><div class="ttdoc">increment 1</div><div class="ttdef"><b>Definition:</b> atomic.h:22</div></div>
@@ -182,7 +182,7 @@ $(document).ready(function(){initNavTree('atomic_8h_source.html',''); initResiza
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_35fe26ecdb9ad765d53fed138617535f.html">argcv</a></li><li class="navelem"><a class="el" href="dir_f4c1d4d5e01226d96972d9b937662d15.html">cxx</a></li><li class="navelem"><a class="el" href="dir_8406e34757e41b9fe978b83e765508d4.html">base</a></li><li class="navelem"><a class="el" href="atomic_8h.html">atomic.h</a></li>
+    <li class="navelem"><a class="el" href="dir_35fe26ecdb9ad765d53fed138617535f.html">argcv</a></li><li class="navelem"><a class="el" href="dir_c902d9ad3e70eee48fe7bcdbb03cfa4a.html">base</a></li><li class="navelem"><a class="el" href="atomic_8h.html">atomic.h</a></li>
   </ul>
 </div>
 </body>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['queue_530',['queue',['../namespaceargcv.html#ab28255fdfa9cac8ced9f9940f953e2d1',1,'argcv']]]
+  ['priority_5fqueue_498',['priority_queue',['../namespaceargcv.html#a2e82ff7bab297cb8a58277b24e1bcf30',1,'argcv']]]
 ];

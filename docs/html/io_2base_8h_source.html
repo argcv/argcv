@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
-<title>ArgCV: argcv/cxx/io/base.h Source File</title>
+<title>ArgCV: argcv/io/base.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,15 +91,15 @@ $(document).ready(function(){initNavTree('io_2base_8h_source.html',''); initResi
 <div class="title">base.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="io_2base_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright 2019 Yu Jing</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef ARGCV_CXX_IO_BASE_H_</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define ARGCV_CXX_IO_BASE_H_</span></div>
+<a href="io_2base_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright 2021 Yu Jing</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef ARGCV_IO_BASE_H_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define ARGCV_IO_BASE_H_</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="result_8h.html">argcv/cxx/base/result.h</a>&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="status_8h.html">argcv/cxx/base/status.h</a>&quot;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="types_8h.html">argcv/cxx/base/types.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="result_8h.html">argcv/base/result.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="status_8h.html">argcv/base/status.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="types_8h.html">argcv/base/types.h</a>&quot;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceargcv.html">argcv</a> {</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
@@ -208,8 +208,8 @@ $(document).ready(function(){initNavTree('io_2base_8h_source.html',''); initResi
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="classargcv_1_1io_1_1_random_writer.html#af8a9535cea01381f3e858ce4a826d651">  116</a></span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classargcv_1_1io_1_1_random_writer.html#af8a9535cea01381f3e858ce4a826d651">~RandomWriter</a>() {}</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
-<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="classargcv_1_1io_1_1_random_writer.html#a149e37d961ddc4410c82f2e2c5f98195">  118</a></span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classargcv_1_1_result.html">Result&lt;size_t&gt;</a> <a class="code" href="classargcv_1_1io_1_1_random_writer.html#a149e37d961ddc4410c82f2e2c5f98195">WriteAt</a>(<a class="code" href="namespaceargcv.html#ae745cc95971bef0fe6c12feee4356e1c">uint64</a> offset, <a class="code" href="namespaceargcv.html#a775cf32fa3d656254b2dbc0b62dc0ea1">string_view</a> data) <span class="keyword">const</span></div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;      noexcept = 0;</div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="classargcv_1_1io_1_1_random_writer.html#a149e37d961ddc4410c82f2e2c5f98195">  118</a></span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classargcv_1_1_result.html">Result&lt;size_t&gt;</a> <a class="code" href="classargcv_1_1io_1_1_random_writer.html#a149e37d961ddc4410c82f2e2c5f98195">WriteAt</a>(<a class="code" href="namespaceargcv.html#ae745cc95971bef0fe6c12feee4356e1c">uint64</a> offset,</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                                 <a class="code" href="namespaceargcv.html#a775cf32fa3d656254b2dbc0b62dc0ea1">string_view</a> data) <span class="keyword">const</span> noexcept = 0;</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;};</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
 <div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="classargcv_1_1io_1_1_random_reader.html">  122</a></span>&#160;<span class="keyword">class </span><a class="code" href="classargcv_1_1io_1_1_random_reader.html">RandomReader</a> {</div>
@@ -289,10 +289,10 @@ $(document).ready(function(){initNavTree('io_2base_8h_source.html',''); initResi
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;}  <span class="comment">// namespace argcv</span></div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160; </div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// ARGCV_CXX_IO_BASE_H_</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// ARGCV_IO_BASE_H_</span></div>
 <div class="ttc" id="aclassargcv_1_1_result_html"><div class="ttname"><a href="classargcv_1_1_result.html">argcv::Result</a></div><div class="ttdef"><b>Definition:</b> result.h:12</div></div>
-<div class="ttc" id="aclassargcv_1_1_status_html"><div class="ttname"><a href="classargcv_1_1_status.html">argcv::Status</a></div><div class="ttdoc">A generic return type.</div><div class="ttdef"><b>Definition:</b> status.h:46</div></div>
-<div class="ttc" id="aclassargcv_1_1_status_html_aaf98553b21cdffc185c9f8278a8e5574"><div class="ttname"><a href="classargcv_1_1_status.html#aaf98553b21cdffc185c9f8278a8e5574">argcv::Status::OK</a></div><div class="ttdeci">static Status OK() noexcept</div><div class="ttdef"><b>Definition:</b> status.h:148</div></div>
+<div class="ttc" id="aclassargcv_1_1_status_html"><div class="ttname"><a href="classargcv_1_1_status.html">argcv::Status</a></div><div class="ttdoc">A generic return type.</div><div class="ttdef"><b>Definition:</b> status.h:45</div></div>
+<div class="ttc" id="aclassargcv_1_1_status_html_aaf98553b21cdffc185c9f8278a8e5574"><div class="ttname"><a href="classargcv_1_1_status.html#aaf98553b21cdffc185c9f8278a8e5574">argcv::Status::OK</a></div><div class="ttdeci">static Status OK() noexcept</div><div class="ttdef"><b>Definition:</b> status.h:147</div></div>
 <div class="ttc" id="aclassargcv_1_1io_1_1_closer_html"><div class="ttname"><a href="classargcv_1_1io_1_1_closer.html">argcv::io::Closer</a></div><div class="ttdef"><b>Definition:</b> base.h:75</div></div>
 <div class="ttc" id="aclassargcv_1_1io_1_1_closer_html_a262c7910012ec9bba83dcb9f0e0f4c31"><div class="ttname"><a href="classargcv_1_1io_1_1_closer.html#a262c7910012ec9bba83dcb9f0e0f4c31">argcv::io::Closer::Close</a></div><div class="ttdeci">virtual Status Close() noexcept=0</div></div>
 <div class="ttc" id="aclassargcv_1_1io_1_1_closer_html_a5b271e15044c0df1d333f91cae3f8f99"><div class="ttname"><a href="classargcv_1_1io_1_1_closer.html#a5b271e15044c0df1d333f91cae3f8f99">argcv::io::Closer::~Closer</a></div><div class="ttdeci">virtual ~Closer()</div><div class="ttdef"><b>Definition:</b> base.h:77</div></div>
@@ -339,9 +339,9 @@ $(document).ready(function(){initNavTree('io_2base_8h_source.html',''); initResi
 <div class="ttc" id="anamespaceargcv_1_1io_html_aef6b4f1f0b858341e7ba9c8ea6774352aab4d9f5c26b67de0689764744993cb8f"><div class="ttname"><a href="namespaceargcv_1_1io.html#aef6b4f1f0b858341e7ba9c8ea6774352aab4d9f5c26b67de0689764744993cb8f">argcv::io::kSeekStart</a></div><div class="ttdeci">@ kSeekStart</div><div class="ttdoc">seek relative to the origin of the file</div><div class="ttdef"><b>Definition:</b> base.h:19</div></div>
 <div class="ttc" id="anamespaceargcv_1_1io_html_aef6b4f1f0b858341e7ba9c8ea6774352ac5f1a28c76f58df141437f74a1c57714"><div class="ttname"><a href="namespaceargcv_1_1io.html#aef6b4f1f0b858341e7ba9c8ea6774352ac5f1a28c76f58df141437f74a1c57714">argcv::io::kSeekEnd</a></div><div class="ttdeci">@ kSeekEnd</div><div class="ttdoc">seek relative to the end</div><div class="ttdef"><b>Definition:</b> base.h:23</div></div>
 <div class="ttc" id="anamespaceargcv_html"><div class="ttname"><a href="namespaceargcv.html">argcv</a></div><div class="ttdoc">Type definitions.</div><div class="ttdef"><b>Definition:</b> atomic.h:10</div></div>
-<div class="ttc" id="anamespaceargcv_html_a775cf32fa3d656254b2dbc0b62dc0ea1"><div class="ttname"><a href="namespaceargcv.html#a775cf32fa3d656254b2dbc0b62dc0ea1">argcv::string_view</a></div><div class="ttdeci">absl::string_view string_view</div><div class="ttdef"><b>Definition:</b> types.h:83</div></div>
-<div class="ttc" id="anamespaceargcv_html_acbf91fead4e2aededdc6a069206ef898"><div class="ttname"><a href="namespaceargcv.html#acbf91fead4e2aededdc6a069206ef898">argcv::int64</a></div><div class="ttdeci">int64_t int64</div><div class="ttdef"><b>Definition:</b> types.h:28</div></div>
-<div class="ttc" id="anamespaceargcv_html_ae745cc95971bef0fe6c12feee4356e1c"><div class="ttname"><a href="namespaceargcv.html#ae745cc95971bef0fe6c12feee4356e1c">argcv::uint64</a></div><div class="ttdeci">uint64_t uint64</div><div class="ttdef"><b>Definition:</b> types.h:33</div></div>
+<div class="ttc" id="anamespaceargcv_html_a775cf32fa3d656254b2dbc0b62dc0ea1"><div class="ttname"><a href="namespaceargcv.html#a775cf32fa3d656254b2dbc0b62dc0ea1">argcv::string_view</a></div><div class="ttdeci">absl::string_view string_view</div><div class="ttdef"><b>Definition:</b> types.h:82</div></div>
+<div class="ttc" id="anamespaceargcv_html_acbf91fead4e2aededdc6a069206ef898"><div class="ttname"><a href="namespaceargcv.html#acbf91fead4e2aededdc6a069206ef898">argcv::int64</a></div><div class="ttdeci">int64_t int64</div><div class="ttdef"><b>Definition:</b> types.h:27</div></div>
+<div class="ttc" id="anamespaceargcv_html_ae745cc95971bef0fe6c12feee4356e1c"><div class="ttname"><a href="namespaceargcv.html#ae745cc95971bef0fe6c12feee4356e1c">argcv::uint64</a></div><div class="ttdeci">uint64_t uint64</div><div class="ttdef"><b>Definition:</b> types.h:32</div></div>
 <div class="ttc" id="aresult_8h_html"><div class="ttname"><a href="result_8h.html">result.h</a></div></div>
 <div class="ttc" id="astatus_8h_html"><div class="ttname"><a href="status_8h.html">status.h</a></div></div>
 <div class="ttc" id="atypes_8h_html"><div class="ttname"><a href="types_8h.html">types.h</a></div></div>
@@ -351,7 +351,7 @@ $(document).ready(function(){initNavTree('io_2base_8h_source.html',''); initResi
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_35fe26ecdb9ad765d53fed138617535f.html">argcv</a></li><li class="navelem"><a class="el" href="dir_f4c1d4d5e01226d96972d9b937662d15.html">cxx</a></li><li class="navelem"><a class="el" href="dir_2a3e5a8dc51c14043aab1d0e31c63235.html">io</a></li><li class="navelem"><a class="el" href="io_2base_8h.html">base.h</a></li>
+    <li class="navelem"><a class="el" href="dir_35fe26ecdb9ad765d53fed138617535f.html">argcv</a></li><li class="navelem"><a class="el" href="dir_a6a51406e35d5087e5bbdb3c4f94cae9.html">io</a></li><li class="navelem"><a class="el" href="io_2base_8h.html">base.h</a></li>
   </ul>
 </div>
 </body>

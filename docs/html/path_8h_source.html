@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
-<title>ArgCV: argcv/cxx/path/path.h Source File</title>
+<title>ArgCV: argcv/path/path.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,14 +91,14 @@ $(document).ready(function(){initNavTree('path_8h_source.html',''); initResizabl
 <div class="title">path.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="path_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright 2019 Yu Jing</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef ARGCV_CXX_PATH_PATH_H_</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define ARGCV_CXX_PATH_PATH_H_</span></div>
+<a href="path_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright 2021 Yu Jing</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef ARGCV_PATH_PATH_H_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define ARGCV_PATH_PATH_H_</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;initializer_list&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="types_8h.html">argcv/cxx/base/types.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="types_8h.html">argcv/base/types.h</a>&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">// #include &quot;glog/logging.h&quot;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
@@ -243,7 +243,7 @@ $(document).ready(function(){initNavTree('path_8h_source.html',''); initResizabl
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="comment">/// separating slash if necessary. The result is Cleaned; in particular,</span></div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="comment">/// all empty strings are ignored.</span></div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="comment"></span><span class="keyword">template</span> &lt;<span class="keyword">typename</span>... T&gt;</div>
-<div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="namespaceargcv_1_1path.html#a6ceb5170d47b7c083dd41cc528ab3751">  153</a></span>&#160;<span class="keywordtype">string</span> <a class="code" href="namespaceargcv_1_1path.html#a6ceb5170d47b7c083dd41cc528ab3751">JoinPath</a>(<span class="keyword">const</span> T &amp;... args) noexcept {</div>
+<div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="namespaceargcv_1_1path.html#a1012ca64abfd60c725bbb95c4137d588">  153</a></span>&#160;<span class="keywordtype">string</span> <a class="code" href="namespaceargcv_1_1path.html#a1012ca64abfd60c725bbb95c4137d588">JoinPath</a>(<span class="keyword">const</span> T &amp;...args) noexcept {</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <span class="keywordflow">return</span> internal::JoinPathImpl({args...});</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;}</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="comment"></span> </div>
@@ -323,16 +323,16 @@ $(document).ready(function(){initNavTree('path_8h_source.html',''); initResizabl
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;}  <span class="comment">// namespace argcv</span></div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160; </div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// ARGCV_CXX_PATH_PATH_H_</span></div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// ARGCV_PATH_PATH_H_</span></div>
 <div class="ttc" id="anamespaceargcv_1_1path_html_a0ce3e62fd21ac0df66bbfea877517d9f"><div class="ttname"><a href="namespaceargcv_1_1path.html#a0ce3e62fd21ac0df66bbfea877517d9f">argcv::path::IsAbsPath</a></div><div class="ttdeci">bool IsAbsPath(string_view in) noexcept</div><div class="ttdoc">IsAbsPath detecteted whether to be a absolute path.</div><div class="ttdef"><b>Definition:</b> path.h:185</div></div>
+<div class="ttc" id="anamespaceargcv_1_1path_html_a1012ca64abfd60c725bbb95c4137d588"><div class="ttname"><a href="namespaceargcv_1_1path.html#a1012ca64abfd60c725bbb95c4137d588">argcv::path::JoinPath</a></div><div class="ttdeci">string JoinPath(const T &amp;...args) noexcept</div><div class="ttdef"><b>Definition:</b> path.h:153</div></div>
 <div class="ttc" id="anamespaceargcv_1_1path_html_a4698c36133c2270117be53efe80f7b61"><div class="ttname"><a href="namespaceargcv_1_1path.html#a4698c36133c2270117be53efe80f7b61">argcv::path::CleanPath</a></div><div class="ttdeci">string CleanPath(string_view in) noexcept</div><div class="ttdef"><b>Definition:</b> path.h:70</div></div>
 <div class="ttc" id="anamespaceargcv_1_1path_html_a5cdb4dd0dd85db8ec750e82f2c12e38c"><div class="ttname"><a href="namespaceargcv_1_1path.html#a5cdb4dd0dd85db8ec750e82f2c12e38c">argcv::path::SplitFilename</a></div><div class="ttdeci">void SplitFilename(string_view in, string_view *dir, string_view *file) noexcept</div><div class="ttdef"><b>Definition:</b> path.h:163</div></div>
-<div class="ttc" id="anamespaceargcv_1_1path_html_a6ceb5170d47b7c083dd41cc528ab3751"><div class="ttname"><a href="namespaceargcv_1_1path.html#a6ceb5170d47b7c083dd41cc528ab3751">argcv::path::JoinPath</a></div><div class="ttdeci">string JoinPath(const T &amp;... args) noexcept</div><div class="ttdef"><b>Definition:</b> path.h:153</div></div>
 <div class="ttc" id="anamespaceargcv_1_1path_html_a85f1f89a996266b7b31638ea127cc873"><div class="ttname"><a href="namespaceargcv_1_1path.html#a85f1f89a996266b7b31638ea127cc873">argcv::path::Dirname</a></div><div class="ttdeci">string Dirname(string_view in) noexcept</div><div class="ttdef"><b>Definition:</b> path.h:197</div></div>
 <div class="ttc" id="anamespaceargcv_1_1path_html_ad704d6186e7b00815e13ec3d59362f79"><div class="ttname"><a href="namespaceargcv_1_1path.html#ad704d6186e7b00815e13ec3d59362f79">argcv::path::Basename</a></div><div class="ttdeci">string Basename(string_view in) noexcept</div><div class="ttdef"><b>Definition:</b> path.h:208</div></div>
 <div class="ttc" id="anamespaceargcv_html"><div class="ttname"><a href="namespaceargcv.html">argcv</a></div><div class="ttdoc">Type definitions.</div><div class="ttdef"><b>Definition:</b> atomic.h:10</div></div>
-<div class="ttc" id="anamespaceargcv_html_a775cf32fa3d656254b2dbc0b62dc0ea1"><div class="ttname"><a href="namespaceargcv.html#a775cf32fa3d656254b2dbc0b62dc0ea1">argcv::string_view</a></div><div class="ttdeci">absl::string_view string_view</div><div class="ttdef"><b>Definition:</b> types.h:83</div></div>
-<div class="ttc" id="anamespaceargcv_html_ac4307817817de9614dd28c828ac9f93a"><div class="ttname"><a href="namespaceargcv.html#ac4307817817de9614dd28c828ac9f93a">argcv::string</a></div><div class="ttdeci">std::basic_string&lt; char &gt; string</div><div class="ttdef"><b>Definition:</b> types.h:85</div></div>
+<div class="ttc" id="anamespaceargcv_html_a775cf32fa3d656254b2dbc0b62dc0ea1"><div class="ttname"><a href="namespaceargcv.html#a775cf32fa3d656254b2dbc0b62dc0ea1">argcv::string_view</a></div><div class="ttdeci">absl::string_view string_view</div><div class="ttdef"><b>Definition:</b> types.h:82</div></div>
+<div class="ttc" id="anamespaceargcv_html_ac4307817817de9614dd28c828ac9f93a"><div class="ttname"><a href="namespaceargcv.html#ac4307817817de9614dd28c828ac9f93a">argcv::string</a></div><div class="ttdeci">std::basic_string&lt; char &gt; string</div><div class="ttdef"><b>Definition:</b> types.h:84</div></div>
 <div class="ttc" id="atypes_8h_html"><div class="ttname"><a href="types_8h.html">types.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -340,7 +340,7 @@ $(document).ready(function(){initNavTree('path_8h_source.html',''); initResizabl
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_35fe26ecdb9ad765d53fed138617535f.html">argcv</a></li><li class="navelem"><a class="el" href="dir_f4c1d4d5e01226d96972d9b937662d15.html">cxx</a></li><li class="navelem"><a class="el" href="dir_d21809716c358ae254c72ce293471cdc.html">path</a></li><li class="navelem"><a class="el" href="path_8h.html">path.h</a></li>
+    <li class="navelem"><a class="el" href="dir_35fe26ecdb9ad765d53fed138617535f.html">argcv</a></li><li class="navelem"><a class="el" href="dir_8160f1e22acda80aac13e59600c4a3ab.html">path</a></li><li class="navelem"><a class="el" href="path_8h.html">path.h</a></li>
   </ul>
 </div>
 </body>

@@ -1,4 +1,4 @@
-# Copyright 2019 Yu Jing
+# Copyright 2021 Yu Jing
 licenses(["notice"])  # MIT
 
 package(default_visibility = ["//visibility:public"])
@@ -29,7 +29,7 @@ cc_library(
 )
 
 cc_test(
-    name = "test",
+    name = "tests",
     srcs = glob([
         "**/*_test.cc",
         "**/*_test.h",
@@ -40,7 +40,7 @@ cc_test(
     ],
     deps = [
         ":argcv",
-        "//argcv/cxx/test",
+        "//argcv/test",
     ],
 )
 

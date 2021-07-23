@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
-<title>ArgCV: argcv/cxx/base/result.h Source File</title>
+<title>ArgCV: argcv/base/result.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,13 +91,13 @@ $(document).ready(function(){initNavTree('result_8h_source.html',''); initResiza
 <div class="title">result.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="result_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright 2019 Yu Jing</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef ARGCV_CXX_BASE_RESULT_H_</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define ARGCV_CXX_BASE_RESULT_H_</span></div>
+<a href="result_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright 2021 Yu Jing</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef ARGCV_BASE_RESULT_H_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define ARGCV_BASE_RESULT_H_</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span>  <span class="comment">// move</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="status_8h.html">argcv/cxx/base/status.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="status_8h.html">argcv/base/status.h</a>&quot;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceargcv.html">argcv</a> {</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
@@ -141,7 +141,7 @@ $(document).ready(function(){initNavTree('result_8h_source.html',''); initResiza
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}  <span class="comment">// namespace argcv</span></div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// ARGCV_CXX_BASE_RESULT_H_</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// ARGCV_BASE_RESULT_H_</span></div>
 <div class="ttc" id="aclassargcv_1_1_result_html"><div class="ttname"><a href="classargcv_1_1_result.html">argcv::Result</a></div><div class="ttdef"><b>Definition:</b> result.h:12</div></div>
 <div class="ttc" id="aclassargcv_1_1_result_html_a1e8d09a5af5f4c407d2fd2aed55802d4"><div class="ttname"><a href="classargcv_1_1_result.html#a1e8d09a5af5f4c407d2fd2aed55802d4">argcv::Result::Result</a></div><div class="ttdeci">Result(Status status, const T &amp;v) noexcept</div><div class="ttdef"><b>Definition:</b> result.h:14</div></div>
 <div class="ttc" id="aclassargcv_1_1_result_html_a1fb125f5abe08c729e3f3645562d648c"><div class="ttname"><a href="classargcv_1_1_result.html#a1fb125f5abe08c729e3f3645562d648c">argcv::Result::Result</a></div><div class="ttdeci">Result(const Result &amp;rhs) noexcept</div><div class="ttdef"><b>Definition:</b> result.h:18</div></div>
@@ -152,8 +152,8 @@ $(document).ready(function(){initNavTree('result_8h_source.html',''); initResiza
 <div class="ttc" id="aclassargcv_1_1_result_html_abcc0678a8655cdc2ba0480c29d69c30b"><div class="ttname"><a href="classargcv_1_1_result.html#abcc0678a8655cdc2ba0480c29d69c30b">argcv::Result::data</a></div><div class="ttdeci">T data() const noexcept</div><div class="ttdef"><b>Definition:</b> result.h:41</div></div>
 <div class="ttc" id="aclassargcv_1_1_result_html_acda3424031f8b6696ae4ae456105f7fc"><div class="ttname"><a href="classargcv_1_1_result.html#acda3424031f8b6696ae4ae456105f7fc">argcv::Result::operator=</a></div><div class="ttdeci">Result &amp; operator=(Result &amp;&amp;rhs) noexcept</div><div class="ttdoc">swap</div><div class="ttdef"><b>Definition:</b> result.h:31</div></div>
 <div class="ttc" id="aclassargcv_1_1_result_html_adf0d9d0f777a0767844f592696494c2f"><div class="ttname"><a href="classargcv_1_1_result.html#adf0d9d0f777a0767844f592696494c2f">argcv::Result::ok</a></div><div class="ttdeci">bool ok() const noexcept</div><div class="ttdef"><b>Definition:</b> result.h:39</div></div>
-<div class="ttc" id="aclassargcv_1_1_status_html"><div class="ttname"><a href="classargcv_1_1_status.html">argcv::Status</a></div><div class="ttdoc">A generic return type.</div><div class="ttdef"><b>Definition:</b> status.h:46</div></div>
-<div class="ttc" id="aclassargcv_1_1_status_html_a1b217540bd120076632ce6dfe37b1408"><div class="ttname"><a href="classargcv_1_1_status.html#a1b217540bd120076632ce6dfe37b1408">argcv::Status::ok</a></div><div class="ttdeci">bool ok() const noexcept</div><div class="ttdoc">Returns true if the status indicates success.</div><div class="ttdef"><b>Definition:</b> status.h:75</div></div>
+<div class="ttc" id="aclassargcv_1_1_status_html"><div class="ttname"><a href="classargcv_1_1_status.html">argcv::Status</a></div><div class="ttdoc">A generic return type.</div><div class="ttdef"><b>Definition:</b> status.h:45</div></div>
+<div class="ttc" id="aclassargcv_1_1_status_html_a1b217540bd120076632ce6dfe37b1408"><div class="ttname"><a href="classargcv_1_1_status.html#a1b217540bd120076632ce6dfe37b1408">argcv::Status::ok</a></div><div class="ttdeci">bool ok() const noexcept</div><div class="ttdoc">Returns true if the status indicates success.</div><div class="ttdef"><b>Definition:</b> status.h:74</div></div>
 <div class="ttc" id="anamespaceargcv_html"><div class="ttname"><a href="namespaceargcv.html">argcv</a></div><div class="ttdoc">Type definitions.</div><div class="ttdef"><b>Definition:</b> atomic.h:10</div></div>
 <div class="ttc" id="astatus_8h_html"><div class="ttname"><a href="status_8h.html">status.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -162,7 +162,7 @@ $(document).ready(function(){initNavTree('result_8h_source.html',''); initResiza
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_35fe26ecdb9ad765d53fed138617535f.html">argcv</a></li><li class="navelem"><a class="el" href="dir_f4c1d4d5e01226d96972d9b937662d15.html">cxx</a></li><li class="navelem"><a class="el" href="dir_8406e34757e41b9fe978b83e765508d4.html">base</a></li><li class="navelem"><a class="el" href="result_8h.html">result.h</a></li>
+    <li class="navelem"><a class="el" href="dir_35fe26ecdb9ad765d53fed138617535f.html">argcv</a></li><li class="navelem"><a class="el" href="dir_c902d9ad3e70eee48fe7bcdbb03cfa4a.html">base</a></li><li class="navelem"><a class="el" href="result_8h.html">result.h</a></li>
   </ul>
 </div>
 </body>

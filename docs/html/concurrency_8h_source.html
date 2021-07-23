@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
-<title>ArgCV: argcv/cxx/base/concurrency.h Source File</title>
+<title>ArgCV: argcv/base/concurrency.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,11 +91,11 @@ $(document).ready(function(){initNavTree('concurrency_8h_source.html',''); initR
 <div class="title">concurrency.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="concurrency_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright 2019 Yu Jing</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef ARGCV_CXX_BASE_CONCURRENCY_H_</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define ARGCV_CXX_BASE_CONCURRENCY_H_</span></div>
+<a href="concurrency_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright 2021 Yu Jing</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef ARGCV_BASE_CONCURRENCY_H_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define ARGCV_BASE_CONCURRENCY_H_</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="types_8h.html">argcv/cxx/base/types.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="types_8h.html">argcv/base/types.h</a>&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceargcv.html">argcv</a> {</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"></span> </div>
@@ -134,7 +134,7 @@ $(document).ready(function(){initNavTree('concurrency_8h_source.html',''); initR
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}  <span class="comment">// namespace argcv</span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// ARGCV_CXX_BASE_CONCURRENCY_H_</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// ARGCV_BASE_CONCURRENCY_H_</span></div>
 <div class="ttc" id="anamespaceargcv_html"><div class="ttname"><a href="namespaceargcv.html">argcv</a></div><div class="ttdoc">Type definitions.</div><div class="ttdef"><b>Definition:</b> atomic.h:10</div></div>
 <div class="ttc" id="anamespaceargcv_html_a1140a4d72d9001d43cb86d2d38603cf5"><div class="ttname"><a href="namespaceargcv.html#a1140a4d72d9001d43cb86d2d38603cf5">argcv::GetCurrentNanoseconds</a></div><div class="ttdeci">uint64 GetCurrentNanoseconds() noexcept</div><div class="ttdoc">Returns the number of nano-seconds since the Unix epoch.</div><div class="ttdef"><b>Definition:</b> concurrency.cc:34</div></div>
 <div class="ttc" id="anamespaceargcv_html_a5d6f85b334094568d9752d5d166f3b4b"><div class="ttname"><a href="namespaceargcv.html#a5d6f85b334094568d9752d5d166f3b4b">argcv::GetCurrentMillis</a></div><div class="ttdeci">uint64 GetCurrentMillis() noexcept</div><div class="ttdoc">Returns the number of milli-seconds since the Unix epoch.</div><div class="ttdef"><b>Definition:</b> concurrency.h:28</div></div>
@@ -143,7 +143,7 @@ $(document).ready(function(){initNavTree('concurrency_8h_source.html',''); initR
 <div class="ttc" id="anamespaceargcv_html_ab3161cc1573c4a1ac93d49af5de122ee"><div class="ttname"><a href="namespaceargcv.html#ab3161cc1573c4a1ac93d49af5de122ee">argcv::GetCurrentSeconds</a></div><div class="ttdeci">uint64 GetCurrentSeconds() noexcept</div><div class="ttdoc">Returns the number of seconds since the Unix epoch.</div><div class="ttdef"><b>Definition:</b> concurrency.h:36</div></div>
 <div class="ttc" id="anamespaceargcv_html_ab7a9fdffa731ac62728cbe31999cabc9"><div class="ttname"><a href="namespaceargcv.html#ab7a9fdffa731ac62728cbe31999cabc9">argcv::GetCurrentMs</a></div><div class="ttdeci">uint64 GetCurrentMs() noexcept</div><div class="ttdoc">Returns the number of milli-seconds since the Unix epoch.</div><div class="ttdef"><b>Definition:</b> concurrency.h:33</div></div>
 <div class="ttc" id="anamespaceargcv_html_ac0cbbfcf77aa8b863667780e7896b003"><div class="ttname"><a href="namespaceargcv.html#ac0cbbfcf77aa8b863667780e7896b003">argcv::GetCurrentMicros</a></div><div class="ttdeci">uint64 GetCurrentMicros() noexcept</div><div class="ttdoc">Returns the number of micro-seconds since the Unix epoch.</div><div class="ttdef"><b>Definition:</b> concurrency.h:23</div></div>
-<div class="ttc" id="anamespaceargcv_html_ae745cc95971bef0fe6c12feee4356e1c"><div class="ttname"><a href="namespaceargcv.html#ae745cc95971bef0fe6c12feee4356e1c">argcv::uint64</a></div><div class="ttdeci">uint64_t uint64</div><div class="ttdef"><b>Definition:</b> types.h:33</div></div>
+<div class="ttc" id="anamespaceargcv_html_ae745cc95971bef0fe6c12feee4356e1c"><div class="ttname"><a href="namespaceargcv.html#ae745cc95971bef0fe6c12feee4356e1c">argcv::uint64</a></div><div class="ttdeci">uint64_t uint64</div><div class="ttdef"><b>Definition:</b> types.h:32</div></div>
 <div class="ttc" id="anamespaceargcv_html_af5def8cd4a4c98aea7424aea2449af09"><div class="ttname"><a href="namespaceargcv.html#af5def8cd4a4c98aea7424aea2449af09">argcv::Sleep</a></div><div class="ttdeci">bool Sleep(uint64 millis, uint64 nanos) noexcept</div><div class="ttdef"><b>Definition:</b> concurrency.cc:18</div></div>
 <div class="ttc" id="atypes_8h_html"><div class="ttname"><a href="types_8h.html">types.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -152,7 +152,7 @@ $(document).ready(function(){initNavTree('concurrency_8h_source.html',''); initR
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_35fe26ecdb9ad765d53fed138617535f.html">argcv</a></li><li class="navelem"><a class="el" href="dir_f4c1d4d5e01226d96972d9b937662d15.html">cxx</a></li><li class="navelem"><a class="el" href="dir_8406e34757e41b9fe978b83e765508d4.html">base</a></li><li class="navelem"><a class="el" href="concurrency_8h.html">concurrency.h</a></li>
+    <li class="navelem"><a class="el" href="dir_35fe26ecdb9ad765d53fed138617535f.html">argcv</a></li><li class="navelem"><a class="el" href="dir_c902d9ad3e70eee48fe7bcdbb03cfa4a.html">base</a></li><li class="navelem"><a class="el" href="concurrency_8h.html">concurrency.h</a></li>
   </ul>
 </div>
 </body>

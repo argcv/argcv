@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
-<title>ArgCV: argcv/cxx/sync/mutex.h Source File</title>
+<title>ArgCV: argcv/sync/mutex.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,17 +91,17 @@ $(document).ready(function(){initNavTree('mutex_8h_source.html',''); initResizab
 <div class="title">mutex.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="mutex_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright 2019 Yu Jing</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef ARGCV_CXX_SYNC_MUTEX_H_</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define ARGCV_CXX_SYNC_MUTEX_H_</span></div>
+<a href="mutex_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright 2021 Yu Jing</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef ARGCV_SYNC_MUTEX_H_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define ARGCV_SYNC_MUTEX_H_</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;atomic&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="atomic_8h.html">argcv/cxx/base/atomic.h</a>&quot;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="cxx_2base_2macros_8h.html">argcv/cxx/base/macros.h</a>&quot;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="types_8h.html">argcv/cxx/base/types.h</a>&quot;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="sync_2base_8h.html">argcv/cxx/sync/base.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="atomic_8h.html">argcv/base/atomic.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="macros_8h.html">argcv/base/macros.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="types_8h.html">argcv/base/types.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="sync_2base_8h.html">argcv/sync/base.h</a>&quot;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceargcv.html">argcv</a> {</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
@@ -137,7 +137,7 @@ $(document).ready(function(){initNavTree('mutex_8h_source.html',''); initResizab
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}  <span class="comment">// namespace argcv</span></div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// ARGCV_CXX_SYNC_MUTEX_H_</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// ARGCV_SYNC_MUTEX_H_</span></div>
 <div class="ttc" id="aatomic_8h_html"><div class="ttname"><a href="atomic_8h.html">atomic.h</a></div></div>
 <div class="ttc" id="aclassargcv_1_1sync_1_1_locker_html"><div class="ttname"><a href="classargcv_1_1sync_1_1_locker.html">argcv::sync::Locker</a></div><div class="ttdef"><b>Definition:</b> base.h:15</div></div>
 <div class="ttc" id="aclassargcv_1_1sync_1_1_mutex_html"><div class="ttname"><a href="classargcv_1_1sync_1_1_mutex.html">argcv::sync::Mutex</a></div><div class="ttdoc">A implementation of spinlock.</div><div class="ttdef"><b>Definition:</b> mutex.h:18</div></div>
@@ -145,7 +145,7 @@ $(document).ready(function(){initNavTree('mutex_8h_source.html',''); initResizab
 <div class="ttc" id="aclassargcv_1_1sync_1_1_mutex_html_a434e915881c9e25f8489d3c54dabcf6a"><div class="ttname"><a href="classargcv_1_1sync_1_1_mutex.html#a434e915881c9e25f8489d3c54dabcf6a">argcv::sync::Mutex::TryLock</a></div><div class="ttdeci">bool TryLock() noexcept</div><div class="ttdef"><b>Definition:</b> mutex.h:29</div></div>
 <div class="ttc" id="aclassargcv_1_1sync_1_1_mutex_html_aefa2fbe4a329ae6501a8dcb66cb74ab4"><div class="ttname"><a href="classargcv_1_1sync_1_1_mutex.html#aefa2fbe4a329ae6501a8dcb66cb74ab4">argcv::sync::Mutex::Mutex</a></div><div class="ttdeci">Mutex() noexcept</div><div class="ttdef"><b>Definition:</b> mutex.h:22</div></div>
 <div class="ttc" id="aclassargcv_1_1sync_1_1_mutex_html_afd93d3777132450c21bf887c697f00b7"><div class="ttname"><a href="classargcv_1_1sync_1_1_mutex.html#afd93d3777132450c21bf887c697f00b7">argcv::sync::Mutex::Unlock</a></div><div class="ttdeci">void Unlock() noexcept</div><div class="ttdef"><b>Definition:</b> mutex.h:33</div></div>
-<div class="ttc" id="acxx_2base_2macros_8h_html"><div class="ttname"><a href="cxx_2base_2macros_8h.html">macros.h</a></div></div>
+<div class="ttc" id="amacros_8h_html"><div class="ttname"><a href="macros_8h.html">macros.h</a></div></div>
 <div class="ttc" id="anamespaceargcv_html"><div class="ttname"><a href="namespaceargcv.html">argcv</a></div><div class="ttdoc">Type definitions.</div><div class="ttdef"><b>Definition:</b> atomic.h:10</div></div>
 <div class="ttc" id="async_2base_8h_html"><div class="ttname"><a href="sync_2base_8h.html">base.h</a></div></div>
 <div class="ttc" id="atypes_8h_html"><div class="ttname"><a href="types_8h.html">types.h</a></div></div>
@@ -155,7 +155,7 @@ $(document).ready(function(){initNavTree('mutex_8h_source.html',''); initResizab
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_35fe26ecdb9ad765d53fed138617535f.html">argcv</a></li><li class="navelem"><a class="el" href="dir_f4c1d4d5e01226d96972d9b937662d15.html">cxx</a></li><li class="navelem"><a class="el" href="dir_449d0259f140035fdafbc8fb45e3013b.html">sync</a></li><li class="navelem"><a class="el" href="mutex_8h.html">mutex.h</a></li>
+    <li class="navelem"><a class="el" href="dir_35fe26ecdb9ad765d53fed138617535f.html">argcv</a></li><li class="navelem"><a class="el" href="dir_42d53064df27f048dc7d4a64861d860d.html">sync</a></li><li class="navelem"><a class="el" href="mutex_8h.html">mutex.h</a></li>
   </ul>
 </div>
 </body>

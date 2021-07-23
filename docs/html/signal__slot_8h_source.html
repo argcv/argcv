@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
-<title>ArgCV: argcv/cxx/base/signal_slot.h Source File</title>
+<title>ArgCV: argcv/base/signal_slot.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,29 +91,29 @@ $(document).ready(function(){initNavTree('signal__slot_8h_source.html',''); init
 <div class="title">signal_slot.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="signal__slot_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright 2019 Yu Jing</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef ARGCV_CXX_BASE_SIGNAL_SLOT_H_</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define ARGCV_CXX_BASE_SIGNAL_SLOT_H_</span></div>
+<a href="signal__slot_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright 2021 Yu Jing</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef ARGCV_BASE_SIGNAL_SLOT_H_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define ARGCV_BASE_SIGNAL_SLOT_H_</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;cstdint&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span>  <span class="comment">// make_pair</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="cxx_2base_2macros_8h.html">argcv/cxx/base/macros.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="macros_8h.html">argcv/base/macros.h</a>&quot;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceargcv.html">argcv</a> {</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
 <div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classargcv_1_1_signal_slot.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="classargcv_1_1_signal_slot.html">SignalSlot</a> {</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classargcv_1_1_signal_slot.html#a733bd31dd8924f25434f39362bd606e0">   17</a></span>&#160;  <span class="keyword">typedef</span> std::function&lt;void(Args...)&gt; <a class="code" href="classargcv_1_1_signal_slot.html#a733bd31dd8924f25434f39362bd606e0">Functor</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classargcv_1_1_signal_slot.html#a3464fc5b887f495d2c5baaa50892554b">   17</a></span>&#160;  <span class="keyword">typedef</span> std::function&lt;void(Args...)&gt; <a class="code" href="classargcv_1_1_signal_slot.html#a3464fc5b887f495d2c5baaa50892554b">CallbackFunc</a>;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
 <div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classargcv_1_1_signal_slot.html#a2826771596952fa559facd42e2df774a">   19</a></span>&#160;  <a class="code" href="classargcv_1_1_signal_slot.html#a2826771596952fa559facd42e2df774a">SignalSlot</a>() noexcept : top_id_(0) {}</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
 <div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classargcv_1_1_signal_slot.html#afbf340571d4a3753f516c28d18d90375">   21</a></span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classargcv_1_1_signal_slot.html#afbf340571d4a3753f516c28d18d90375">~SignalSlot</a>() noexcept {}</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classargcv_1_1_signal_slot.html#a10fc078388562d8db3a6ec3d503c74e4">   23</a></span>&#160;  uint64_t <a class="code" href="classargcv_1_1_signal_slot.html#a10fc078388562d8db3a6ec3d503c74e4">Connect</a>(<a class="code" href="classargcv_1_1_signal_slot.html#a733bd31dd8924f25434f39362bd606e0">Functor</a>&amp;&amp; func) noexcept {</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classargcv_1_1_signal_slot.html#a6e117c13ff98c31bca346c7602ab9689">   23</a></span>&#160;  uint64_t <a class="code" href="classargcv_1_1_signal_slot.html#a6e117c13ff98c31bca346c7602ab9689">Connect</a>(<a class="code" href="classargcv_1_1_signal_slot.html#a3464fc5b887f495d2c5baaa50892554b">CallbackFunc</a>&amp;&amp; func) noexcept {</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    uint64_t <span class="keywordtype">id</span> = top_id_++;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    functors_.emplace(std::make_pair(<span class="keywordtype">id</span>, func));</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">return</span> id;</div>
@@ -139,22 +139,23 @@ $(document).ready(function(){initNavTree('signal__slot_8h_source.html',''); init
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  }</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  std::map&lt;uint64_t, Functor&gt; functors_;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  std::map&lt;uint64_t, CallbackFunc&gt; functors_;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  uint64_t top_id_;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  DISALLOW_COPY_AND_ASSIGN(<a class="code" href="classargcv_1_1_signal_slot.html">SignalSlot</a>);</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;};</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}  <span class="comment">// namespace argcv</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// ARGCV_CXX_BASE_SIGNAL_SLOT_H_</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}  <span class="comment">// namespace argcv</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// ARGCV_BASE_SIGNAL_SLOT_H_</span></div>
 <div class="ttc" id="aclassargcv_1_1_signal_slot_html"><div class="ttname"><a href="classargcv_1_1_signal_slot.html">argcv::SignalSlot</a></div><div class="ttdef"><b>Definition:</b> signal_slot.h:15</div></div>
-<div class="ttc" id="aclassargcv_1_1_signal_slot_html_a10fc078388562d8db3a6ec3d503c74e4"><div class="ttname"><a href="classargcv_1_1_signal_slot.html#a10fc078388562d8db3a6ec3d503c74e4">argcv::SignalSlot::Connect</a></div><div class="ttdeci">uint64_t Connect(Functor &amp;&amp;func) noexcept</div><div class="ttdef"><b>Definition:</b> signal_slot.h:23</div></div>
 <div class="ttc" id="aclassargcv_1_1_signal_slot_html_a2826771596952fa559facd42e2df774a"><div class="ttname"><a href="classargcv_1_1_signal_slot.html#a2826771596952fa559facd42e2df774a">argcv::SignalSlot::SignalSlot</a></div><div class="ttdeci">SignalSlot() noexcept</div><div class="ttdef"><b>Definition:</b> signal_slot.h:19</div></div>
+<div class="ttc" id="aclassargcv_1_1_signal_slot_html_a3464fc5b887f495d2c5baaa50892554b"><div class="ttname"><a href="classargcv_1_1_signal_slot.html#a3464fc5b887f495d2c5baaa50892554b">argcv::SignalSlot::CallbackFunc</a></div><div class="ttdeci">std::function&lt; void(Args...)&gt; CallbackFunc</div><div class="ttdef"><b>Definition:</b> signal_slot.h:17</div></div>
 <div class="ttc" id="aclassargcv_1_1_signal_slot_html_a41f0ff5aa94bad9185d6de3ba00fb8ad"><div class="ttname"><a href="classargcv_1_1_signal_slot.html#a41f0ff5aa94bad9185d6de3ba00fb8ad">argcv::SignalSlot::DisconnectAll</a></div><div class="ttdeci">void DisconnectAll() noexcept</div><div class="ttdef"><b>Definition:</b> signal_slot.h:40</div></div>
-<div class="ttc" id="aclassargcv_1_1_signal_slot_html_a733bd31dd8924f25434f39362bd606e0"><div class="ttname"><a href="classargcv_1_1_signal_slot.html#a733bd31dd8924f25434f39362bd606e0">argcv::SignalSlot::Functor</a></div><div class="ttdeci">std::function&lt; void(Args...)&gt; Functor</div><div class="ttdef"><b>Definition:</b> signal_slot.h:17</div></div>
+<div class="ttc" id="aclassargcv_1_1_signal_slot_html_a6e117c13ff98c31bca346c7602ab9689"><div class="ttname"><a href="classargcv_1_1_signal_slot.html#a6e117c13ff98c31bca346c7602ab9689">argcv::SignalSlot::Connect</a></div><div class="ttdeci">uint64_t Connect(CallbackFunc &amp;&amp;func) noexcept</div><div class="ttdef"><b>Definition:</b> signal_slot.h:23</div></div>
 <div class="ttc" id="aclassargcv_1_1_signal_slot_html_aa3779acc57b9879a4f76b078e269fc96"><div class="ttname"><a href="classargcv_1_1_signal_slot.html#aa3779acc57b9879a4f76b078e269fc96">argcv::SignalSlot::Call</a></div><div class="ttdeci">void Call(Args &amp;&amp;... args) noexcept</div><div class="ttdef"><b>Definition:</b> signal_slot.h:42</div></div>
 <div class="ttc" id="aclassargcv_1_1_signal_slot_html_ae333502a3cb3659cb89b4fcfbafa749d"><div class="ttname"><a href="classargcv_1_1_signal_slot.html#ae333502a3cb3659cb89b4fcfbafa749d">argcv::SignalSlot::Disconnect</a></div><div class="ttdeci">bool Disconnect(uint64_t id) noexcept</div><div class="ttdef"><b>Definition:</b> signal_slot.h:29</div></div>
 <div class="ttc" id="aclassargcv_1_1_signal_slot_html_afbf340571d4a3753f516c28d18d90375"><div class="ttname"><a href="classargcv_1_1_signal_slot.html#afbf340571d4a3753f516c28d18d90375">argcv::SignalSlot::~SignalSlot</a></div><div class="ttdeci">virtual ~SignalSlot() noexcept</div><div class="ttdef"><b>Definition:</b> signal_slot.h:21</div></div>
-<div class="ttc" id="acxx_2base_2macros_8h_html"><div class="ttname"><a href="cxx_2base_2macros_8h.html">macros.h</a></div></div>
+<div class="ttc" id="amacros_8h_html"><div class="ttname"><a href="macros_8h.html">macros.h</a></div></div>
 <div class="ttc" id="anamespaceargcv_html"><div class="ttname"><a href="namespaceargcv.html">argcv</a></div><div class="ttdoc">Type definitions.</div><div class="ttdef"><b>Definition:</b> atomic.h:10</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -162,7 +163,7 @@ $(document).ready(function(){initNavTree('signal__slot_8h_source.html',''); init
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_35fe26ecdb9ad765d53fed138617535f.html">argcv</a></li><li class="navelem"><a class="el" href="dir_f4c1d4d5e01226d96972d9b937662d15.html">cxx</a></li><li class="navelem"><a class="el" href="dir_8406e34757e41b9fe978b83e765508d4.html">base</a></li><li class="navelem"><a class="el" href="signal__slot_8h.html">signal_slot.h</a></li>
+    <li class="navelem"><a class="el" href="dir_35fe26ecdb9ad765d53fed138617535f.html">argcv</a></li><li class="navelem"><a class="el" href="dir_c902d9ad3e70eee48fe7bcdbb03cfa4a.html">base</a></li><li class="navelem"><a class="el" href="signal__slot_8h.html">signal_slot.h</a></li>
   </ul>
 </div>
 </body>

@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
-<title>ArgCV: argcv/cxx/base/thread_pool.h Source File</title>
+<title>ArgCV: argcv/base/thread_pool.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,9 +91,9 @@ $(document).ready(function(){initNavTree('thread__pool_8h_source.html',''); init
 <div class="title">thread_pool.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="thread__pool_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright 2019 Yu Jing</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef ARGCV_CXX_BASE_THREAD_POOL_H_</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define ARGCV_CXX_BASE_THREAD_POOL_H_</span></div>
+<a href="thread__pool_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright 2021 Yu Jing</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef ARGCV_BASE_THREAD_POOL_H_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define ARGCV_BASE_THREAD_POOL_H_</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;condition_variable&gt;</span>  <span class="comment">// NOLINT(build/c++11)</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
@@ -251,21 +251,21 @@ $(document).ready(function(){initNavTree('thread__pool_8h_source.html',''); init
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;}  <span class="comment">// namespace argcv</span></div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// ARGCV_CXX_BASE_THREAD_POOL_H_</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// ARGCV_BASE_THREAD_POOL_H_</span></div>
 <div class="ttc" id="aclassargcv_1_1_thread_pool_html"><div class="ttname"><a href="classargcv_1_1_thread_pool.html">argcv::ThreadPool</a></div><div class="ttdef"><b>Definition:</b> thread_pool.h:18</div></div>
 <div class="ttc" id="aclassargcv_1_1_thread_pool_html_a1211ed39265e49ee08375c0e8549540a"><div class="ttname"><a href="classargcv_1_1_thread_pool.html#a1211ed39265e49ee08375c0e8549540a">argcv::ThreadPool::Send</a></div><div class="ttdeci">void Send(const std::function&lt; void()&gt; &amp;task) noexcept</div><div class="ttdef"><b>Definition:</b> thread_pool.h:44</div></div>
 <div class="ttc" id="aclassargcv_1_1_thread_pool_html_a330c3745ab11ce77d20ff5cc5fa4061f"><div class="ttname"><a href="classargcv_1_1_thread_pool.html#a330c3745ab11ce77d20ff5cc5fa4061f">argcv::ThreadPool::Enqueue</a></div><div class="ttdeci">auto Enqueue(F &amp;&amp;f, Args &amp;&amp;... args) noexcept -&gt; std::future&lt; typename std::result_of&lt; F(Args...)&gt;::type &gt;</div><div class="ttdef"><b>Definition:</b> thread_pool.h:64</div></div>
 <div class="ttc" id="aclassargcv_1_1_thread_pool_html_a5a559c451fbcc83db59040122fe98e75"><div class="ttname"><a href="classargcv_1_1_thread_pool.html#a5a559c451fbcc83db59040122fe98e75">argcv::ThreadPool::~ThreadPool</a></div><div class="ttdeci">~ThreadPool()</div><div class="ttdef"><b>Definition:</b> thread_pool.h:33</div></div>
 <div class="ttc" id="aclassargcv_1_1_thread_pool_html_a5bf6cb82300270b6e5c31712ac277b3c"><div class="ttname"><a href="classargcv_1_1_thread_pool.html#a5bf6cb82300270b6e5c31712ac277b3c">argcv::ThreadPool::ThreadPool</a></div><div class="ttdeci">ThreadPool(int reserve_threads, int max_parallelism=0) noexcept</div><div class="ttdef"><b>Definition:</b> thread_pool.h:20</div></div>
 <div class="ttc" id="anamespaceargcv_html"><div class="ttname"><a href="namespaceargcv.html">argcv</a></div><div class="ttdoc">Type definitions.</div><div class="ttdef"><b>Definition:</b> atomic.h:10</div></div>
-<div class="ttc" id="anamespaceargcv_html_ab28255fdfa9cac8ced9f9940f953e2d1"><div class="ttname"><a href="namespaceargcv.html#ab28255fdfa9cac8ced9f9940f953e2d1">argcv::queue</a></div><div class="ttdeci">std::queue&lt; T, Container &gt; queue</div><div class="ttdef"><b>Definition:</b> types.h:53</div></div>
+<div class="ttc" id="anamespaceargcv_html_ab28255fdfa9cac8ced9f9940f953e2d1"><div class="ttname"><a href="namespaceargcv.html#ab28255fdfa9cac8ced9f9940f953e2d1">argcv::queue</a></div><div class="ttdeci">std::queue&lt; T, Container &gt; queue</div><div class="ttdef"><b>Definition:</b> types.h:52</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.8.7-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_35fe26ecdb9ad765d53fed138617535f.html">argcv</a></li><li class="navelem"><a class="el" href="dir_f4c1d4d5e01226d96972d9b937662d15.html">cxx</a></li><li class="navelem"><a class="el" href="dir_8406e34757e41b9fe978b83e765508d4.html">base</a></li><li class="navelem"><a class="el" href="thread__pool_8h.html">thread_pool.h</a></li>
+    <li class="navelem"><a class="el" href="dir_35fe26ecdb9ad765d53fed138617535f.html">argcv</a></li><li class="navelem"><a class="el" href="dir_c902d9ad3e70eee48fe7bcdbb03cfa4a.html">base</a></li><li class="navelem"><a class="el" href="thread__pool_8h.html">thread_pool.h</a></li>
   </ul>
 </div>
 </body>
