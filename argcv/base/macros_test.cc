@@ -19,8 +19,8 @@ class CompariableInteger {
     return value_ - rhs.value_;
   }
 
-  OP_COMPARABLE(int);
-  OP_COMPARABLE(CompariableInteger);
+  COMPARABLE(int);
+  COMPARABLE(CompariableInteger);
 
  private:
   int value_;

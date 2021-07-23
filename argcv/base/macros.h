@@ -80,7 +80,7 @@
 
 /// A macro to enable compare related operators
 /// This is usually placed in the public: declarations for a class.
-#define OP_COMPARABLE(TypeName)                          \
+#define COMPARABLE(TypeName)                          \
   bool operator==(const TypeName &that) const noexcept { \
     return this->Compare(that) == 0;                     \
   }                                                      \
@@ -110,7 +110,7 @@
     return *this;                                    \
   }
 
-/// Similar to OP_COMPARABLE but using extends instead
+/// Similar to COMPARABLE but using extends instead
 template <typename T>
 class Comparable {
  public:
