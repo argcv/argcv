@@ -3,6 +3,7 @@
 #define ARGCV_SYNC_WAIT_GROUP_H_
 
 #include <cassert>
+#include <condition_variable>
 #include <mutex>  // NOLINT(build/c++11)  std::once_flag
 
 #include "argcv/base/atomic.h"
@@ -20,22 +21,28 @@ class WaitGroup {
  public:
   WaitGroup() : state_(0) {}
 
-  virtual ~WaitGroup() {}
+  virtual ~WaitGroup() { cv_.notify_all(); }
 
   int64 Add(int64 delta = 1) noexcept { return AtomicFetchAdd(&state_, delta); }
 
   int64 Done() noexcept {
     int64 st = AtomicDecr(&state_);
     assert(st >= 0);
+    cv_.notify_all();
     return st;
   }
 
-  void Wait() const noexcept;
+  void Wait() noexcept {
+    std::unique_lock<std::mutex> lock(mutex_);
+    cv_.wait(lock, [this]() { return AtomicLoad(&this->state_) == 0; });
+  }
 
  private:
-  atomic<int64> state_;
-
   DISALLOW_COPY_AND_ASSIGN(WaitGroup);
+
+  atomic<int64> state_;
+  std::mutex mutex_;
+  std::condition_variable cv_;
 };
 
 }  // namespace sync
