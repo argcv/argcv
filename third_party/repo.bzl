@@ -1,7 +1,7 @@
 # Copyright 2021 Yu Jing
 
 # How to prepare rules: https://bazel.build/versions/master/docs/skylark/cookbook.html
-load("//tools/build_rules/config:system.bzl", "cc_system_package")
+# load("//tools/build_rules/config:system.bzl", "cc_system_package")
 load("//tools/build_rules:arq.bzl", "arq", "clean_dep")
 load("//third_party:infra.bzl", "argcv_infra_repositories")
 

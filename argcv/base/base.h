@@ -2,6 +2,8 @@
 #ifndef ARGCV_BASE_BASE_H_
 #define ARGCV_BASE_BASE_H_
 
+#include "argcv/base/chan.h"
+#include "argcv/base/concurrency.h"
 #include "argcv/base/iter.h"
 #include "argcv/base/lock.h"
 #include "argcv/base/macros.h"
