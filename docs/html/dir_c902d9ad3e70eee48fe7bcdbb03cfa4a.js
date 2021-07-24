@@ -2,10 +2,14 @@ var dir_c902d9ad3e70eee48fe7bcdbb03cfa4a =
 [
     [ "atomic.h", "atomic_8h.html", "atomic_8h" ],
     [ "base.h", "base_2base_8h.html", null ],
+    [ "chan.h", "chan_8h.html", [
+      [ "Chan", "classargcv_1_1_chan.html", "classargcv_1_1_chan" ]
+    ] ],
     [ "code.h", "code_8h.html", "code_8h" ],
     [ "concurrency.cc", "concurrency_8cc.html", "concurrency_8cc" ],
     [ "concurrency.h", "concurrency_8h.html", "concurrency_8h" ],
     [ "iter.h", "iter_8h.html", [
+      [ "Iterable", "structargcv_1_1_iterable.html", "structargcv_1_1_iterable" ],
       [ "Iterator", "classargcv_1_1_iterator.html", "classargcv_1_1_iterator" ]
     ] ],
     [ "macros.h", "macros_8h.html", "macros_8h" ],

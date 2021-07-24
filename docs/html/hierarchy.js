@@ -12,6 +12,9 @@ var hierarchy =
     [ "Comparable< T >", "class_comparable.html", null ],
     [ "argcv::io::File", "classargcv_1_1io_1_1_file.html", null ],
     [ "argcv::io::FileInfo", "classargcv_1_1io_1_1_file_info.html", null ],
+    [ "argcv::Iterable< T >", "structargcv_1_1_iterable.html", [
+      [ "argcv::Chan< T >", "classargcv_1_1_chan.html", null ]
+    ] ],
     [ "argcv::Iterator< T >", "classargcv_1_1_iterator.html", null ],
     [ "argcv::sync::Locker", "classargcv_1_1sync_1_1_locker.html", [
       [ "argcv::sync::Mutex", "classargcv_1_1sync_1_1_mutex.html", null ]

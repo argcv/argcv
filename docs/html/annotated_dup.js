@@ -29,6 +29,8 @@ var annotated_dup =
         [ "Once", "classargcv_1_1sync_1_1_once.html", "classargcv_1_1sync_1_1_once" ],
         [ "WaitGroup", "classargcv_1_1sync_1_1_wait_group.html", "classargcv_1_1sync_1_1_wait_group" ]
       ] ],
+      [ "Chan", "classargcv_1_1_chan.html", "classargcv_1_1_chan" ],
+      [ "Iterable", "structargcv_1_1_iterable.html", "structargcv_1_1_iterable" ],
       [ "Iterator", "classargcv_1_1_iterator.html", "classargcv_1_1_iterator" ],
       [ "Result", "classargcv_1_1_result.html", "classargcv_1_1_result" ],
       [ "SignalSlot", "classargcv_1_1_signal_slot.html", "classargcv_1_1_signal_slot" ],

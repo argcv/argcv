@@ -13,7 +13,6 @@ var dir_42d53064df27f048dc7d4a64861d860d =
       [ "Once", "classargcv_1_1sync_1_1_once.html", "classargcv_1_1sync_1_1_once" ]
     ] ],
     [ "sync.h", "sync_8h.html", null ],
-    [ "wait_group.cc", "wait__group_8cc.html", null ],
     [ "wait_group.h", "wait__group_8h.html", [
       [ "WaitGroup", "classargcv_1_1sync_1_1_wait_group.html", "classargcv_1_1sync_1_1_wait_group" ]
     ] ]

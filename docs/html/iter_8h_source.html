@@ -99,25 +99,123 @@ $(document).ready(function(){initNavTree('iter_8h_source.html',''); initResizabl
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="macros_8h.html">argcv/base/macros.h</a>&quot;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="types_8h.html">argcv/base/types.h</a>&quot;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceargcv.html">argcv</a> {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">/// \brief a iterable element</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"></span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classargcv_1_1_iterator.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="classargcv_1_1_iterator.html">Iterator</a> {</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classargcv_1_1_iterator.html#ac222a8fc195f068e9ea2caf2882248b3">   16</a></span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classargcv_1_1_iterator.html#ac222a8fc195f068e9ea2caf2882248b3">~Iterator</a>() {}</div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classargcv_1_1_iterator.html#a3ab7268a9bdfd949e4cb9ae6d2f0fc46">   17</a></span>&#160;  <span class="keyword">virtual</span> T* <a class="code" href="classargcv_1_1_iterator.html#a3ab7268a9bdfd949e4cb9ae6d2f0fc46">Next</a>() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;};</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}  <span class="comment">// namespace argcv</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// ARGCV_BASE_ITER_H_</span></div>
-<div class="ttc" id="aclassargcv_1_1_iterator_html"><div class="ttname"><a href="classargcv_1_1_iterator.html">argcv::Iterator</a></div><div class="ttdoc">a iterable element</div><div class="ttdef"><b>Definition:</b> iter.h:14</div></div>
-<div class="ttc" id="aclassargcv_1_1_iterator_html_a3ab7268a9bdfd949e4cb9ae6d2f0fc46"><div class="ttname"><a href="classargcv_1_1_iterator.html#a3ab7268a9bdfd949e4cb9ae6d2f0fc46">argcv::Iterator::Next</a></div><div class="ttdeci">virtual T * Next() const =0</div></div>
-<div class="ttc" id="aclassargcv_1_1_iterator_html_ac222a8fc195f068e9ea2caf2882248b3"><div class="ttname"><a href="classargcv_1_1_iterator.html#ac222a8fc195f068e9ea2caf2882248b3">argcv::Iterator::~Iterator</a></div><div class="ttdeci">virtual ~Iterator()</div><div class="ttdef"><b>Definition:</b> iter.h:16</div></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;glog/logging.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceargcv.html">argcv</a> {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">/// \brief a iterable element</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"></span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="structargcv_1_1_iterable.html">   15</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structargcv_1_1_iterable.html">Iterable</a> {</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="structargcv_1_1_iterable.html#a9435387453134ea854b2824d6cad4acc">   16</a></span>&#160;  <a class="code" href="structargcv_1_1_iterable.html#a9435387453134ea854b2824d6cad4acc">Iterable</a>() {}</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="structargcv_1_1_iterable.html#a7f3e9a32c621acb35422ac7c8ab3e0e0">   17</a></span>&#160;  <span class="keyword">virtual</span> <a class="code" href="structargcv_1_1_iterable.html#a7f3e9a32c621acb35422ac7c8ab3e0e0">~Iterable</a>() {}</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="structargcv_1_1_iterable.html#a598f239208ff4f41827ea214589f21d8">   18</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="structargcv_1_1_iterable.html#a598f239208ff4f41827ea214589f21d8">Next</a>(T&amp; item) = 0;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;};</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classargcv_1_1_iterator.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="classargcv_1_1_iterator.html">Iterator</a> {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classargcv_1_1_iterator.html#a2f2ddbee5366bf4478892856d15f54e4">   24</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classargcv_1_1_iterator.html#a2f2ddbee5366bf4478892856d15f54e4">Iterator</a>() : it_(nullptr), underlying_ref_(nullptr), eof_(true) {}</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classargcv_1_1_iterator.html#adcdd4742de3de191e82a7e34a132c9b9">   25</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classargcv_1_1_iterator.html#adcdd4742de3de191e82a7e34a132c9b9">Iterator</a>(<a class="code" href="structargcv_1_1_iterable.html">Iterable&lt;T&gt;</a>* it)</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      : it_(it),</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        underlying_ref_(static_cast&lt;T*&gt;(std::malloc(sizeof(T)))),</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        eof_(it == nullptr) {}</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="comment">// each &#39;copy&#39; may re-allocate a new underlying_ref_</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="comment">// this means all the state may lost, a new &#39;begin&#39; may required</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classargcv_1_1_iterator.html#aca9e1be4f18b96c7b9f9c150f7353828">   32</a></span>&#160;  <a class="code" href="classargcv_1_1_iterator.html#aca9e1be4f18b96c7b9f9c150f7353828">Iterator</a>(<span class="keyword">const</span> <a class="code" href="classargcv_1_1_iterator.html">Iterator</a>&amp; rhs)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;      : it_(rhs.it_),</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        underlying_ref_(static_cast&lt;T*&gt;(std::malloc(sizeof(T)))),</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        eof_(rhs.it_ == nullptr) {}</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classargcv_1_1_iterator.html#a9821c4e42a5dc8041ab4466ce8f6f3ed">   37</a></span>&#160;  <a class="code" href="classargcv_1_1_iterator.html">Iterator</a>&amp; <a class="code" href="classargcv_1_1_iterator.html#a9821c4e42a5dc8041ab4466ce8f6f3ed">operator=</a>(<span class="keyword">const</span> <a class="code" href="classargcv_1_1_iterator.html">Iterator</a>&amp; rhs) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">  /// swap</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classargcv_1_1_iterator.html#a9a6d096de7b9e15fa83cec0c223c740f">   40</a></span>&#160;<span class="comment"></span>  <a class="code" href="classargcv_1_1_iterator.html">Iterator</a>&amp; <a class="code" href="classargcv_1_1_iterator.html#a9a6d096de7b9e15fa83cec0c223c740f">operator=</a>(<a class="code" href="classargcv_1_1_iterator.html">Iterator</a>&amp;&amp; rhs) noexcept {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;SWAP...&quot;</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    std::swap(it_, rhs.it_);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    std::swap(underlying_ref_, rhs.underlying_ref_);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    std::swap(eof_, rhs.eof_);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">  /// swap</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classargcv_1_1_iterator.html#a1033e5e050d1396cc90b73e781130dfd">   49</a></span>&#160;<span class="comment"></span>  <a class="code" href="classargcv_1_1_iterator.html#a1033e5e050d1396cc90b73e781130dfd">Iterator</a>(<a class="code" href="classargcv_1_1_iterator.html">Iterator</a>&amp;&amp; rhs) noexcept</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      : it_(rhs.it_), underlying_ref_(rhs.underlying_ref_), eof_(rhs.eof_) {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;SWAP2...&quot;</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    rhs.it_ = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    rhs.underlying_ref_ = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    rhs.eof_ = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classargcv_1_1_iterator.html#ac222a8fc195f068e9ea2caf2882248b3">   57</a></span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classargcv_1_1_iterator.html#ac222a8fc195f068e9ea2caf2882248b3">~Iterator</a>() {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">if</span> (underlying_ref_ != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      <span class="keyword">delete</span> underlying_ref_;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      underlying_ref_ = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">  //////////////////////////////////////////////</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classargcv_1_1_iterator.html#a56d44c48e099ce1092cce078e221d346">   65</a></span>&#160;<span class="comment"></span>  <a class="code" href="classargcv_1_1_iterator.html">Iterator&lt;T&gt;</a>&amp; <a class="code" href="classargcv_1_1_iterator.html#a56d44c48e099ce1092cce078e221d346">begin</a>() {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="comment">// LOG(INFO) &lt;&lt; &quot;begin&quot;;</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">if</span> (it_ == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      eof_ = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    eof_ = !it_-&gt;Next(*underlying_ref_);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="comment">// LOG(INFO) &lt;&lt; &quot;begin result: &quot; &lt;&lt; *underlying_ref_ &lt;&lt; &quot;, eof:&quot; &lt;&lt; eof_;</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classargcv_1_1_iterator.html#a5bfeaf370b030ec4266c39087b48ea4c">   76</a></span>&#160;  <a class="code" href="classargcv_1_1_iterator.html">Iterator&lt;T&gt;</a> <a class="code" href="classargcv_1_1_iterator.html#a5bfeaf370b030ec4266c39087b48ea4c">end</a>() {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="comment">// LOG(INFO) &lt;&lt; &quot;end&quot;;</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classargcv_1_1_iterator.html">Iterator&lt;T&gt;</a>(<span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classargcv_1_1_iterator.html#a5c5dc8406fe55f809ba92199285f0532">   81</a></span>&#160;  T&amp; <a class="code" href="classargcv_1_1_iterator.html#a5c5dc8406fe55f809ba92199285f0532">operator*</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="comment">// LOG(INFO) &lt;&lt; &quot;operator*&quot;;</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">return</span> *underlying_ref_;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classargcv_1_1_iterator.html#ac2419e4eba21cd16b1c045f21430038a">   86</a></span>&#160;  <a class="code" href="classargcv_1_1_iterator.html">Iterator&lt;T&gt;</a>&amp; <a class="code" href="classargcv_1_1_iterator.html#ac2419e4eba21cd16b1c045f21430038a">operator++</a>() {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="comment">// LOG(INFO) &lt;&lt; &quot;Next...&quot;;</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    eof_ = !it_-&gt;Next(*underlying_ref_);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="comment">// LOG(INFO) &lt;&lt; &quot;Next result: &quot; &lt;&lt; *underlying_ref_ &lt;&lt; &quot;, eof:&quot; &lt;&lt; eof_;</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="classargcv_1_1_iterator.html#a75aa1882389153fce9f2f59f8fb85cb2">   93</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classargcv_1_1_iterator.html#a75aa1882389153fce9f2f59f8fb85cb2">operator!=</a>(<span class="keyword">const</span> <a class="code" href="classargcv_1_1_iterator.html">Iterator&lt;T&gt;</a>&amp; rhs)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="comment">// LOG(INFO) &lt;&lt; &quot;EOF ?&quot; &lt;&lt; eof_ &lt;&lt; &quot;RHS_EOF ?&quot; &lt;&lt; rhs.eof_;</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">return</span> eof_ != rhs.eof_;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <a class="code" href="structargcv_1_1_iterable.html">Iterable&lt;T&gt;</a>* it_;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  T* underlying_ref_;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="keywordtype">bool</span> eof_;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;};</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;}  <span class="comment">// namespace argcv</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// ARGCV_BASE_ITER_H_</span></div>
+<div class="ttc" id="aclassargcv_1_1_iterator_html"><div class="ttname"><a href="classargcv_1_1_iterator.html">argcv::Iterator</a></div><div class="ttdef"><b>Definition:</b> iter.h:22</div></div>
+<div class="ttc" id="aclassargcv_1_1_iterator_html_a1033e5e050d1396cc90b73e781130dfd"><div class="ttname"><a href="classargcv_1_1_iterator.html#a1033e5e050d1396cc90b73e781130dfd">argcv::Iterator::Iterator</a></div><div class="ttdeci">Iterator(Iterator &amp;&amp;rhs) noexcept</div><div class="ttdoc">swap</div><div class="ttdef"><b>Definition:</b> iter.h:49</div></div>
+<div class="ttc" id="aclassargcv_1_1_iterator_html_a2f2ddbee5366bf4478892856d15f54e4"><div class="ttname"><a href="classargcv_1_1_iterator.html#a2f2ddbee5366bf4478892856d15f54e4">argcv::Iterator::Iterator</a></div><div class="ttdeci">Iterator()</div><div class="ttdef"><b>Definition:</b> iter.h:24</div></div>
+<div class="ttc" id="aclassargcv_1_1_iterator_html_a56d44c48e099ce1092cce078e221d346"><div class="ttname"><a href="classargcv_1_1_iterator.html#a56d44c48e099ce1092cce078e221d346">argcv::Iterator::begin</a></div><div class="ttdeci">Iterator&lt; T &gt; &amp; begin()</div><div class="ttdef"><b>Definition:</b> iter.h:65</div></div>
+<div class="ttc" id="aclassargcv_1_1_iterator_html_a5bfeaf370b030ec4266c39087b48ea4c"><div class="ttname"><a href="classargcv_1_1_iterator.html#a5bfeaf370b030ec4266c39087b48ea4c">argcv::Iterator::end</a></div><div class="ttdeci">Iterator&lt; T &gt; end()</div><div class="ttdef"><b>Definition:</b> iter.h:76</div></div>
+<div class="ttc" id="aclassargcv_1_1_iterator_html_a5c5dc8406fe55f809ba92199285f0532"><div class="ttname"><a href="classargcv_1_1_iterator.html#a5c5dc8406fe55f809ba92199285f0532">argcv::Iterator::operator*</a></div><div class="ttdeci">T &amp; operator*() const</div><div class="ttdef"><b>Definition:</b> iter.h:81</div></div>
+<div class="ttc" id="aclassargcv_1_1_iterator_html_a75aa1882389153fce9f2f59f8fb85cb2"><div class="ttname"><a href="classargcv_1_1_iterator.html#a75aa1882389153fce9f2f59f8fb85cb2">argcv::Iterator::operator!=</a></div><div class="ttdeci">bool operator!=(const Iterator&lt; T &gt; &amp;rhs) const</div><div class="ttdef"><b>Definition:</b> iter.h:93</div></div>
+<div class="ttc" id="aclassargcv_1_1_iterator_html_a9821c4e42a5dc8041ab4466ce8f6f3ed"><div class="ttname"><a href="classargcv_1_1_iterator.html#a9821c4e42a5dc8041ab4466ce8f6f3ed">argcv::Iterator::operator=</a></div><div class="ttdeci">Iterator &amp; operator=(const Iterator &amp;rhs)=delete</div></div>
+<div class="ttc" id="aclassargcv_1_1_iterator_html_a9a6d096de7b9e15fa83cec0c223c740f"><div class="ttname"><a href="classargcv_1_1_iterator.html#a9a6d096de7b9e15fa83cec0c223c740f">argcv::Iterator::operator=</a></div><div class="ttdeci">Iterator &amp; operator=(Iterator &amp;&amp;rhs) noexcept</div><div class="ttdoc">swap</div><div class="ttdef"><b>Definition:</b> iter.h:40</div></div>
+<div class="ttc" id="aclassargcv_1_1_iterator_html_ac222a8fc195f068e9ea2caf2882248b3"><div class="ttname"><a href="classargcv_1_1_iterator.html#ac222a8fc195f068e9ea2caf2882248b3">argcv::Iterator::~Iterator</a></div><div class="ttdeci">virtual ~Iterator()</div><div class="ttdef"><b>Definition:</b> iter.h:57</div></div>
+<div class="ttc" id="aclassargcv_1_1_iterator_html_ac2419e4eba21cd16b1c045f21430038a"><div class="ttname"><a href="classargcv_1_1_iterator.html#ac2419e4eba21cd16b1c045f21430038a">argcv::Iterator::operator++</a></div><div class="ttdeci">Iterator&lt; T &gt; &amp; operator++()</div><div class="ttdef"><b>Definition:</b> iter.h:86</div></div>
+<div class="ttc" id="aclassargcv_1_1_iterator_html_aca9e1be4f18b96c7b9f9c150f7353828"><div class="ttname"><a href="classargcv_1_1_iterator.html#aca9e1be4f18b96c7b9f9c150f7353828">argcv::Iterator::Iterator</a></div><div class="ttdeci">Iterator(const Iterator &amp;rhs)</div><div class="ttdef"><b>Definition:</b> iter.h:32</div></div>
+<div class="ttc" id="aclassargcv_1_1_iterator_html_adcdd4742de3de191e82a7e34a132c9b9"><div class="ttname"><a href="classargcv_1_1_iterator.html#adcdd4742de3de191e82a7e34a132c9b9">argcv::Iterator::Iterator</a></div><div class="ttdeci">Iterator(Iterable&lt; T &gt; *it)</div><div class="ttdef"><b>Definition:</b> iter.h:25</div></div>
 <div class="ttc" id="amacros_8h_html"><div class="ttname"><a href="macros_8h.html">macros.h</a></div></div>
 <div class="ttc" id="anamespaceargcv_html"><div class="ttname"><a href="namespaceargcv.html">argcv</a></div><div class="ttdoc">Type definitions.</div><div class="ttdef"><b>Definition:</b> atomic.h:10</div></div>
+<div class="ttc" id="astructargcv_1_1_iterable_html"><div class="ttname"><a href="structargcv_1_1_iterable.html">argcv::Iterable</a></div><div class="ttdoc">a iterable element</div><div class="ttdef"><b>Definition:</b> iter.h:15</div></div>
+<div class="ttc" id="astructargcv_1_1_iterable_html_a598f239208ff4f41827ea214589f21d8"><div class="ttname"><a href="structargcv_1_1_iterable.html#a598f239208ff4f41827ea214589f21d8">argcv::Iterable::Next</a></div><div class="ttdeci">virtual bool Next(T &amp;item)=0</div></div>
+<div class="ttc" id="astructargcv_1_1_iterable_html_a7f3e9a32c621acb35422ac7c8ab3e0e0"><div class="ttname"><a href="structargcv_1_1_iterable.html#a7f3e9a32c621acb35422ac7c8ab3e0e0">argcv::Iterable::~Iterable</a></div><div class="ttdeci">virtual ~Iterable()</div><div class="ttdef"><b>Definition:</b> iter.h:17</div></div>
+<div class="ttc" id="astructargcv_1_1_iterable_html_a9435387453134ea854b2824d6cad4acc"><div class="ttname"><a href="structargcv_1_1_iterable.html#a9435387453134ea854b2824d6cad4acc">argcv::Iterable::Iterable</a></div><div class="ttdeci">Iterable()</div><div class="ttdef"><b>Definition:</b> iter.h:16</div></div>
 <div class="ttc" id="atypes_8h_html"><div class="ttname"><a href="types_8h.html">types.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
