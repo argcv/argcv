@@ -88,10 +88,10 @@ def argcv_infra_repositories(repo_name):
     arq(
         name = "com_github_google_benchmark",
         urls = [
-            "https://github.com/google/benchmark/archive/d205ead299c7cddd5e1bc3478d57ad4320a4a53c.zip",
+            "https://github.com/google/benchmark/archive/v1.5.5.zip",
         ],
-        sha256 = "5ac8c2d8c4cd9751c78a28651c34fada1ea31a12e1e3f12009365c5a686312ca",
-        strip_prefix = "benchmark-d205ead299c7cddd5e1bc3478d57ad4320a4a53c",
+        sha256 = "30f2e5156de241789d772dd8b130c1cb5d33473cc2f29e4008eab680df7bd1f0",
+        strip_prefix = "benchmark-1.5.5",
         repository = repo_name,
     )
 
