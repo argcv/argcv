@@ -1,4 +1,6 @@
 # Copyright 2021 Yu Jing
+load("@rules_cc//cc:defs.bzl", "cc_test")
+
 licenses(["notice"])  # MIT
 
 package(default_visibility = ["//visibility:public"])
@@ -12,13 +14,13 @@ cc_test(
     srcs = glob([
         "**/*_test.cc",
         "**/*_test.h",
-    ]),
+    ], allow_empty = True),
     includes = [
         # ".",
     ],
     deps = [
         "//argcv/test",
-        "//external:gtest_main",
+        "@googletest//:gtest_main",
     ],
 )
 
@@ -27,8 +29,8 @@ cc_test(
     srcs = glob([
         "**/*_bench.cc",
         "**/*_bench.h",
-    ]),
+    ], allow_empty = True),
     deps = [
-        "//external:benchmark_main",
+        "@google_benchmark//:benchmark_main",
     ],
 )

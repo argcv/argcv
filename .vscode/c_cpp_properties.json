@@ -1,0 +1,121 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "${default}",
+                "/usr/local/include",
+                "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/",
+                "${workspaceFolder}",
+                "${workspaceFolder}/**",
+                "${workspaceRoot}",
+                "${workspaceRoot}/bazel-argcv/external/com_google_protobuf/src",
+                "${workspaceRoot}/bazel-argcv/external/curl_archive/include",
+                "${workspaceRoot}/bazel-argcv/external/curl_archive/src",
+                "${workspaceRoot}/bazel-argcv/external/eigen_archive",
+                "${workspaceRoot}/bazel-argcv/external/com_github_argcv_argcv",
+                "${workspaceRoot}/bazel-argcv/external/com_github_google_googletest/googletest/include",
+                "${workspaceRoot}/bazel-genfiles",
+                "${workspaceRoot}/bazel-genfiles/external/curl_archive/include",
+                "${workspaceRoot}/bazel-genfiles/external/com_github_gflags_gflags",
+                "${workspaceRoot}/bazel-genfiles/external/com_github_gflags_gflags/include",
+                "${workspaceRoot}/bazel-genfiles/external/com_github_gflags_gflags/src",
+                "${workspaceRoot}/bazel-genfiles/external/com_github_google_glog/include",
+                "${workspaceRoot}/bazel-genfiles/external/com_google_protobuf",
+                "${workspaceRoot}/bazel-genfiles/external/libxml2_archive",
+                "${workspaceRoot}/bazel-genfiles/external/libxml2_archive/include",
+                "${workspaceRoot}/**"
+            ],
+            "defines": [],
+            "intelliSenseMode": "clang-x64",
+            "cppStandard": "c++11",
+            "browse": {
+                "path": [
+                    "${default}",
+                    "/usr/local/include",
+                    "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/",
+                    "${workspaceFolder}",
+                    "${workspaceFolder}/**",
+                    "${workspaceRoot}",
+                    "${workspaceRoot}/bazel-argcv/external/com_google_protobuf/src",
+                    "${workspaceRoot}/bazel-argcv/external/curl_archive/include",
+                    "${workspaceRoot}/bazel-argcv/external/curl_archive/src",
+                    "${workspaceRoot}/bazel-argcv/external/eigen_archive",
+                    "${workspaceRoot}/bazel-argcv/external/com_github_argcv_argcv",
+                    "${workspaceRoot}/bazel-argcv/external/com_github_google_googletest/googletest/include",
+                    "${workspaceRoot}/bazel-genfiles",
+                    "${workspaceRoot}/bazel-genfiles/external/curl_archive/include",
+                    "${workspaceRoot}/bazel-genfiles/external/com_github_gflags_gflags",
+                    "${workspaceRoot}/bazel-genfiles/external/com_github_gflags_gflags/include",
+                    "${workspaceRoot}/bazel-genfiles/external/com_github_gflags_gflags/src",
+                    "${workspaceRoot}/bazel-genfiles/external/com_github_google_glog/include",
+                    "${workspaceRoot}/bazel-genfiles/external/com_google_protobuf",
+                    "${workspaceRoot}/bazel-genfiles/external/libxml2_archive",
+                    "${workspaceRoot}/bazel-genfiles/external/libxml2_archive/include",
+                    "${workspaceRoot}/**"
+                ],
+                "limitSymbolsToIncludedHeaders": false,
+                "databaseFilename": ""
+            },
+            "macFrameworkPath": [
+                "/System/Library/Frameworks",
+                "/Library/Frameworks",
+                "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks"
+            ],
+            "configurationProvider": "ms-vscode.makefile-tools"
+        },
+        {
+            "name": "Linux",
+            "includePath": [
+                "/usr/include",
+                "/usr/local/include",
+                "${workspaceRoot}",
+                "${workspaceRoot}/bazel-argcv/external/com_google_protobuf/src",
+                "${workspaceRoot}/bazel-argcv/external/curl_archive/include",
+                "${workspaceRoot}/bazel-argcv/external/curl_archive/src",
+                "${workspaceRoot}/bazel-argcv/external/eigen_archive",
+                "${workspaceRoot}/bazel-argcv/external/com_github_argcv_argcv",
+                "${workspaceRoot}/bazel-argcv/external/com_github_google_googletest/googletest/include",
+                "${workspaceRoot}/bazel-genfiles",
+                "${workspaceRoot}/bazel-genfiles/external/curl_archive/include",
+                "${workspaceRoot}/bazel-genfiles/external/com_github_gflags_gflags",
+                "${workspaceRoot}/bazel-genfiles/external/com_github_gflags_gflags/include",
+                "${workspaceRoot}/bazel-genfiles/external/com_github_gflags_gflags/src",
+                "${workspaceRoot}/bazel-genfiles/external/com_github_google_glog/include",
+                "${workspaceRoot}/bazel-genfiles/external/com_google_protobuf",
+                "${workspaceRoot}/bazel-genfiles/external/libxml2_archive",
+                "${workspaceRoot}/bazel-genfiles/external/libxml2_archive/include",
+                "${workspaceRoot}/**"
+            ],
+            "defines": [],
+            "intelliSenseMode": "clang-x64",
+            "cppStandard": "c++11",
+            "browse": {
+                "path": [
+                    "/usr/include",
+                    "/usr/local/include",
+                    "${workspaceRoot}",
+                    "${workspaceRoot}/bazel-argcv/external/com_google_protobuf/src",
+                    "${workspaceRoot}/bazel-argcv/external/curl_archive/include",
+                    "${workspaceRoot}/bazel-argcv/external/curl_archive/src",
+                    "${workspaceRoot}/bazel-argcv/external/eigen_archive",
+                    "${workspaceRoot}/bazel-argcv/external/com_github_argcv_argcv",
+                    "${workspaceRoot}/bazel-argcv/external/com_github_google_googletest/googletest/include",
+                    "${workspaceRoot}/bazel-genfiles",
+                    "${workspaceRoot}/bazel-genfiles/external/curl_archive/include",
+                    "${workspaceRoot}/bazel-genfiles/external/com_github_gflags_gflags",
+                    "${workspaceRoot}/bazel-genfiles/external/com_github_gflags_gflags/include",
+                    "${workspaceRoot}/bazel-genfiles/external/com_github_gflags_gflags/src",
+                    "${workspaceRoot}/bazel-genfiles/external/com_github_google_glog/include",
+                    "${workspaceRoot}/bazel-genfiles/external/com_google_protobuf",
+                    "${workspaceRoot}/bazel-genfiles/external/libxml2_archive",
+                    "${workspaceRoot}/bazel-genfiles/external/libxml2_archive/include",
+                    "${workspaceRoot}/**"
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            }
+        }
+    ],
+    "version": 4
+}
