@@ -1,4 +1,6 @@
 # Copyright 2021 Yu Jing
+load("@rules_cc//cc:defs.bzl", "cc_library", "cc_test")
+
 licenses(["notice"])  # MIT
 
 package(default_visibility = ["//visibility:public"])
@@ -10,6 +12,7 @@ cc_library(
             "**/*.c",
             "**/*.cc",
         ],
+        allow_empty = True,
         exclude = [
             "**/*_test.cc",
         ],
@@ -18,13 +21,14 @@ cc_library(
         [
             "**/*.h",
         ],
+        allow_empty = True,
         exclude = [
             "**/*_test.h",
         ],
     ),
     deps = [
-        "//external:absl/strings",
-        "//external:glog",
+        "@abseil-cpp//absl/strings",
+        "@glog//:glog",
     ],
 )
 
@@ -33,7 +37,7 @@ cc_test(
     srcs = glob([
         "**/*_test.cc",
         "**/*_test.h",
-    ]),
+    ], allow_empty = True),
     copts = [
         "-Wno-unused-function",
         "-Wno-unused-local-typedef",

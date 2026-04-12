@@ -1,0 +1,49 @@
+build:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "BUILD"
+          - "BUILD.bazel"
+          - "WORKSPACE"
+          - "WORKSPACE.bazel"
+          - "MODULE.bazel"
+          - "MODULE.bazel.lock"
+          - ".bazelrc"
+          - "**/*.bzl"
+          - "Makefile"
+          - "tools/**"
+
+core:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "argcv/**"
+
+examples:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "examples/**"
+
+third_party:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "third_party/**"
+
+docs:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "docs/**"
+          - "README.md"
+          - "CHANGELOG.md"
+          - "LICENSE.md"
+
+ci:
+  - changed-files:
+      - any-glob-to-any-file:
+          - ".github/workflows/**"
+          - ".travis.yml"
+
+test:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "**/*_test.cc"
+          - "**/*_test.h"
+          - "**/test/**"

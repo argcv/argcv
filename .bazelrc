@@ -1,0 +1,11 @@
+build -c opt
+test -c opt
+run -c opt
+
+build --cxxopt='-std=c++17'
+build --host_cxxopt='-std=c++17'
+
+build --show_timestamps
+build --verbose_failures
+
+test --test_output=errors

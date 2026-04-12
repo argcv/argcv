@@ -1,3 +1,5 @@
+load("@rules_cc//cc:defs.bzl", "cc_binary")
+
 cc_binary(
     name = "hello-absl",
     srcs = [
@@ -5,14 +7,14 @@ cc_binary(
     ],
     visibility = ["//visibility:public"],
     deps = [
-        "//external:absl/strings",
-        "//external:glog",
+        "@abseil-cpp//absl/strings",
+        "@glog//:glog",
     ],
 )
 
 # see: https://github.com/bazelbuild/bazel/tree/master/tools/build_defs/pkg
 # load("@bazel_tools//tools/build_defs/pkg:pkg.bzl", "pkg_tar", "pkg_deb", "pkg_rpm")
-load("@bazel_tools//tools/build_defs/pkg:pkg.bzl", "pkg_tar")
+load("@rules_pkg//pkg:tar.bzl", "pkg_tar")
 
 pkg_tar(
     name = "hello-absl-bin",
@@ -21,5 +23,5 @@ pkg_tar(
     ],
     mode = "0755",
     package_dir = "/tmp/example",
-    strip_prefix = "/examples/cxx/absl/",
+    strip_prefix = "/examples/absl/",
 )
