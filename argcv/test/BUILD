@@ -1,4 +1,6 @@
 # Copyright 2021 Yu Jing
+load("@rules_cc//cc:defs.bzl", "cc_library")
+
 licenses(["notice"])  # MIT
 
 package(default_visibility = ["//visibility:public"])
@@ -15,7 +17,7 @@ cc_library(
         "-Wno-unused-function",
     ],
     deps = [
-        "//external:glog",
-        "//external:gtest_main",
+        "@glog//:glog",
+        "@googletest//:gtest_main",
     ],
 )
